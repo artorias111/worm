@@ -1,0 +1,88 @@
+Jun-04 12:35:50.686 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf
+Jun-04 12:35:50.792 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.1
+Jun-04 12:35:50.813 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [wise_darwin] - revision: afef52f7c9
+Jun-04 12:35:50.831 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/assface/scripts/telseq_nf/nextflow.config
+Jun-04 12:35:50.832 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/assface/scripts/telseq_nf/nextflow.config
+Jun-04 12:35:50.861 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jun-04 12:35:51.650 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/assface/.nextflow/plugins
+Jun-04 12:35:51.651 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-04 12:35:51.653 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Jun-04 12:35:51.660 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-04 12:35:51.661 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-04 12:35:51.665 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jun-04 12:35:51.673 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-04 12:35:51.717 [main] DEBUG nextflow.Session - Session uuid: 2884590c-79ca-4778-af2d-6c92e636ac7f
+Jun-04 12:35:51.717 [main] DEBUG nextflow.Session - Run name: wise_darwin
+Jun-04 12:35:51.718 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jun-04 12:35:51.738 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.1 build 5556
+  Created: 14-05-2021 15:20 UTC (20:50 IDT)
+  System: Linux 5.4.0-73-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-8u292-b10-0ubuntu1~20.04-b10
+  Encoding: UTF-8 (UTF-8)
+  Process: 3247@ubuntu-vm [10.0.2.15]
+  CPUs: 2 - Mem: 4.4 GB (2.5 GB) - Swap: 778.9 MB (778.9 MB)
+Jun-04 12:35:51.756 [main] DEBUG nextflow.Session - Work-dir: /home/assface/scripts/telseq_nf/work [ext2/ext3]
+Jun-04 12:35:51.756 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/assface/scripts/telseq_nf/bin
+Jun-04 12:35:51.767 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-04 12:35:51.777 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-04 12:35:51.954 [main] DEBUG nextflow.Session - Session start invoked
+Jun-04 12:35:52.284 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-04 12:35:52.293 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: telseq
+Jun-04 12:35:52.328 [main] DEBUG nextflow.Session - Session aborted -- Cause: Unknown variable 'AB1'
+Jun-04 12:35:52.339 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: Unknown variable 'AB1'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:295)
+	at nextflow.script.ProcessConfig.getProperty(ProcessConfig.groovy:276)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:194)
+	at groovy.lang.Closure.getPropertyTryThese(Closure.java:320)
+	at groovy.lang.Closure.getPropertyDelegateFirst(Closure.java:310)
+	at groovy.lang.Closure.getProperty(Closure.java:296)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341)
+	at Script_581200b6$_runScript_closure1.doCall(Script_581200b6:7)
+	at Script_581200b6$_runScript_closure1.doCall(Script_581200b6)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.ProcessFactory.createProcessor(ProcessFactory.groovy:95)
+	at nextflow.script.ProcessFactory$createProcessor.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at nextflow.script.BaseScript.process(BaseScript.groovy:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
+	at Script_581200b6.runScript(Script_581200b6:5)
+	at nextflow.script.BaseScript.runDsl1(BaseScript.groovy:164)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:302)
+	at nextflow.cli.Launcher.run(Launcher.groovy:475)
+	at nextflow.cli.Launcher.main(Launcher.groovy:657)

@@ -1,0 +1,10 @@
+2021-06-04 11:56:01	2.5s	spontaneous_brown	OK	975c442a29a0bfe409c7563dc1492eae	6e0ac4f0-4d76-4e99-8bec-050aab7f7d3d	nextflow main.nf --telseq_input ./data/AB1.bam
+2021-06-04 12:04:48	1.6s	shrivelled_becquerel	OK	975c442a29a0bfe409c7563dc1492eae	9a460a87-0754-4dbd-9272-e77c37c870e3	nextflow main.nf
+2021-06-04 12:35:51	-	wise_darwin	-	afef52f7c9119fb8392cef2c8691eaff	2884590c-79ca-4778-af2d-6c92e636ac7f	nextflow main.nf
+2021-06-04 12:36:15	2s	disturbed_avogadro	OK	7121da8520ac98319134526b20a572db	fd114ca0-43e5-45a4-9480-f178ce893d1a	nextflow main.nf
+2021-06-04 12:37:08	1.6s	nauseous_brahmagupta	OK	cb455f64dfade0cdd41369e2f0108b2a	b57d750d-c8f2-4bfb-a1fc-0cbee63e25bb	nextflow main.nf
+2021-06-04 12:40:31	1.4s	magical_coulomb	OK	9187e419fcb76d3c8b26f247d2a286e8	9df42040-1037-42b1-8b7f-c7ed2cff376d	nextflow main.nf
+2021-06-04 13:05:36	1.2s	gloomy_mercator	OK	c64ba6d0735031a508de344bfb47a847	a55bbee6-8c01-4a05-a580-5ea1b52a2102	nextflow main.nf
+2021-06-04 13:07:05	1.3s	intergalactic_avogadro	OK	c64ba6d0735031a508de344bfb47a847	4740a8d2-6bcc-4a2f-9d7c-b93a95008561	nextflow run main.nf
+2021-06-04 13:11:35	1.7s	elated_payne	OK	d6f5a21a2a3eeb719f9eaaaac624e464	d619519e-6f1b-4b06-aae7-e6c850f56463	nextflow run main.nf
+2021-06-04 13:15:21	1.2s	elated_ardinghelli	OK	46dc2bd16c844a2e22ddb49c3994e282	1e6c33a7-7f2e-4d4a-9d64-654901ea7993	nextflow main.nf

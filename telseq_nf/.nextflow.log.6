@@ -1,0 +1,45 @@
+Jun-04 12:36:14.785 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf
+Jun-04 12:36:14.894 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.1
+Jun-04 12:36:14.934 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [disturbed_avogadro] - revision: 7121da8520
+Jun-04 12:36:14.952 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/assface/scripts/telseq_nf/nextflow.config
+Jun-04 12:36:14.953 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/assface/scripts/telseq_nf/nextflow.config
+Jun-04 12:36:14.979 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jun-04 12:36:15.700 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/assface/.nextflow/plugins
+Jun-04 12:36:15.701 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-04 12:36:15.704 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Jun-04 12:36:15.710 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-04 12:36:15.711 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-04 12:36:15.715 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jun-04 12:36:15.724 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-04 12:36:15.767 [main] DEBUG nextflow.Session - Session uuid: fd114ca0-43e5-45a4-9480-f178ce893d1a
+Jun-04 12:36:15.768 [main] DEBUG nextflow.Session - Run name: disturbed_avogadro
+Jun-04 12:36:15.768 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jun-04 12:36:15.788 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.1 build 5556
+  Created: 14-05-2021 15:20 UTC (20:50 IDT)
+  System: Linux 5.4.0-73-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-8u292-b10-0ubuntu1~20.04-b10
+  Encoding: UTF-8 (UTF-8)
+  Process: 3324@ubuntu-vm [10.0.2.15]
+  CPUs: 2 - Mem: 4.4 GB (2.5 GB) - Swap: 778.9 MB (778.9 MB)
+Jun-04 12:36:15.806 [main] DEBUG nextflow.Session - Work-dir: /home/assface/scripts/telseq_nf/work [ext2/ext3]
+Jun-04 12:36:15.807 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/assface/scripts/telseq_nf/bin
+Jun-04 12:36:15.818 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-04 12:36:15.828 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-04 12:36:15.950 [main] DEBUG nextflow.Session - Session start invoked
+Jun-04 12:36:16.386 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-04 12:36:16.395 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: telseq
+Jun-04 12:36:16.459 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-04 12:36:16.459 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-04 12:36:16.464 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-04 12:36:16.471 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=2; memory=4.4 GB; capacity=2; pollInterval=100ms; dumpInterval=5m
+Jun-04 12:36:16.597 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jun-04 12:36:16.597 [main] DEBUG nextflow.Session - Session await
+Jun-04 12:36:16.777 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-04 12:36:16.783 [Task submitter] INFO  nextflow.Session - [79/1f8531] Submitted process > telseq
+Jun-04 12:36:16.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: telseq; status: COMPLETED; exit: 0; error: -; workDir: /home/assface/scripts/telseq_nf/work/79/1f8531973a557e557d5acb861ad085]
+Jun-04 12:36:16.832 [main] DEBUG nextflow.Session - Session await > all process finished
+Jun-04 12:36:16.833 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-04 12:36:16.839 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=3ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jun-04 12:36:16.988 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jun-04 12:36:16.997 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
