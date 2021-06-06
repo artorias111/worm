@@ -8,3 +8,8 @@
 2021-06-04 13:07:05	1.3s	intergalactic_avogadro	OK	c64ba6d0735031a508de344bfb47a847	4740a8d2-6bcc-4a2f-9d7c-b93a95008561	nextflow run main.nf
 2021-06-04 13:11:35	1.7s	elated_payne	OK	d6f5a21a2a3eeb719f9eaaaac624e464	d619519e-6f1b-4b06-aae7-e6c850f56463	nextflow run main.nf
 2021-06-04 13:15:21	1.2s	elated_ardinghelli	OK	46dc2bd16c844a2e22ddb49c3994e282	1e6c33a7-7f2e-4d4a-9d64-654901ea7993	nextflow main.nf
+2021-06-06 12:21:39	2.4s	drunk_curran	OK	46dc2bd16c844a2e22ddb49c3994e282	cafd419b-e321-4565-877e-6a6f34c3a53c	nextflow main.nf
+2021-06-06 19:38:06	1s	romantic_archimedes	OK	9514229ca669e8e1ea298c255b402094	a72866b9-c13f-43af-8a98-a5233b5cc2f8	nextflow main.nf
+2021-06-06 19:39:32	1.2s	shrivelled_archimedes	OK	9514229ca669e8e1ea298c255b402094	ccf5ee07-530c-46a6-a5ab-05d9e3048522	nextflow main.nf --file /home/bhats/thesis/worm/telseq_nf/data/bam/AB1.bam
+2021-06-06 19:58:32	1.8s	determined_leakey	OK	a9a1df5ec6452b70b89c34a9659e4d6b	43d197d5-cffe-46a6-82b4-9d0746f7847a	nextflow main.nf
+2021-06-06 20:01:50	1.5s	goofy_davinci	OK	a9a1df5ec6452b70b89c34a9659e4d6b	15ea83d0-16b7-4d91-9a7b-81221cbe0f47	nextflow main.nf --file /home/bhats/thesis/worm/telseq_nf/data/bam/LSJ1.bam

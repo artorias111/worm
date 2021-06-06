@@ -5,7 +5,7 @@
 process telseq {
     script:
     """
-    telseq -z TTAGGC -H $PWD/data/bam/AB1.bam > telseq_out.txt
+    telseq -z TTAGGC -H $params.file > telseq_out.txt
     """
 }
 

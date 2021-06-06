@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/AndersenLab/wi-gatk/blob/master/test_data/LSJ1.bam
+HostUrl=https://raw.githubusercontent.com/AndersenLab/wi-gatk/master/test_data/LSJ1.bam
