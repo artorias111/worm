@@ -1,3 +1,3 @@
 # Telseq pipeline using nextflow
 
-conda activate tsq
+env: conda activate tsq
