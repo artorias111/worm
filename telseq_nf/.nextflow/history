@@ -13,3 +13,5 @@
 2021-06-06 19:39:32	1.2s	shrivelled_archimedes	OK	9514229ca669e8e1ea298c255b402094	ccf5ee07-530c-46a6-a5ab-05d9e3048522	nextflow main.nf --file /home/bhats/thesis/worm/telseq_nf/data/bam/AB1.bam
 2021-06-06 19:58:32	1.8s	determined_leakey	OK	a9a1df5ec6452b70b89c34a9659e4d6b	43d197d5-cffe-46a6-82b4-9d0746f7847a	nextflow main.nf
 2021-06-06 20:01:50	1.5s	goofy_davinci	OK	a9a1df5ec6452b70b89c34a9659e4d6b	15ea83d0-16b7-4d91-9a7b-81221cbe0f47	nextflow main.nf --file /home/bhats/thesis/worm/telseq_nf/data/bam/LSJ1.bam
+2021-06-14 12:37:15	1.5s	lethal_minsky	ERR	a9a1df5ec6452b70b89c34a9659e4d6b	13767d5d-f921-4b57-8242-c4a56e6b548f	nextflow main.nf
+2021-06-15 01:46:18	2.4s	gigantic_ritchie	OK	a9a1df5ec6452b70b89c34a9659e4d6b	3b799ff2-6966-407b-9550-c86157edd9b8	nextflow main.nf
