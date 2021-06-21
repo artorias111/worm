@@ -1,0 +1,8 @@
+use user specified pattern TTAGGC
+reverse complement GCCTAA
+Start analysing BAM ECA718.bam
+Specified BAM has 1 read groups
+[scan] total reads in BAM scanned 50666
+Completed scanning BAM
+Completed writing results
+[timer - scan BAM] wall clock: 0.38s CPU: 0.38s
