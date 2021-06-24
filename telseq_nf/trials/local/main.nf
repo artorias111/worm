@@ -1,7 +1,7 @@
 date = new Date().format( 'yyyyMMdd' )
 params.out = "TELOMERE-${date}"
-//params.bam = "/projects/b1059/data/c_elegans/WI/alignments/*.{bam,bam.bai}"
-params.bam = "/home/bhats/thesis/data/bam/*.{bam,bam.bai}"
+params.bam = "/projects/b1059/data/c_elegans/WI/alignments/*.{bam,bam.bai}"
+//params.bam = "/home/bhats/thesis/data/bam/*.{bam,bam.bai}"
 
 Channel.fromFilePairs(params.bam)
        .map{it -> [it[0], it[1][0], it[1][1]]}

@@ -1,0 +1,11 @@
+use user specified pattern TTAGGC
+reverse complement GCCTAA
+Start analysing BAM QG4137.bam
+Treat all reads in BAM as if they were from a same sample
+[scan] processed 10000000 reads 
+[scan] processed 20000000 reads 
+[scan] processed 30000000 reads 
+[scan] total reads in BAM scanned 33294005
+Completed scanning BAM
+Completed writing results
+[timer - scan BAM] wall clock: 3744.60s CPU: 531.83s

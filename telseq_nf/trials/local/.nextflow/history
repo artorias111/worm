@@ -1,3 +1,6 @@
 2021-06-20 08:47:25	-	crazy_kowalevski	-	5140b86f8235198a5393ae03532757a3	b8d0d4f1-5df6-4be3-b92c-34e61e8d2ea0	nextflow main.nf
 2021-06-21 10:32:20	3.6s	nice_mclean	OK	49ae8bee8924c419b640357d28891966	0d068e5f-2f86-41a1-898a-6b06358a5724	nextflow run main.nf
 2021-06-21 17:32:53	2.9s	prickly_shaw	OK	f37581536b56097d6bbe05b79a521e33	aaaaa370-bb43-473c-a403-32274cd00314	nextflow run main.nf
+2021-06-21 13:47:00	7m 4s	irreverent_galileo	ERR	e774025bb27199293787b5928331cbe8	72d27a8a-0cbf-44dc-8713-787322995747	nextflow run main.nf
+2021-06-21 13:54:22	1h 37m 1s	confident_hugle	ERR	e774025bb27199293787b5928331cbe8	e72d1ad6-26e2-4a45-b7f3-7b6ab6228f2b	nextflow run main.nf
+2021-06-21 22:03:03	2d 3h 11m 54s	furious_laplace	OK	e774025bb27199293787b5928331cbe8	bbe92cf9-2249-46bc-ab79-1311ebe59af0	nextflow run main.nf
