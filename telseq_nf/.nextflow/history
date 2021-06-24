@@ -15,3 +15,11 @@
 2021-06-06 20:01:50	1.5s	goofy_davinci	OK	a9a1df5ec6452b70b89c34a9659e4d6b	15ea83d0-16b7-4d91-9a7b-81221cbe0f47	nextflow main.nf --file /home/bhats/thesis/worm/telseq_nf/data/bam/LSJ1.bam
 2021-06-14 12:37:15	1.5s	lethal_minsky	ERR	a9a1df5ec6452b70b89c34a9659e4d6b	13767d5d-f921-4b57-8242-c4a56e6b548f	nextflow main.nf
 2021-06-15 01:46:18	2.4s	gigantic_ritchie	OK	a9a1df5ec6452b70b89c34a9659e4d6b	3b799ff2-6966-407b-9550-c86157edd9b8	nextflow main.nf
+2021-06-24 10:15:45	-	disturbed_sanger	-	d3d7adc3dc3575824656de8375575577	25ec9881-a4f9-46c0-98c9-4b297ffd53a7	nextflow run main.nf
+2021-06-24 10:18:58	49.3s	berserk_saha	ERR	d3d7adc3dc3575824656de8375575577	7277efe0-8f25-46a0-ad07-ad36e5f724f8	nextflow run main.nf
+2021-06-24 10:20:32	5.2s	scruffy_ritchie	ERR	d3d7adc3dc3575824656de8375575577	d658c052-4084-4de6-bc6c-ebeea46fd25b	nextflow run main.nf
+2021-06-24 10:25:53	5.5s	soggy_varahamihira	ERR	d3d7adc3dc3575824656de8375575577	a1cec9a2-9762-4820-b444-868c0e4f791e	nextflow run main.nf
+2021-06-24 10:40:23	5.6s	extravagant_payne	ERR	d3d7adc3dc3575824656de8375575577	9f7081f2-e363-49e2-ad12-765a43c0b09d	nextflow run main.nf
+2021-06-24 10:42:20	-	pensive_galileo	-	859967d5cd2e3e4faac389d76352f61c	cb194f7f-0e4a-42b1-9f47-fc0b0043fc19	nextflow run main.nf
+2021-06-24 10:47:56	6.4s	admiring_curie	ERR	700f325911c450313a5fa76a7a5b7b88	54a5466e-3ae2-4446-83fc-b6cbffe83191	nextflow run main.nf
+2021-06-24 11:08:48	6s	pensive_cantor	OK	8c25d45cd5267c017fdcf57d40f81538	5f4794d8-375f-4aab-8292-26d84fca2380	nextflow run main.nf
