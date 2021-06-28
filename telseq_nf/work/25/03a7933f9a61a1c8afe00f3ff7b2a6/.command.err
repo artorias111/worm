@@ -1,8 +1,0 @@
-use user specified pattern TTAGGC
-reverse complement GCCTAA
-Start analysing BAM AB1.bam
-Treat all reads in BAM as if they were from a same sample
-[scan] total reads in BAM scanned 50036
-Completed scanning BAM
-Completed writing results
-[timer - scan BAM] wall clock: 0.50s CPU: 0.42s
