@@ -1,5 +1,3 @@
 *.log
 *.nextflow.log
 *.nextflow.log.*
-
-/data/test_bam/*
