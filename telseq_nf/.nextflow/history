@@ -23,3 +23,5 @@
 2021-06-24 10:42:20	-	pensive_galileo	-	859967d5cd2e3e4faac389d76352f61c	cb194f7f-0e4a-42b1-9f47-fc0b0043fc19	nextflow run main.nf
 2021-06-24 10:47:56	6.4s	admiring_curie	ERR	700f325911c450313a5fa76a7a5b7b88	54a5466e-3ae2-4446-83fc-b6cbffe83191	nextflow run main.nf
 2021-06-24 11:08:48	6s	pensive_cantor	OK	8c25d45cd5267c017fdcf57d40f81538	5f4794d8-375f-4aab-8292-26d84fca2380	nextflow run main.nf
+2021-06-29 01:17:07	15m 51s	shrivelled_poisson	OK	7918d9425217be1ce1006eac0d539e7d	a85dcb12-09e5-491c-beaa-dfb597306ac3	nextflow run main.nf
+2021-06-29 02:58:44	22h 46m 54s	trusting_tuckerman	OK	e9a4042591b7bee71e3cc10fbfba5bf4	e02d95dc-439f-4204-b3bb-d73b1dd6d61d	nextflow run main.nf

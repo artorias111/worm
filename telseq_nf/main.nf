@@ -1,7 +1,7 @@
 date = new Date().format( 'yyyyMMdd' )
 params.out = "TELOMERE-${date}"
 params.bam = "/projects/b1059/data/c_elegans/WI/alignments/*.{bam,bam.bai}"
-//params.bam = "/projects/b1059/projects/Shriram/worm/test_data/bam/*{.bam,bam.bai}"
+//params.bam = "/projects/b1059/projects/Shriram/worm/data/test_bam/*{.bam,bam.bai}"
 
 Channel.fromFilePairs(params.bam)
        .map{it -> [it[0], it[1][0], it[1][1]]}
@@ -9,6 +9,7 @@ Channel.fromFilePairs(params.bam)
 
 process call_telseq{
     publishDir "${params.out}/individual", mode: 'copy'
+    cpus 4
     tag{SM}
     input:
         set val(SM), file("${SM}.bam"), file("${SM}.bam.bai") from bam_individual
@@ -29,6 +30,6 @@ process combine_telseq{
 
     '''
         telseq -h > telseq.tsv
-        cat ind_telseq*.txt | egrep -v '\\[|BAMs' >> telseq.tsv
+        cat ind_telseq*.txt >> telseq.tsv
     '''
 }
