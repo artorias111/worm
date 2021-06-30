@@ -1,0 +1,7 @@
+ECA1406
+ECA2677
+ECA2678
+ECA2679
+ECA2686
+
+(BAM files present, not in the isotype list)
