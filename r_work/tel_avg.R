@@ -16,7 +16,6 @@ telfinal %>% inner_join(isotype)
 #Find the mean length for each isotype
 new_tel<-telfinal %>% group_by(isotype) %>% summarise(mean_length = mean(length_estimate))
 
-
 #Rescaling to celegans length from human length
 #human c value : (332720800/46000)
 #celegans c value : ((5808700/12000))
