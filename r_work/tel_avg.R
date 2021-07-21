@@ -8,6 +8,7 @@ isotype <- as_tibble(isotype)
 
 #Cleaning up tel
 tel <- tel %>% mutate(strain_new = str_replace(strain, ".bam", ""))
+tel <- tel %>% mutate(strain_new = str_replace(strain_new, "\\[", ""))
 telfinal <- tel %>% rename(length_estimate=LENGTH_ESTIMATE)
 
 #Combine the two tibbles with a common column
