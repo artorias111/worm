@@ -1,0 +1,13 @@
+# 332720800 = # sum of 100-bp windows with 48-52% GC content in human
+# 5808700 = # sum of 100-bp windows with 48-52% GC content in C. elegans
+# LENGTH_ESTIMATE = estimate output by telseq (in kb)
+# In this calculation we are dividing the length estimate by human GC / (46 ends * 1 kb), 
+# then rescaling this by multiplying it by the C. elegans (GC / 12 ends * 1 kb)
+telomere_length = ((LENGTH_ESTIMATE) / (332720800/46000)) * (5808700/12000)) 
+
+# Sorry for the confusing mix of kb / bp units; At the time it made sense to me for some reason. You get the same result if you do:
+telomere_length = ((LENGTH_ESTIMATE) / (332720800/46)) * (5808700/12)) 
+# The bottom line is that you are calculating the length of GC-windows with 48-52% over the total length. We divide human length by c and rescale with the C. elegans c.
+# Here is a full example
+# Lets say you have a human telomere estimate of 70 kb:
+--> (70 kb / (332720800 bp /46000 bp)) * (5808700 bp /12000 bp) = 4.68 kb in c. elegans
