@@ -1,7 +1,7 @@
 from Bio import SeqIO
 import re
 
-ref = SeqIO.index("WBcel235.fa.gz", 'fasta')
+ref = SeqIO.index("/projects/b1059/data/c_tropicalis/genomes/PRJNA53597/WS276/c_tropicalis.PRJNA53597.WS276.genome.fa.gz", 'fasta')
 
 gc_counter = 0
 for k in ref:
