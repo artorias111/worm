@@ -1,3 +1,4 @@
 *.log
 *.nextflow.log
 *.nextflow.log.*
+.Rproj.user
