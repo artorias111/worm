@@ -15,9 +15,12 @@ for k in ref:
         rl = len(seq_bin)
         gcCount = len(re.findall("[GC]", seq_bin))
         totalBaseCount = len(re.findall("[GCTA]", seq_bin))
-        gcFraction = float(gcCount) / totalBaseCount
+        if (totalBaseCount==0):
+            continue
+        gcFraction = float(gcCount) / totalBaseCount #Error : total base count is still 0
         if 0.52 >= gcFraction >= 0.48:
             gc_counter += 100
             print k, gc_counter
         start += 100
         end += 100
+ 
