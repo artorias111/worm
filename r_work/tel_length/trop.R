@@ -26,3 +26,7 @@ tel <- tel %>% mutate(strain_new = str_replace(strain, ".bam", ""))
 tel <- tel %>% mutate(strain_new = str_replace(strain_new, "\\[", ""))
 
 tel <- tel %>% select(strain_new,Length_estimate)
+
+#Find the equivalent lengths for ctropicalis
+tel %>% mutate(ctrop_val=(Length_estimate/(332720800/46000)) * (5350700/12000))
+final <- tel %>% mutate(ctrop_val_rounded=round(ctrop_val,0))

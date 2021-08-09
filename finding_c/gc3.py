@@ -1,5 +1,9 @@
+#A script to find the sum of 100-bp windows with %gc of 48<%gc<52 from the genome.fa.gz
+
 #5808700 - elegans
 #5350700 - tropicalis
+#7484400 - briggsae
+
 
 from Bio import SeqIO
 from Bio.SeqUtils import GC
@@ -7,7 +11,7 @@ from Bio.SeqUtils import GC
 import re
 
 #ref = SeqIO.index('/projects/b1059/data/c_tropicalis/genomes/PRJNA53597/WS276/c_tropicalis.PRJNA53597.WS276.genome.fa.gz','fasta')
-ref=SeqIO.index('/home/bhats/thesis/data/genomes/c_tropicalis.PRJNA53597.WS276.genome.fa.gz','fasta')
+ref=SeqIO.index('/home/bhats/thesis/data/genomes/c_briggsae.PRJNA10731.WS276.genome.fa.gz','fasta')
 
 gc=0
 
