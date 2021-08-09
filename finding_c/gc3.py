@@ -9,8 +9,10 @@ gc=0
 
 for i in ref:
     seq = str(ref[i].seq).upper()
-    start,end=0,l00
+    start,end=0,100
     while(True):
+        if(len(seq[start:end])!=100):
+            break
         gc_fraction=GC(seq[start:end])
         if(gc_fraction<=0.52 and gc_fraction>=0.48):
             gc+=100
