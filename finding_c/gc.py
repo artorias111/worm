@@ -1,3 +1,6 @@
+#5808700 - elegans
+#53507 - tropicalis
+
 from Bio import SeqIO
 import re
 
