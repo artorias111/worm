@@ -16,7 +16,7 @@ for i in ref:
         gc_fraction=GC(seq[start:end])
         if(gc_fraction<=0.52 and gc_fraction>=0.48):
             gc+=100
-        start+=100
-        end+=100
+        start=start+100
+        end=end+100
     
-    print(gc)
+print(gc)
