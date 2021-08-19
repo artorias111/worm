@@ -11,3 +11,5 @@ telomere_length = ((LENGTH_ESTIMATE) / (332720800/46)) * (5808700/12))
 # Here is a full example
 # Lets say you have a human telomere estimate of 70 kb:
 --> (70 kb / (332720800 bp /46000 bp)) * (5808700 bp /12000 bp) = 4.68 kb in c. elegans
+
+/projects/b1059/data/c_briggsae/genomes/PRJNA10731/WS276/c_briggsae.PRJNA10731.WS276.genome.fa.gz
