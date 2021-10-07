@@ -1,2 +1,0 @@
-[ECA640.bam]
-1 BAMs

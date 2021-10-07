@@ -1,0 +1,4143 @@
+N E X T F L O W  ~  version 21.04.0
+Launching `main.nf` [friendly_elion] - revision: 04d98366de
+[-        ] process > call_telseq -
+
+[-        ] process > call_telseq    -
+[-        ] process > combine_telseq -
+
+[-        ] process > call_telseq    [  0%] 0 of 5
+[-        ] process > combine_telseq -
+
+executor >  local (1)
+[f3/3074c9] process > call_telseq (NIC1284) [  0%] 0 of 35
+[-        ] process > combine_telseq        -
+
+executor >  local (6)
+[2a/b9be2f] process > call_telseq (NIC1930) [  0%] 0 of 58
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 84
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 111
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 134
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 167
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 192
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 224
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 247
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 266
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 303
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 310
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 345
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 378
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 410
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 453
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 487
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 518
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 550
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 586
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 627
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 659
+[-        ] process > combine_telseq        -
+
+executor >  local (7)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 0 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (8)
+[0f/54bc27] process > call_telseq (NIC1181) [  0%] 0 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (8)
+[be/c478b2] process > call_telseq (ECA2087) [  0%] 1 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (9)
+[f3/3074c9] process > call_telseq (NIC1284) [  0%] 2 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (9)
+[f3/3074c9] process > call_telseq (NIC1284) [  0%] 2 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (10)
+[df/acadda] process > call_telseq (NIC424)  [  0%] 3 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (10)
+[df/acadda] process > call_telseq (NIC424)  [  0%] 3 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (11)
+[1e/b9bfe9] process > call_telseq (QG3808)  [  1%] 4 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (12)
+[3e/06a6e8] process > call_telseq (QG3854) [  1%] 5 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (13)
+[8a/db0ef4] process > call_telseq (NIC1153) [  1%] 6 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (13)
+[8a/db0ef4] process > call_telseq (NIC1153) [  1%] 6 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (14)
+[73/96fe04] process > call_telseq (NIC1878) [  1%] 7 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (15)
+[b0/bef8a2] process > call_telseq (QG3880)  [  1%] 8 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (16)
+[d1/4d0770] process > call_telseq (NIC1355) [  1%] 9 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (17)
+[49/cbd7ec] process > call_telseq (NIC1321) [  1%] 10 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (18)
+[47/96e793] process > call_telseq (QG942) [  2%] 11 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (19)
+[39/1733fe] process > call_telseq (NIC905) [  2%] 12 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (20)
+[92/c6a96b] process > call_telseq (NIC1913) [  2%] 13 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (20)
+[92/c6a96b] process > call_telseq (NIC1913) [  2%] 13 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (21)
+[cc/fd7537] process > call_telseq (NIC458) [  2%] 14 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (22)
+[10/49a3d5] process > call_telseq (NIC585) [  2%] 15 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (23)
+[8a/db0ef4] process > call_telseq (NIC1153) [  2%] 16 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (23)
+[8a/db0ef4] process > call_telseq (NIC1153) [  2%] 16 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (24)
+[78/c0ff1e] process > call_telseq (NIC1163) [  3%] 17 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (24)
+[78/c0ff1e] process > call_telseq (NIC1163) [  3%] 17 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (25)
+[29/d96fb2] process > call_telseq (NIC441) [  3%] 18 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (25)
+[92/c6a96b] process > call_telseq (NIC1913) [  3%] 19 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (26)
+[fe/a1ea99] process > call_telseq (NIC942)  [  3%] 19 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (27)
+[dd/23b5c0] process > call_telseq (NIC1417) [  3%] 20 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (27)
+[dd/23b5c0] process > call_telseq (NIC1417) [  3%] 20 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (28)
+[3e/c00510] process > call_telseq (NIC1344) [  3%] 21 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (29)
+[9c/09b08a] process > call_telseq (NIC378) [  3%] 22 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (29)
+[9c/09b08a] process > call_telseq (NIC378) [  3%] 22 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (30)
+[e4/c731c5] process > call_telseq (NIC1276) [  3%] 23 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (31)
+[72/df20fe] process > call_telseq (NIC1928) [  4%] 24 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (31)
+[72/df20fe] process > call_telseq (NIC1928) [  4%] 24 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (32)
+[94/abecce] process > call_telseq (ECA1481) [  4%] 25 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (33)
+[64/b239bd] process > call_telseq (NIC383) [  4%] 26 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (33)
+[64/b239bd] process > call_telseq (NIC383) [  4%] 26 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (33)
+[dd/23b5c0] process > call_telseq (NIC1417) [  4%] 27 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (34)
+[e5/70978f] process > call_telseq (NIC1372) [  4%] 27 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (35)
+[40/79ef63] process > call_telseq (NIC1278) [  4%] 28 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (36)
+[e5/818a00] process > call_telseq (QG3817)  [  4%] 29 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (36)
+[e5/818a00] process > call_telseq (QG3817)  [  4%] 29 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (37)
+[ff/bc8a00] process > call_telseq (NIC1029) [  4%] 30 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (38)
+[06/d2ba19] process > call_telseq (NIC567) [  5%] 31 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (39)
+[f7/805576] process > call_telseq (NIC1649) [  5%] 32 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (40)
+[1e/679b03] process > call_telseq (NIC1938) [  5%] 33 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (40)
+[1e/679b03] process > call_telseq (NIC1938) [  5%] 33 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (41)
+[97/cf76c8] process > call_telseq (QG2904) [  5%] 34 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (42)
+[38/556155] process > call_telseq (JU1428) [  5%] 35 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (43)
+[b1/1e5f75] process > call_telseq (NIC1433) [  5%] 36 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (44)
+[c5/b0a571] process > call_telseq (QG131) [  6%] 37 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (45)
+[57/1268bc] process > call_telseq (QG2726) [  6%] 38 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (46)
+[c6/770b2e] process > call_telseq (NIC916) [  6%] 39 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (47)
+[50/67edbc] process > call_telseq (QG3847) [  6%] 40 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (47)
+[50/67edbc] process > call_telseq (QG3847) [  6%] 40 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (48)
+[a4/63cfc3] process > call_telseq (NIC894) [  6%] 41 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (48)
+[a4/63cfc3] process > call_telseq (NIC894) [  6%] 41 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (49)
+[3e/bd3242] process > call_telseq (ECA800) [  6%] 42 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (50)
+[4e/0d02e6] process > call_telseq (NIC1436) [  6%] 43 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (51)
+[b8/8ab308] process > call_telseq (QG3036) [  7%] 44 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (51)
+[c5/b0a571] process > call_telseq (QG131) [  7%] 45 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (52)
+[72/c1b40e] process > call_telseq (QG3846) [  7%] 45 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (53)
+[76/69bb3d] process > call_telseq (NIC1559) [  7%] 46 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (53)
+[3e/bd3242] process > call_telseq (ECA800) [  7%] 47 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (54)
+[13/8128ad] process > call_telseq (NIC1404) [  7%] 47 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (55)
+[84/bf3e22] process > call_telseq (QG3535)  [  7%] 48 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (55)
+[84/bf3e22] process > call_telseq (QG3535)  [  7%] 48 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (55)
+[4e/0d02e6] process > call_telseq (NIC1436) [  7%] 49 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (56)
+[13/4e0803] process > call_telseq (QG3548)  [  7%] 49 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (57)
+[c1/cf72df] process > call_telseq (NIC1313) [  7%] 50 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (57)
+[c1/cf72df] process > call_telseq (NIC1313) [  7%] 50 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (58)
+[40/ea6125] process > call_telseq (NIC393) [  8%] 51 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (58)
+[40/ea6125] process > call_telseq (NIC393) [  8%] 51 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (59)
+[b3/b29268] process > call_telseq (NIC1410) [  8%] 52 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (60)
+[74/7bea27] process > call_telseq (NIC1144) [  8%] 53 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (60)
+[74/7bea27] process > call_telseq (NIC1144) [  8%] 53 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (61)
+[9e/05c551] process > call_telseq (NIC1175) [  8%] 54 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (61)
+[9e/05c551] process > call_telseq (NIC1175) [  8%] 54 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (62)
+[2b/43f553] process > call_telseq (QG3872) [  8%] 55 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (63)
+[d2/355a19] process > call_telseq (NIC1586) [  8%] 56 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (63)
+[d2/355a19] process > call_telseq (NIC1586) [  8%] 56 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (64)
+[3d/eb0725] process > call_telseq (JU1851) [  9%] 57 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (64)
+[40/ea6125] process > call_telseq (NIC393) [  9%] 58 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (65)
+[a5/2b46b1] process > call_telseq (NIC311) [  9%] 58 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (66)
+[39/e932a5] process > call_telseq (NIC1564) [  9%] 59 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (67)
+[15/f9910c] process > call_telseq (NIC1151) [  9%] 60 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (68)
+[65/c060f7] process > call_telseq (NIC1912) [  9%] 61 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (69)
+[fe/e8ec25] process > call_telseq (ECA1307) [  9%] 62 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (69)
+[fe/e8ec25] process > call_telseq (ECA1307) [  9%] 62 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (70)
+[41/2a8569] process > call_telseq (QG3831)  [  9%] 63 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (70)
+[41/2a8569] process > call_telseq (QG3831)  [  9%] 63 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (71)
+[c9/04c76c] process > call_telseq (NIC752) [ 10%] 64 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (72)
+[33/f3afa8] process > call_telseq (QG3790) [ 10%] 65 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (72)
+[33/f3afa8] process > call_telseq (QG3790) [ 10%] 65 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (73)
+[66/8a450b] process > call_telseq (QG846)  [ 10%] 66 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (74)
+[dc/0e238a] process > call_telseq (JU1430) [ 10%] 67 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (75)
+[e6/3629fe] process > call_telseq (QG3793) [ 10%] 68 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (76)
+[3f/c71beb] process > call_telseq (QG2725) [ 10%] 69 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (76)
+[3f/c71beb] process > call_telseq (QG2725) [ 10%] 69 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (77)
+[de/b9fae7] process > call_telseq (NIC1657) [ 10%] 70 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (77)
+[de/b9fae7] process > call_telseq (NIC1657) [ 10%] 70 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (77)
+[66/8a450b] process > call_telseq (QG846) [ 11%] 71 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (78)
+[a7/9dd1ed] process > call_telseq (NIC359) [ 11%] 71 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (79)
+[b5/9d6651] process > call_telseq (NIC1016) [ 11%] 72 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (79)
+[b5/9d6651] process > call_telseq (NIC1016) [ 11%] 72 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (80)
+[b3/9708ef] process > call_telseq (NIC927) [ 11%] 73 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (81)
+[0b/c331be] process > call_telseq (QG2699) [ 11%] 74 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (81)
+[0b/c331be] process > call_telseq (QG2699) [ 11%] 74 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (82)
+[34/620717] process > call_telseq (NIC1116) [ 11%] 75 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (82)
+[34/620717] process > call_telseq (NIC1116) [ 11%] 75 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (83)
+[1f/40b1df] process > call_telseq (QG852)   [ 11%] 76 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (84)
+[20/5b5eaa] process > call_telseq (NIC912) [ 11%] 77 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (84)
+[20/5b5eaa] process > call_telseq (NIC912) [ 11%] 77 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (85)
+[55/d9b63a] process > call_telseq (ECA1311) [ 12%] 78 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (86)
+[8e/8c4e9a] process > call_telseq (NIC586)  [ 12%] 79 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (86)
+[8e/8c4e9a] process > call_telseq (NIC586)  [ 12%] 79 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (87)
+[2f/3e6c6b] process > call_telseq (NIC1644) [ 12%] 80 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (87)
+[2f/3e6c6b] process > call_telseq (NIC1644) [ 12%] 80 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (87)
+[20/5b5eaa] process > call_telseq (NIC912) [ 12%] 81 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (88)
+[9a/2be301] process > call_telseq (NIC1341) [ 12%] 81 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (89)
+[6d/93ba1a] process > call_telseq (QG2896) [ 12%] 82 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (89)
+[6d/93ba1a] process > call_telseq (QG2896) [ 12%] 82 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (90)
+[96/9cc32c] process > call_telseq (NIC1383) [ 12%] 83 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (91)
+[d3/133f3d] process > call_telseq (NIC409) [ 13%] 84 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (91)
+[d3/133f3d] process > call_telseq (NIC409) [ 13%] 84 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (92)
+[e3/f93b42] process > call_telseq (NIC1177) [ 13%] 85 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (92)
+[2f/3e6c6b] process > call_telseq (NIC1644) [ 13%] 86 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (93)
+[83/8d0306] process > call_telseq (JU1373)  [ 13%] 86 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (94)
+[a9/321886] process > call_telseq (NIC1152) [ 13%] 87 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (95)
+[25/0f8091] process > call_telseq (QG843) [ 13%] 88 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (95)
+[96/9cc32c] process > call_telseq (NIC1383) [ 13%] 89 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (96)
+[f5/dea45a] process > call_telseq (QG3522)  [ 13%] 89 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (97)
+[8a/d3f48f] process > call_telseq (NIC1837) [ 13%] 90 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (97)
+[8a/d3f48f] process > call_telseq (NIC1837) [ 13%] 90 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (98)
+[09/4c7e1f] process > call_telseq (NIC1585) [ 14%] 91 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (98)
+[09/4c7e1f] process > call_telseq (NIC1585) [ 14%] 91 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (99)
+[79/4a8607] process > call_telseq (NIC999) [ 14%] 92 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (100)
+[79/279a82] process > call_telseq (NIC1395) [ 14%] 93 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (101)
+[dc/b914d6] process > call_telseq (QG3521) [ 14%] 94 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (101)
+[dc/b914d6] process > call_telseq (QG3521) [ 14%] 94 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (102)
+[b7/25f62b] process > call_telseq (QG2749) [ 14%] 95 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (102)
+[b7/25f62b] process > call_telseq (QG2749) [ 14%] 95 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (102)
+[e3/f93b42] process > call_telseq (NIC1177) [ 14%] 96 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (103)
+[1e/3d5a52] process > call_telseq (NIC1960) [ 14%] 96 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (104)
+[2d/6e2a33] process > call_telseq (NIC1556) [ 14%] 97 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (105)
+[44/8bce7d] process > call_telseq (NIC965)  [ 15%] 98 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (106)
+[ca/a292fe] process > call_telseq (NIC953) [ 15%] 99 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (107)
+[de/578cc5] process > call_telseq (NIC1171) [ 15%] 100 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (107)
+[de/578cc5] process > call_telseq (NIC1171) [ 15%] 100 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (108)
+[c1/253c24] process > call_telseq (NIC280) [ 15%] 101 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (109)
+[14/879534] process > call_telseq (NIC408) [ 15%] 102 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (110)
+[99/87a2fe] process > call_telseq (NIC936) [ 15%] 103 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (111)
+[c3/58ad79] process > call_telseq (ECA1579) [ 16%] 104 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (112)
+[c5/777989] process > call_telseq (JU1636) [ 16%] 105 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (113)
+[2d/6ca390] process > call_telseq (NIC972) [ 16%] 106 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (114)
+[bd/5d4604] process > call_telseq (NIC1162) [ 16%] 107 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (115)
+[3e/227995] process > call_telseq (QG3539) [ 16%] 108 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (115)
+[3e/227995] process > call_telseq (QG3539) [ 16%] 108 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (116)
+[9c/da72cf] process > call_telseq (NIC1392) [ 16%] 109 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (116)
+[9c/da72cf] process > call_telseq (NIC1392) [ 16%] 109 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (117)
+[66/f5b627] process > call_telseq (QG844) [ 16%] 110 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (118)
+[13/18be30] process > call_telseq (NIC300) [ 17%] 111 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (118)
+[13/18be30] process > call_telseq (NIC300) [ 17%] 111 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (118)
+[c5/777989] process > call_telseq (JU1636) [ 17%] 112 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (119)
+[be/505648] process > call_telseq (NIC1167) [ 17%] 112 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (120)
+[ba/16dab9] process > call_telseq (NIC570) [ 17%] 113 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (121)
+[53/94f311] process > call_telseq (NIC344) [ 17%] 114 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (121)
+[53/94f311] process > call_telseq (NIC344) [ 17%] 114 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (122)
+[98/cdeefb] process > call_telseq (NIC961) [ 17%] 115 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (122)
+[98/cdeefb] process > call_telseq (NIC961) [ 17%] 115 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (123)
+[a0/f689c2] process > call_telseq (NIC989) [ 17%] 116 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (123)
+[9c/da72cf] process > call_telseq (NIC1392) [ 17%] 117 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (124)
+[3b/0f1dc7] process > call_telseq (NIC1146) [ 17%] 117 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (125)
+[01/252d28] process > call_telseq (NIC1950) [ 18%] 118 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (126)
+[74/beef18] process > call_telseq (NIC939) [ 18%] 119 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (127)
+[6d/4fe72c] process > call_telseq (NIC1376) [ 18%] 120 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (128)
+[af/84488c] process > call_telseq (NIC375) [ 18%] 121 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (128)
+[af/84488c] process > call_telseq (NIC375) [ 18%] 121 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (129)
+[7b/42188c] process > call_telseq (NIC247) [ 18%] 122 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (130)
+[16/db140d] process > call_telseq (NIC365) [ 18%] 123 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (131)
+[c9/2ba753] process > call_telseq (JU1640) [ 19%] 124 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (131)
+[c9/2ba753] process > call_telseq (JU1640) [ 19%] 124 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (131)
+[a0/f689c2] process > call_telseq (NIC989) [ 19%] 125 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (132)
+[3a/02f3d4] process > call_telseq (NIC1270) [ 19%] 125 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (133)
+[e9/106509] process > call_telseq (NIC993)  [ 19%] 126 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (134)
+[68/811b66] process > call_telseq (NIC1161) [ 19%] 127 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (135)
+[90/a8ee5a] process > call_telseq (QG834) [ 19%] 128 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (135)
+[68/811b66] process > call_telseq (NIC1161) [ 19%] 129 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (136)
+[92/0a14b5] process > call_telseq (NIC1368) [ 19%] 129 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (136)
+[c9/2ba753] process > call_telseq (JU1640)  [ 19%] 130 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (137)
+[23/609070] process > call_telseq (JU1846)  [ 19%] 130 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (137)
+[7b/42188c] process > call_telseq (NIC247) [ 20%] 131 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (138)
+[99/ffd18d] process > call_telseq (NIC598) [ 20%] 131 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (139)
+[16/db140d] process > call_telseq (NIC365) [ 20%] 132 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (139)
+[fe/bd2b4e] process > call_telseq (QG3520) [ 20%] 132 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (140)
+[60/b6b276] process > call_telseq (NIC286) [ 20%] 133 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (141)
+[9f/2d38c5] process > call_telseq (NIC1015) [ 20%] 134 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (141)
+[9f/2d38c5] process > call_telseq (NIC1015) [ 20%] 134 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (142)
+[d2/2be66a] process > call_telseq (NIC1188) [ 20%] 135 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (143)
+[8c/a5f9fb] process > call_telseq (BRC20391) [ 20%] 136 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (143)
+[92/0a14b5] process > call_telseq (NIC1368)  [ 20%] 137 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (144)
+[86/de269d] process > call_telseq (NIC959)   [ 20%] 137 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (145)
+[22/2fdcc3] process > call_telseq (NIC1285) [ 21%] 138 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (145)
+[22/2fdcc3] process > call_telseq (NIC1285) [ 21%] 138 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (146)
+[50/041e3e] process > call_telseq (NIC1378) [ 21%] 139 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (146)
+[50/041e3e] process > call_telseq (NIC1378) [ 21%] 139 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (147)
+[2c/4b4d40] process > call_telseq (NIC1477) [ 21%] 140 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (147)
+[2c/4b4d40] process > call_telseq (NIC1477) [ 21%] 140 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (148)
+[7e/d8bce0] process > call_telseq (QG3869) [ 21%] 141 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (148)
+[7e/d8bce0] process > call_telseq (QG3869) [ 21%] 141 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (149)
+[5a/a432ae] process > call_telseq (NIC1881) [ 21%] 142 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (149)
+[5a/a432ae] process > call_telseq (NIC1881) [ 21%] 142 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (149)
+[90/a8ee5a] process > call_telseq (QG834) [ 21%] 143 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (150)
+[c0/99120b] process > call_telseq (NIC426) [ 21%] 143 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (151)
+[7e/d8bce0] process > call_telseq (QG3869) [ 21%] 144 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (151)
+[7e/d8bce0] process > call_telseq (QG3869) [ 21%] 144 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (152)
+[29/defbc5] process > call_telseq (NIC1976) [ 22%] 145 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (152)
+[29/defbc5] process > call_telseq (NIC1976) [ 22%] 145 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (153)
+[93/4b9d52] process > call_telseq (ECA804) [ 22%] 146 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (154)
+[a7/f66a50] process > call_telseq (NIC1149) [ 22%] 147 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (154)
+[a7/f66a50] process > call_telseq (NIC1149) [ 22%] 147 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (155)
+[a3/2723a0] process > call_telseq (ECA790) [ 22%] 148 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (156)
+[bb/742588] process > call_telseq (NIC55) [ 22%] 149 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (156)
+[bb/742588] process > call_telseq (NIC55) [ 22%] 149 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (157)
+[74/b62ab4] process > call_telseq (QG2897) [ 22%] 150 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (157)
+[74/b62ab4] process > call_telseq (QG2897) [ 22%] 150 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (158)
+[63/660369] process > call_telseq (NIC1382) [ 23%] 151 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (159)
+[e2/be808f] process > call_telseq (QG3064) [ 23%] 152 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (159)
+[e2/be808f] process > call_telseq (QG3064) [ 23%] 152 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (160)
+[75/ecb151] process > call_telseq (NIC987) [ 23%] 153 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (160)
+[75/ecb151] process > call_telseq (NIC987) [ 23%] 153 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (160)
+[d2/2be66a] process > call_telseq (NIC1188) [ 23%] 154 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (161)
+[d1/0f7689] process > call_telseq (NIC1694) [ 23%] 154 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (161)
+[3b/320a42] process > call_telseq (NIC1467) [ 23%] 155 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (162)
+[6e/7226a0] process > call_telseq (NIC925)  [ 23%] 155 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (163)
+[fe/59078e] process > call_telseq (ECA1518) [ 23%] 156 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (164)
+[98/d6334c] process > call_telseq (NIC1168) [ 23%] 157 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (164)
+[98/d6334c] process > call_telseq (NIC1168) [ 23%] 157 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (165)
+[50/b39bb6] process > call_telseq (NIC950)  [ 24%] 158 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (166)
+[6b/adce15] process > call_telseq (QG3848) [ 24%] 159 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (167)
+[87/6fcd60] process > call_telseq (QG3791) [ 24%] 160 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (167)
+[87/6fcd60] process > call_telseq (QG3791) [ 24%] 160 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (168)
+[23/5a1883] process > call_telseq (NIC1300) [ 24%] 161 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (169)
+[51/20468b] process > call_telseq (NIC56) [ 24%] 162 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (170)
+[24/8cd861] process > call_telseq (NIC1648) [ 24%] 163 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (170)
+[6b/adce15] process > call_telseq (QG3848) [ 24%] 164 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (171)
+[11/bc9446] process > call_telseq (JU2752) [ 24%] 164 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (172)
+[99/00c9b5] process > call_telseq (NIC747) [ 25%] 165 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (172)
+[99/00c9b5] process > call_telseq (NIC747) [ 25%] 165 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (173)
+[af/3557f4] process > call_telseq (NIC1136) [ 25%] 166 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (174)
+[6e/8525d5] process > call_telseq (NIC58) [ 25%] 167 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (174)
+[6e/8525d5] process > call_telseq (NIC58) [ 25%] 167 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (175)
+[c5/71f908] process > call_telseq (NIC1133) [ 25%] 168 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (176)
+[c4/ff7bec] process > call_telseq (NIC1927) [ 25%] 169 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (177)
+[e2/569c81] process > call_telseq (NIC291) [ 25%] 170 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (178)
+[d5/c5ea31] process > call_telseq (QG823) [ 26%] 171 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (178)
+[d5/c5ea31] process > call_telseq (QG823) [ 26%] 171 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (179)
+[fc/064dbb] process > call_telseq (NIC948) [ 26%] 172 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (180)
+[53/ec91c1] process > call_telseq (NIC1156) [ 26%] 173 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (181)
+[a2/397ce8] process > call_telseq (NIC1169) [ 26%] 174 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (182)
+[5e/1533a9] process > call_telseq (NIC1545) [ 26%] 175 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (182)
+[5e/1533a9] process > call_telseq (NIC1545) [ 26%] 175 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (183)
+[95/b21132] process > call_telseq (NIC568) [ 26%] 176 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (183)
+[95/b21132] process > call_telseq (NIC568) [ 26%] 176 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (184)
+[0a/115e03] process > call_telseq (NIC1130) [ 26%] 177 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (184)
+[53/ec91c1] process > call_telseq (NIC1156) [ 27%] 178 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (185)
+[20/3a427e] process > call_telseq (NIC988)  [ 27%] 178 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (186)
+[6e/d2b9ef] process > call_telseq (NIC952)  [ 27%] 179 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (186)
+[d5/c5ea31] process > call_telseq (QG823) [ 27%] 180 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (187)
+[ea/174d43] process > call_telseq (NIC1656) [ 27%] 180 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (188)
+[be/9c95f0] process > call_telseq (NIC1012) [ 27%] 181 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (188)
+[0a/115e03] process > call_telseq (NIC1130) [ 27%] 182 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (189)
+[e1/ad7a97] process > call_telseq (NIC1335) [ 27%] 182 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (190)
+[04/3cd208] process > call_telseq (NIC1166) [ 27%] 183 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (190)
+[04/3cd208] process > call_telseq (NIC1166) [ 27%] 183 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (191)
+[9b/4f6a4c] process > call_telseq (NIC1193) [ 27%] 184 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (191)
+[9b/4f6a4c] process > call_telseq (NIC1193) [ 27%] 184 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (192)
+[29/adaa1b] process > call_telseq (NIC1337) [ 28%] 185 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (192)
+[29/adaa1b] process > call_telseq (NIC1337) [ 28%] 185 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (193)
+[b0/57a348] process > call_telseq (NIC478) [ 28%] 186 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (194)
+[ac/589f4c] process > call_telseq (QG981) [ 28%] 187 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (194)
+[ea/174d43] process > call_telseq (NIC1656) [ 28%] 188 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (195)
+[25/5e2e54] process > call_telseq (NIC938)  [ 28%] 188 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (196)
+[2e/35b25d] process > call_telseq (NIC1354) [ 28%] 189 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (196)
+[be/9c95f0] process > call_telseq (NIC1012) [ 28%] 190 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (197)
+[9c/ed75c1] process > call_telseq (NIC1370) [ 28%] 190 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (198)
+[d6/a8403a] process > call_telseq (QG842) [ 29%] 191 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (199)
+[14/30b629] process > call_telseq (NIC1338) [ 29%] 192 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (200)
+[3b/076b6d] process > call_telseq (NIC1419) [ 29%] 193 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (201)
+[17/c348a9] process > call_telseq (QG3805) [ 29%] 194 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (201)
+[9b/4f6a4c] process > call_telseq (NIC1193) [ 29%] 195 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (202)
+[c5/830d96] process > call_telseq (NIC1165) [ 29%] 195 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (202)
+[14/30b629] process > call_telseq (NIC1338) [ 29%] 196 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (203)
+[08/64cb97] process > call_telseq (NIC1534) [ 29%] 196 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (204)
+[1c/bf6b17] process > call_telseq (QG3799) [ 29%] 197 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (204)
+[1c/bf6b17] process > call_telseq (QG3799) [ 29%] 197 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (205)
+[67/340826] process > call_telseq (NIC1473) [ 30%] 198 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (206)
+[71/c79e8d] process > call_telseq (NIC1391) [ 30%] 199 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (206)
+[c5/830d96] process > call_telseq (NIC1165) [ 30%] 200 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (207)
+[80/cf0706] process > call_telseq (NIC387)  [ 30%] 200 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (208)
+[7a/2ddc42] process > call_telseq (QG3860) [ 30%] 201 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (209)
+[26/7ba0e9] process > call_telseq (QG3877) [ 30%] 202 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (209)
+[26/7ba0e9] process > call_telseq (QG3877) [ 30%] 202 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (210)
+[75/e65ca1] process > call_telseq (NIC1915) [ 30%] 203 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (211)
+[34/ed175c] process > call_telseq (QG2898) [ 30%] 204 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (212)
+[39/a9a3c4] process > call_telseq (QG3802) [ 31%] 205 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (212)
+[39/a9a3c4] process > call_telseq (QG3802) [ 31%] 205 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (213)
+[5f/9b13f9] process > call_telseq (JU1839) [ 31%] 206 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (213)
+[5f/9b13f9] process > call_telseq (JU1839) [ 31%] 206 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (214)
+[2f/4f83a9] process > call_telseq (QG2772) [ 31%] 207 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (215)
+[90/77d58f] process > call_telseq (QG3844) [ 31%] 208 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (216)
+[de/874c5b] process > call_telseq (JU1975) [ 31%] 209 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (216)
+[de/874c5b] process > call_telseq (JU1975) [ 31%] 209 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (217)
+[15/eb5c7e] process > call_telseq (NIC1650) [ 31%] 210 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (217)
+[15/eb5c7e] process > call_telseq (NIC1650) [ 31%] 210 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (218)
+[32/53fa2c] process > call_telseq (NIC1328) [ 31%] 211 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (218)
+[90/77d58f] process > call_telseq (QG3844) [ 32%] 212 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (219)
+[f4/b2c839] process > call_telseq (NIC572) [ 32%] 212 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (220)
+[2d/df6f9d] process > call_telseq (JU1631) [ 32%] 213 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (220)
+[26/7ba0e9] process > call_telseq (QG3877) [ 32%] 214 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (221)
+[fe/0c9a29] process > call_telseq (ECA1451) [ 32%] 214 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (222)
+[53/850774] process > call_telseq (NIC1277) [ 32%] 215 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (222)
+[53/850774] process > call_telseq (NIC1277) [ 32%] 215 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (223)
+[4f/26f765] process > call_telseq (NIC775) [ 32%] 216 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (223)
+[4f/26f765] process > call_telseq (NIC775) [ 32%] 216 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (224)
+[3a/c53924] process > call_telseq (NIC390) [ 32%] 217 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (224)
+[3a/c53924] process > call_telseq (NIC390) [ 32%] 217 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (225)
+[ac/33f7a4] process > call_telseq (QG921) [ 33%] 218 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (226)
+[09/6c3364] process > call_telseq (QG3013) [ 33%] 219 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (226)
+[2d/df6f9d] process > call_telseq (JU1631) [ 33%] 220 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (227)
+[94/ea56c6] process > call_telseq (NIC1916) [ 33%] 220 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (228)
+[a3/836545] process > call_telseq (NIC1155) [ 33%] 221 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (228)
+[a3/836545] process > call_telseq (NIC1155) [ 33%] 221 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (228)
+[ac/33f7a4] process > call_telseq (QG921) [ 33%] 222 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (229)
+[67/6d5af1] process > call_telseq (EG6180) [ 33%] 222 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (229)
+[32/53fa2c] process > call_telseq (NIC1328) [ 33%] 223 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (230)
+[1e/aec114] process > call_telseq (NIC917)  [ 33%] 223 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (230)
+[3a/c53924] process > call_telseq (NIC390) [ 33%] 224 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (231)
+[65/ebe683] process > call_telseq (NIC496) [ 33%] 224 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (232)
+[00/0684dd] process > call_telseq (BRC20400) [ 34%] 225 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (232)
+[00/0684dd] process > call_telseq (BRC20400) [ 34%] 225 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (233)
+[82/9dec12] process > call_telseq (NIC773) [ 34%] 226 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (234)
+[71/ec468e] process > call_telseq (QG3834) [ 34%] 227 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (235)
+[9b/3358f8] process > call_telseq (NIC391) [ 34%] 228 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (235)
+[9b/3358f8] process > call_telseq (NIC391) [ 34%] 228 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (236)
+[ed/c46200] process > call_telseq (NIC1914) [ 34%] 229 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (236)
+[ed/c46200] process > call_telseq (NIC1914) [ 34%] 229 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (237)
+[55/d405ec] process > call_telseq (ECA795) [ 34%] 230 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (238)
+[8c/ba932c] process > call_telseq (QG3836) [ 34%] 231 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (238)
+[8c/ba932c] process > call_telseq (QG3836) [ 34%] 231 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (238)
+[71/ec468e] process > call_telseq (QG3834) [ 35%] 232 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (239)
+[3a/c49135] process > call_telseq (QG3845) [ 35%] 232 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (240)
+[eb/e9d57a] process > call_telseq (NIC1565) [ 35%] 233 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (240)
+[eb/e9d57a] process > call_telseq (NIC1565) [ 35%] 233 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (241)
+[29/061a84] process > call_telseq (NIC1381) [ 35%] 234 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (241)
+[29/061a84] process > call_telseq (NIC1381) [ 35%] 234 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (242)
+[db/323f99] process > call_telseq (NIC573) [ 35%] 235 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (242)
+[8c/ba932c] process > call_telseq (QG3836) [ 35%] 236 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (243)
+[f0/9dad3f] process > call_telseq (NIC284) [ 35%] 236 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (244)
+[86/4869ac] process > call_telseq (QG3010) [ 35%] 237 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (245)
+[57/0f3584] process > call_telseq (NIC1348) [ 36%] 238 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (245)
+[57/0f3584] process > call_telseq (NIC1348) [ 36%] 238 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (246)
+[8c/840625] process > call_telseq (NIC1187) [ 36%] 239 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (247)
+[df/2a1ae2] process > call_telseq (QG3009) [ 36%] 240 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (247)
+[df/2a1ae2] process > call_telseq (QG3009) [ 36%] 240 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (248)
+[22/da9549] process > call_telseq (QG847) [ 36%] 241 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (249)
+[5e/d239b0] process > call_telseq (NIC577) [ 36%] 242 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (249)
+[db/323f99] process > call_telseq (NIC573) [ 36%] 243 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (250)
+[4a/b6e297] process > call_telseq (NIC1114) [ 36%] 243 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (251)
+[1f/b94712] process > call_telseq (QG849) [ 36%] 244 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (251)
+[1f/b94712] process > call_telseq (QG849) [ 36%] 244 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (251)
+[57/0f3584] process > call_telseq (NIC1348) [ 37%] 245 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (252)
+[2c/20852e] process > call_telseq (QG850)   [ 37%] 245 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (253)
+[3f/c997c0] process > call_telseq (NIC934) [ 37%] 246 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (253)
+[3f/c997c0] process > call_telseq (NIC934) [ 37%] 246 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (254)
+[5d/f3a032] process > call_telseq (NIC404) [ 37%] 247 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (255)
+[d5/aac138] process > call_telseq (NIC1929) [ 37%] 248 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (255)
+[5e/d239b0] process > call_telseq (NIC577) [ 37%] 249 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (256)
+[16/084871] process > call_telseq (QG3807) [ 37%] 249 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (256)
+[2c/20852e] process > call_telseq (QG850) [ 37%] 250 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (257)
+[26/1924d7] process > call_telseq (NIC1646) [ 37%] 250 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (258)
+[48/74204a] process > call_telseq (NIC1380) [ 37%] 251 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (258)
+[48/74204a] process > call_telseq (NIC1380) [ 37%] 251 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (258)
+[4a/b6e297] process > call_telseq (NIC1114) [ 38%] 252 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (259)
+[61/f41915] process > call_telseq (NIC416)  [ 38%] 252 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (260)
+[f5/c175fb] process > call_telseq (JU1847) [ 38%] 253 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (261)
+[09/c4dc95] process > call_telseq (NIC895) [ 38%] 254 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (261)
+[09/c4dc95] process > call_telseq (NIC895) [ 38%] 254 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (262)
+[4c/dd33ac] process > call_telseq (JU1630) [ 38%] 255 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (263)
+[c5/a6e02b] process > call_telseq (NIC920) [ 38%] 256 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (264)
+[aa/f390d3] process > call_telseq (NIC956) [ 38%] 257 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (264)
+[aa/f390d3] process > call_telseq (NIC956) [ 38%] 257 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (265)
+[1c/9d2e73] process > call_telseq (NIC1939) [ 39%] 258 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (265)
+[16/084871] process > call_telseq (QG3807) [ 39%] 259 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (266)
+[0b/c1a594] process > call_telseq (NIC587) [ 39%] 259 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (267)
+[bc/386507] process > call_telseq (NIC1389) [ 39%] 260 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (268)
+[c8/cc675a] process > call_telseq (NIC1474) [ 39%] 261 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (268)
+[c5/a6e02b] process > call_telseq (NIC920) [ 39%] 262 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (269)
+[b4/e0c2b3] process > call_telseq (JU1821) [ 39%] 262 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (270)
+[31/a41402] process > call_telseq (NIC945) [ 39%] 263 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (270)
+[c8/cc675a] process > call_telseq (NIC1474) [ 39%] 264 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (271)
+[f7/046ae8] process > call_telseq (NIC125)  [ 39%] 264 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (271)
+[4c/dd33ac] process > call_telseq (JU1630) [ 40%] 265 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (272)
+[00/0cec4e] process > call_telseq (NIC1299) [ 40%] 265 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (273)
+[dc/341e00] process > call_telseq (NIC1126) [ 40%] 266 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (274)
+[71/1f7dd3] process > call_telseq (NIC947) [ 40%] 267 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (275)
+[a7/4571e6] process > call_telseq (QG3785) [ 40%] 268 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (276)
+[5b/e92744] process > call_telseq (NIC1588) [ 40%] 269 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (277)
+[1a/54b3e8] process > call_telseq (NIC53) [ 40%] 270 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (278)
+[6d/6a488c] process > call_telseq (QG3839) [ 40%] 271 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (279)
+[19/8d9433] process > call_telseq (NIC294) [ 41%] 272 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (280)
+[4b/49b1b5] process > call_telseq (QG3828) [ 41%] 273 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (281)
+[b1/2a7e0b] process > call_telseq (NIC1877) [ 41%] 274 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (282)
+[30/f30cbe] process > call_telseq (NIC122) [ 41%] 275 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (282)
+[30/f30cbe] process > call_telseq (NIC122) [ 41%] 275 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (283)
+[cb/956ee0] process > call_telseq (JU1870) [ 41%] 276 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (284)
+[b5/27a48d] process > call_telseq (QG838) [ 41%] 277 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (284)
+[b5/27a48d] process > call_telseq (QG838) [ 41%] 277 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (285)
+[86/e1642b] process > call_telseq (ECA789) [ 41%] 278 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (286)
+[70/0c5cab] process > call_telseq (NIC1653) [ 42%] 279 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (287)
+[b5/03270e] process > call_telseq (ECA806) [ 42%] 280 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (287)
+[b5/03270e] process > call_telseq (ECA806) [ 42%] 280 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (287)
+[86/e1642b] process > call_telseq (ECA789) [ 42%] 281 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (288)
+[27/6cffb0] process > call_telseq (NIC749) [ 42%] 281 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (288)
+[30/f30cbe] process > call_telseq (NIC122) [ 42%] 282 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (289)
+[d6/ff1e36] process > call_telseq (JU2750) [ 42%] 282 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (289)
+[cb/956ee0] process > call_telseq (JU1870) [ 42%] 283 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (290)
+[cd/e35c07] process > call_telseq (NIC1544) [ 42%] 283 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (291)
+[f7/1e0483] process > call_telseq (NIC547) [ 42%] 284 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (292)
+[40/4d93a9] process > call_telseq (QG3833) [ 43%] 285 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (293)
+[fc/2509ce] process > call_telseq (QG839)  [ 43%] 286 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (293)
+[fc/2509ce] process > call_telseq (QG839)  [ 43%] 286 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (294)
+[d8/4f2a20] process > call_telseq (QG800) [ 43%] 287 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (295)
+[25/25b25a] process > call_telseq (NIC436) [ 43%] 288 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (296)
+[6c/c9b86b] process > call_telseq (NIC969) [ 43%] 289 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (296)
+[6c/c9b86b] process > call_telseq (NIC969) [ 43%] 289 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (297)
+[b0/34a0df] process > call_telseq (NIC904) [ 43%] 290 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (298)
+[12/e59522] process > call_telseq (NIC1583) [ 43%] 291 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (298)
+[d6/ff1e36] process > call_telseq (JU2750) [ 44%] 292 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (299)
+[ac/b30e06] process > call_telseq (QG2727) [ 44%] 292 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (300)
+[4e/ca614a] process > call_telseq (BRC20464) [ 44%] 293 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (300)
+[4e/ca614a] process > call_telseq (BRC20464) [ 44%] 293 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (301)
+[13/93cdf3] process > call_telseq (NIC1855) [ 44%] 294 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (301)
+[13/93cdf3] process > call_telseq (NIC1855) [ 44%] 294 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (302)
+[26/7a0495] process > call_telseq (NIC374) [ 44%] 295 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (302)
+[26/7a0495] process > call_telseq (NIC374) [ 44%] 295 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (302)
+[4e/ca614a] process > call_telseq (BRC20464) [ 44%] 296 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (303)
+[67/3b16a6] process > call_telseq (NIC1397)  [ 44%] 296 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (304)
+[57/2e8223] process > call_telseq (NIC1603)  [ 44%] 297 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (305)
+[01/5bcc97] process > call_telseq (QG3859) [ 44%] 298 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (306)
+[5c/b49521] process > call_telseq (TWN2103) [ 45%] 299 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (307)
+[d7/a840a3] process > call_telseq (NIC1478) [ 45%] 300 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (307)
+[d7/a840a3] process > call_telseq (NIC1478) [ 45%] 300 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (308)
+[41/1680dc] process > call_telseq (NIC1543) [ 45%] 301 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (308)
+[41/1680dc] process > call_telseq (NIC1543) [ 45%] 301 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (309)
+[cb/4ddd9f] process > call_telseq (JU1818) [ 45%] 302 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (310)
+[59/d2c1cf] process > call_telseq (NIC1272) [ 45%] 303 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (310)
+[13/93cdf3] process > call_telseq (NIC1855) [ 45%] 304 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (311)
+[a1/20c155] process > call_telseq (NIC1254) [ 45%] 304 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (312)
+[30/0c6023] process > call_telseq (NIC1940) [ 46%] 305 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (312)
+[30/0c6023] process > call_telseq (NIC1940) [ 46%] 305 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (313)
+[86/418b1d] process > call_telseq (NIC923) [ 46%] 306 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (314)
+[62/6bae0d] process > call_telseq (NIC1561) [ 46%] 307 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (315)
+[94/6b90af] process > call_telseq (ECA1585) [ 46%] 308 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (316)
+[32/591250] process > call_telseq (NIC751) [ 46%] 309 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (316)
+[57/2e8223] process > call_telseq (NIC1603) [ 46%] 310 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (317)
+[bf/c1a5d3] process > call_telseq (NIC1005) [ 46%] 310 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (317)
+[86/418b1d] process > call_telseq (NIC923) [ 46%] 311 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (318)
+[68/eb5114] process > call_telseq (NIC445) [ 46%] 311 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (319)
+[9d/053ae7] process > call_telseq (QG3786) [ 47%] 312 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (320)
+[be/34d81b] process > call_telseq (NIC434) [ 47%] 313 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (321)
+[b8/518230] process > call_telseq (NIC962) [ 47%] 314 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (322)
+[9c/15c137] process > call_telseq (NIC933) [ 47%] 315 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (322)
+[9c/15c137] process > call_telseq (NIC933) [ 47%] 315 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (322)
+[9d/053ae7] process > call_telseq (QG3786) [ 47%] 316 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (323)
+[fa/666299] process > call_telseq (NIC1282) [ 47%] 316 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (324)
+[7a/ad2f62] process > call_telseq (NIC960) [ 47%] 317 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (325)
+[ac/394dd2] process > call_telseq (NIC1316) [ 47%] 318 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (326)
+[5c/6f3430] process > call_telseq (NIC1526) [ 48%] 319 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (326)
+[5c/6f3430] process > call_telseq (NIC1526) [ 48%] 319 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (327)
+[ef/68ee35] process > call_telseq (ECA1583) [ 48%] 320 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (327)
+[ef/68ee35] process > call_telseq (ECA1583) [ 48%] 320 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (328)
+[7c/66511a] process > call_telseq (NIC461) [ 48%] 321 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (328)
+[7c/66511a] process > call_telseq (NIC461) [ 48%] 321 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (329)
+[94/10b3a9] process > call_telseq (NIC571) [ 48%] 322 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (330)
+[a1/133ba3] process > call_telseq (NIC1862) [ 48%] 323 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (330)
+[a1/133ba3] process > call_telseq (NIC1862) [ 48%] 323 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (331)
+[fd/b85002] process > call_telseq (NIC970)  [ 48%] 324 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (331)
+[fd/b85002] process > call_telseq (NIC970)  [ 48%] 324 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (332)
+[d2/2dd1e1] process > call_telseq (QG835) [ 49%] 325 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (332)
+[d2/2dd1e1] process > call_telseq (QG835) [ 49%] 325 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (333)
+[6f/f4ddd5] process > call_telseq (QG2733) [ 49%] 326 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (334)
+[0e/a0db19] process > call_telseq (NIC443) [ 49%] 327 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (335)
+[86/ab0cce] process > call_telseq (QG3856) [ 49%] 328 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (335)
+[86/ab0cce] process > call_telseq (QG3856) [ 49%] 328 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (336)
+[79/71fe7e] process > call_telseq (NIC1679) [ 49%] 329 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (336)
+[79/71fe7e] process > call_telseq (NIC1679) [ 49%] 329 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (337)
+[bf/16bbf7] process > call_telseq (NIC479) [ 49%] 330 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (338)
+[b2/2f2273] process > call_telseq (NIC420) [ 49%] 331 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (339)
+[d7/1b1775] process > call_telseq (NIC983) [ 50%] 332 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (340)
+[9e/0a9134] process > call_telseq (NIC1164) [ 50%] 333 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (340)
+[9e/0a9134] process > call_telseq (NIC1164) [ 50%] 333 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (341)
+[4f/0e04dc] process > call_telseq (ECA1447) [ 50%] 334 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (341)
+[79/71fe7e] process > call_telseq (NIC1679) [ 50%] 335 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (342)
+[20/76b6a1] process > call_telseq (ECA792)  [ 50%] 335 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (343)
+[f7/51774b] process > call_telseq (NIC1453) [ 50%] 336 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (343)
+[bf/16bbf7] process > call_telseq (NIC479) [ 50%] 337 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (344)
+[98/5ea9f9] process > call_telseq (NIC1180) [ 50%] 337 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (344)
+[d7/1b1775] process > call_telseq (NIC983) [ 50%] 338 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (345)
+[19/379a64] process > call_telseq (NIC339) [ 50%] 338 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (346)
+[f7/f7cfe5] process > call_telseq (NIC1305) [ 51%] 339 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (346)
+[f7/f7cfe5] process > call_telseq (NIC1305) [ 51%] 339 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (347)
+[82/6a2a6c] process > call_telseq (NIC1425) [ 51%] 340 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (348)
+[48/0694c3] process > call_telseq (NIC975) [ 51%] 341 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (348)
+[b2/2f2273] process > call_telseq (NIC420) [ 51%] 342 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (349)
+[81/bcd6ed] process > call_telseq (QG2755) [ 51%] 342 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (350)
+[d1/d96e2a] process > call_telseq (QG3803) [ 51%] 343 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (350)
+[d1/d96e2a] process > call_telseq (QG3803) [ 51%] 343 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (351)
+[4c/66a077] process > call_telseq (NIC289) [ 51%] 344 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (352)
+[6b/b889ce] process > call_telseq (JU2505) [ 51%] 345 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (353)
+[28/7ba9ac] process > call_telseq (NIC575) [ 52%] 346 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (354)
+[42/6fbd70] process > call_telseq (QG3011) [ 52%] 347 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (355)
+[0d/9f9e16] process > call_telseq (JU1639) [ 52%] 348 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (355)
+[0d/9f9e16] process > call_telseq (JU1639) [ 52%] 348 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (356)
+[41/260b01] process > call_telseq (ECA803) [ 52%] 349 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (356)
+[41/260b01] process > call_telseq (ECA803) [ 52%] 349 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (357)
+[66/016d2f] process > call_telseq (NIC763) [ 52%] 350 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (357)
+[66/016d2f] process > call_telseq (NIC763) [ 52%] 350 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (358)
+[a5/cadf0d] process > call_telseq (NIC450) [ 52%] 351 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (359)
+[a2/7cf67d] process > call_telseq (ECA805) [ 53%] 352 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (360)
+[9a/e935b8] process > call_telseq (QG3546) [ 53%] 353 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (361)
+[89/2f3323] process > call_telseq (JU1819) [ 53%] 354 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (361)
+[89/2f3323] process > call_telseq (JU1819) [ 53%] 354 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (362)
+[56/b3210a] process > call_telseq (NIC472) [ 53%] 355 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (362)
+[56/b3210a] process > call_telseq (NIC472) [ 53%] 355 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (363)
+[82/16948d] process > call_telseq (NIC1541) [ 53%] 356 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (364)
+[02/34c2b8] process > call_telseq (QG3782) [ 53%] 357 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (365)
+[7b/69f4d3] process > call_telseq (NIC380) [ 53%] 358 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (366)
+[69/786cf4] process > call_telseq (NIC1115) [ 54%] 359 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (366)
+[69/786cf4] process > call_telseq (NIC1115) [ 54%] 359 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (367)
+[e9/707091] process > call_telseq (ECA1306) [ 54%] 360 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (367)
+[e9/707091] process > call_telseq (ECA1306) [ 54%] 360 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (368)
+[24/153977] process > call_telseq (NIC193) [ 54%] 361 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (369)
+[17/13167a] process > call_telseq (NIC1856) [ 54%] 362 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (370)
+[fc/c59b56] process > call_telseq (QG3008)  [ 54%] 363 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (371)
+[df/93109f] process > call_telseq (NIC1447) [ 54%] 364 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (372)
+[2e/cde5a6] process > call_telseq (EG5889) [ 54%] 365 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (373)
+[57/4e814c] process > call_telseq (QG848) [ 55%] 366 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (374)
+[1f/9d59df] process > call_telseq (ECA793) [ 55%] 367 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (375)
+[5c/50e7d8] process > call_telseq (JU1838) [ 55%] 368 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (375)
+[69/786cf4] process > call_telseq (NIC1115) [ 55%] 369 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (376)
+[a0/051cb7] process > call_telseq (NIC1192) [ 55%] 369 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (377)
+[e2/ca2f70] process > call_telseq (QG3857) [ 55%] 370 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (377)
+[fc/c59b56] process > call_telseq (QG3008) [ 55%] 371 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (378)
+[e3/06800d] process > call_telseq (NIC584) [ 55%] 371 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (379)
+[5c/e7d9a7] process > call_telseq (NIC1315) [ 56%] 372 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (379)
+[5c/e7d9a7] process > call_telseq (NIC1315) [ 56%] 372 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (380)
+[a8/3839f6] process > call_telseq (NIC943) [ 56%] 373 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (380)
+[a8/3839f6] process > call_telseq (NIC943) [ 56%] 373 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (381)
+[6a/fb68a2] process > call_telseq (NIC475) [ 56%] 374 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (381)
+[6a/fb68a2] process > call_telseq (NIC475) [ 56%] 374 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (381)
+[5c/e7d9a7] process > call_telseq (NIC1315) [ 56%] 375 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (382)
+[1c/38f0ff] process > call_telseq (NIC957)  [ 56%] 375 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (382)
+[57/4e814c] process > call_telseq (QG848)   [ 56%] 376 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (383)
+[1d/0c41ed] process > call_telseq (QG3862)  [ 56%] 376 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (384)
+[a0/d56d7a] process > call_telseq (QG3797) [ 56%] 377 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (384)
+[a0/d56d7a] process > call_telseq (QG3797) [ 56%] 377 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (385)
+[40/50bc11] process > call_telseq (NIC1174) [ 56%] 378 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (386)
+[4a/62c675] process > call_telseq (NIC1268) [ 57%] 379 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (387)
+[81/a82ba4] process > call_telseq (ECA1599) [ 57%] 380 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (388)
+[9c/83e53f] process > call_telseq (QG3795) [ 57%] 381 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (389)
+[da/aabf63] process > call_telseq (QG2716) [ 57%] 382 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (390)
+[70/a95db9] process > call_telseq (NIC1411) [ 57%] 383 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (390)
+[70/a95db9] process > call_telseq (NIC1411) [ 57%] 383 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (391)
+[de/858bc4] process > call_telseq (ECA1581) [ 57%] 384 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (391)
+[de/858bc4] process > call_telseq (ECA1581) [ 57%] 384 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (392)
+[80/7e5850] process > call_telseq (NIC1122) [ 57%] 385 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (393)
+[27/197e4a] process > call_telseq (NIC1137) [ 58%] 386 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (393)
+[70/a95db9] process > call_telseq (NIC1411) [ 58%] 387 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (394)
+[83/be20a1] process > call_telseq (ECA1303) [ 58%] 387 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (395)
+[23/6e08f5] process > call_telseq (JU1635) [ 58%] 388 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (396)
+[56/b26f54] process > call_telseq (NIC1472) [ 58%] 389 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (396)
+[56/b26f54] process > call_telseq (NIC1472) [ 58%] 389 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (397)
+[8c/2806ef] process > call_telseq (NIC955) [ 58%] 390 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (398)
+[91/c7ddc9] process > call_telseq (QG820) [ 58%] 391 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (398)
+[27/197e4a] process > call_telseq (NIC1137) [ 59%] 392 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (399)
+[9b/48a570] process > call_telseq (NIC322)  [ 59%] 392 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (400)
+[19/8981af] process > call_telseq (NIC1317) [ 59%] 393 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (401)
+[0e/2162d3] process > call_telseq (QG2905) [ 59%] 394 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (402)
+[38/15bbe7] process > call_telseq (NIC944) [ 59%] 395 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (403)
+[61/924b3e] process > call_telseq (QG3863) [ 59%] 396 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (404)
+[54/45ffaf] process > call_telseq (QG2747) [ 59%] 397 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (404)
+[54/45ffaf] process > call_telseq (QG2747) [ 59%] 397 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (405)
+[8e/cfb830] process > call_telseq (QG3853) [ 59%] 398 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (405)
+[8e/cfb830] process > call_telseq (QG3853) [ 59%] 398 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (407)
+[c2/8e5bea] process > call_telseq (NIC1176) [ 60%] 400 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (407)
+[c2/8e5bea] process > call_telseq (NIC1176) [ 60%] 400 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (407)
+[91/c7ddc9] process > call_telseq (QG820) [ 60%] 401 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (408)
+[7e/3823a5] process > call_telseq (NIC384) [ 60%] 401 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (409)
+[c5/4a17d6] process > call_telseq (NIC491) [ 60%] 402 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (410)
+[3a/f09ab7] process > call_telseq (QG3055) [ 60%] 403 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (410)
+[9b/48a570] process > call_telseq (NIC322) [ 60%] 404 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (411)
+[c3/cc65dc] process > call_telseq (NIC1001) [ 60%] 404 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (412)
+[9a/577ffe] process > call_telseq (NIC1918) [ 60%] 405 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (413)
+[8f/c161d8] process > call_telseq (NIC417) [ 61%] 406 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (413)
+[8f/c161d8] process > call_telseq (NIC417) [ 61%] 406 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (414)
+[b4/3a3d8f] process > call_telseq (ECA1403) [ 61%] 407 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (414)
+[b4/3a3d8f] process > call_telseq (ECA1403) [ 61%] 407 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (415)
+[3e/d0b64c] process > call_telseq (NIC1178) [ 61%] 408 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (415)
+[3e/d0b64c] process > call_telseq (NIC1178) [ 61%] 408 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (416)
+[7c/97d912] process > call_telseq (QG2748) [ 61%] 409 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (416)
+[7c/97d912] process > call_telseq (QG2748) [ 61%] 409 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (417)
+[a0/41afca] process > call_telseq (QG3811) [ 61%] 410 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (417)
+[a0/41afca] process > call_telseq (QG3811) [ 61%] 410 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (418)
+[a8/eb05ba] process > call_telseq (NIC1911) [ 61%] 411 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (419)
+[53/23dafd] process > call_telseq (NIC1584) [ 61%] 412 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (419)
+[53/23dafd] process > call_telseq (NIC1584) [ 61%] 412 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (420)
+[2b/896f45] process > call_telseq (QG3526) [ 62%] 413 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (420)
+[2b/896f45] process > call_telseq (QG3526) [ 62%] 413 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (421)
+[ca/1d7638] process > call_telseq (NIC589) [ 62%] 414 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (421)
+[ca/1d7638] process > call_telseq (NIC589) [ 62%] 414 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (422)
+[da/a56c25] process > call_telseq (ECA788) [ 62%] 415 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (423)
+[ae/4b8921] process > call_telseq (NIC1420) [ 62%] 416 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (424)
+[da/943cbc] process > call_telseq (NIC1514) [ 62%] 417 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (424)
+[da/943cbc] process > call_telseq (NIC1514) [ 62%] 417 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (425)
+[d1/dc3320] process > call_telseq (NIC1343) [ 62%] 418 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (425)
+[d1/dc3320] process > call_telseq (NIC1343) [ 62%] 418 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (426)
+[b5/c219db] process > call_telseq (NIC1531) [ 63%] 419 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (426)
+[b5/c219db] process > call_telseq (NIC1531) [ 63%] 419 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (427)
+[a7/5b603d] process > call_telseq (QG836) [ 63%] 420 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (427)
+[da/943cbc] process > call_telseq (NIC1514) [ 63%] 421 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (428)
+[64/7961be] process > call_telseq (NIC1160) [ 63%] 421 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (429)
+[02/53f0d9] process > call_telseq (NIC422) [ 63%] 422 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (429)
+[2b/896f45] process > call_telseq (QG3526) [ 63%] 423 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (430)
+[ad/f3a5f7] process > call_telseq (NIC105) [ 63%] 423 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (431)
+[91/6440e0] process > call_telseq (NIC492) [ 63%] 424 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (432)
+[ed/110157] process > call_telseq (NIC1430) [ 63%] 425 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (432)
+[b5/c219db] process > call_telseq (NIC1531) [ 64%] 426 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (433)
+[25/ac00b0] process > call_telseq (NIC536)  [ 64%] 426 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (434)
+[55/f042fd] process > call_telseq (ECA1405) [ 64%] 427 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (434)
+[55/f042fd] process > call_telseq (ECA1405) [ 64%] 427 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (435)
+[0a/8d96c1] process > call_telseq (QG3809) [ 64%] 428 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (435)
+[0a/8d96c1] process > call_telseq (QG3809) [ 64%] 428 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (436)
+[7d/174217] process > call_telseq (NIC389) [ 64%] 429 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (436)
+[7d/174217] process > call_telseq (NIC389) [ 64%] 429 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (437)
+[d9/d9c21b] process > call_telseq (ECA1309) [ 64%] 430 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (437)
+[a7/5b603d] process > call_telseq (QG836)   [ 64%] 431 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (438)
+[d4/d92896] process > call_telseq (NIC121)  [ 64%] 431 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (438)
+[02/53f0d9] process > call_telseq (NIC422) [ 64%] 432 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (439)
+[26/c0b1ac] process > call_telseq (QG3812) [ 64%] 432 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (440)
+[90/b217ab] process > call_telseq (NIC915) [ 65%] 433 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (440)
+[90/b217ab] process > call_telseq (NIC915) [ 65%] 433 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (441)
+[d7/9e78ad] process > call_telseq (NIC120) [ 65%] 434 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (441)
+[d7/9e78ad] process > call_telseq (NIC120) [ 65%] 434 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (442)
+[85/5232c1] process > call_telseq (NIC551) [ 65%] 435 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (442)
+[85/5232c1] process > call_telseq (NIC551) [ 65%] 435 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (443)
+[c3/ec8878] process > call_telseq (NIC1004) [ 65%] 436 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (444)
+[32/922bcb] process > call_telseq (QG2697) [ 65%] 437 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (444)
+[32/922bcb] process > call_telseq (QG2697) [ 65%] 437 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (445)
+[05/6f136c] process > call_telseq (NIC591) [ 65%] 438 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (445)
+[90/b217ab] process > call_telseq (NIC915) [ 66%] 439 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (446)
+[b0/5507f8] process > call_telseq (NIC203) [ 66%] 439 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (447)
+[4c/f9a7b2] process > call_telseq (NIC1307) [ 66%] 440 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (447)
+[4c/f9a7b2] process > call_telseq (NIC1307) [ 66%] 440 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (448)
+[4b/99a93f] process > call_telseq (JU1831) [ 66%] 441 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (449)
+[37/6b9f80] process > call_telseq (ECA1301) [ 66%] 442 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (450)
+[93/9b1006] process > call_telseq (NIC1557) [ 66%] 443 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (450)
+[93/9b1006] process > call_telseq (NIC1557) [ 66%] 443 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (450)
+[b0/5507f8] process > call_telseq (NIC203) [ 66%] 444 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (451)
+[6b/0a0c44] process > call_telseq (NIC530) [ 66%] 444 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (452)
+[7b/eb2c97] process > call_telseq (QG3818) [ 66%] 445 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (453)
+[4e/f3d96b] process > call_telseq (NIC1886) [ 67%] 446 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (453)
+[4e/f3d96b] process > call_telseq (NIC1886) [ 67%] 446 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (454)
+[86/91b8fb] process > call_telseq (QG3873)  [ 67%] 447 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (455)
+[0f/3847ed] process > call_telseq (NIC1422) [ 67%] 448 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (456)
+[d9/5a193e] process > call_telseq (NIC91) [ 67%] 449 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (456)
+[d9/5a193e] process > call_telseq (NIC91) [ 67%] 449 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (457)
+[ac/924a18] process > call_telseq (NIC1173) [ 67%] 450 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (457)
+[ac/924a18] process > call_telseq (NIC1173) [ 67%] 450 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (458)
+[25/557ecc] process > call_telseq (JU1634) [ 67%] 451 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (459)
+[f5/442a2a] process > call_telseq (QG837) [ 67%] 452 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (459)
+[f5/442a2a] process > call_telseq (QG837) [ 67%] 452 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (460)
+[2f/2d6248] process > call_telseq (NIC469) [ 68%] 453 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (460)
+[2f/2d6248] process > call_telseq (NIC469) [ 68%] 453 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (461)
+[ac/e2ee7b] process > call_telseq (JU3170) [ 68%] 454 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (461)
+[ac/e2ee7b] process > call_telseq (JU3170) [ 68%] 454 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (462)
+[1e/a8bf3b] process > call_telseq (QG841) [ 68%] 455 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (463)
+[49/36c60e] process > call_telseq (NIC1371) [ 68%] 456 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (463)
+[49/36c60e] process > call_telseq (NIC1371) [ 68%] 456 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (463)
+[6b/0a0c44] process > call_telseq (NIC530)  [ 68%] 457 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (464)
+[11/79d8fa] process > call_telseq (NIC1275) [ 68%] 457 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (465)
+[03/f7d27d] process > call_telseq (NIC550) [ 68%] 458 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (465)
+[03/f7d27d] process > call_telseq (NIC550) [ 68%] 458 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (466)
+[b2/458d0b] process > call_telseq (NIC1587) [ 69%] 459 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (467)
+[1b/78b534] process > call_telseq (ECA1305) [ 69%] 460 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (468)
+[99/34f7b2] process > call_telseq (NIC1851) [ 69%] 461 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (468)
+[99/34f7b2] process > call_telseq (NIC1851) [ 69%] 461 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (469)
+[cf/ece936] process > call_telseq (ECA1310) [ 69%] 462 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (469)
+[cf/ece936] process > call_telseq (ECA1310) [ 69%] 462 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (469)
+[03/f7d27d] process > call_telseq (NIC550) [ 69%] 463 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (470)
+[6c/ba996d] process > call_telseq (QG3545) [ 69%] 463 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (471)
+[8b/d36dcd] process > call_telseq (NIC1290) [ 69%] 464 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (472)
+[7b/fa6e59] process > call_telseq (NIC1132) [ 69%] 465 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (473)
+[75/3d0726] process > call_telseq (NIC1647) [ 70%] 466 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (474)
+[a0/472d7c] process > call_telseq (NIC350) [ 70%] 467 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (475)
+[60/dcd87c] process > call_telseq (NIC1179) [ 70%] 468 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (475)
+[60/dcd87c] process > call_telseq (NIC1179) [ 70%] 468 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (476)
+[10/36a132] process > call_telseq (NIC1917) [ 70%] 469 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (477)
+[19/5ce9af] process > call_telseq (ECA801) [ 70%] 470 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (477)
+[19/5ce9af] process > call_telseq (ECA801) [ 70%] 470 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (478)
+[f1/a5946d] process > call_telseq (NIC1596) [ 70%] 471 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (479)
+[75/3d0726] process > call_telseq (NIC1647) [ 70%] 472 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (480)
+[f6/3e603c] process > call_telseq (NIC1400) [ 71%] 473 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (481)
+[0e/7980f8] process > call_telseq (NIC994) [ 71%] 474 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (481)
+[0e/7980f8] process > call_telseq (NIC994) [ 71%] 474 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (482)
+[04/07554c] process > call_telseq (NIC114) [ 71%] 475 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (483)
+[8e/3b2ed3] process > call_telseq (QG801) [ 71%] 476 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (483)
+[f1/a5946d] process > call_telseq (NIC1596) [ 71%] 477 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (484)
+[fd/831d3d] process > call_telseq (QG2724)  [ 71%] 477 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (485)
+[34/1304f5] process > call_telseq (NIC946) [ 71%] 478 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (485)
+[34/1304f5] process > call_telseq (NIC946) [ 71%] 478 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (486)
+[eb/e190a4] process > call_telseq (QG3829) [ 71%] 479 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (487)
+[ad/6d6bf9] process > call_telseq (NIC51) [ 72%] 480 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (488)
+[eb/4731fe] process > call_telseq (ECA1300) [ 72%] 481 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (489)
+[3b/863d18] process > call_telseq (NIC926) [ 72%] 482 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (489)
+[3b/863d18] process > call_telseq (NIC926) [ 72%] 482 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (490)
+[f5/f56329] process > call_telseq (NIC1919) [ 72%] 483 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (490)
+[fd/831d3d] process > call_telseq (QG2724) [ 72%] 484 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (491)
+[3d/8e6e1e] process > call_telseq (NIC372) [ 72%] 484 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (492)
+[50/ad43ff] process > call_telseq (NIC1476) [ 72%] 485 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (492)
+[50/ad43ff] process > call_telseq (NIC1476) [ 72%] 485 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (493)
+[c3/28ec63] process > call_telseq (NIC1509) [ 73%] 486 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (494)
+[1a/3cde4d] process > call_telseq (QG2773)  [ 73%] 487 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (495)
+[3b/ec90f8] process > call_telseq (NIC1405) [ 73%] 488 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (496)
+[3f/9e812e] process > call_telseq (NIC1121) [ 73%] 489 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (497)
+[5e/fb8c20] process > call_telseq (NIC1542) [ 73%] 490 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (498)
+[3c/279009] process > call_telseq (NIC535) [ 73%] 491 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (498)
+[3c/279009] process > call_telseq (NIC535) [ 73%] 491 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (499)
+[b5/07b7ae] process > call_telseq (NIC425) [ 73%] 492 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (499)
+[b5/07b7ae] process > call_telseq (NIC425) [ 73%] 492 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (499)
+[3d/8e6e1e] process > call_telseq (NIC372) [ 74%] 493 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (500)
+[6a/ab4317] process > call_telseq (QG3037) [ 74%] 493 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (501)
+[23/13d9f7] process > call_telseq (NIC1471) [ 74%] 494 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (502)
+[88/b516bf] process > call_telseq (NIC1172) [ 74%] 495 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (502)
+[88/b516bf] process > call_telseq (NIC1172) [ 74%] 495 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (503)
+[5c/895543] process > call_telseq (NIC1846) [ 74%] 496 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (503)
+[5c/895543] process > call_telseq (NIC1846) [ 74%] 496 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (504)
+[13/b13040] process > call_telseq (NIC57) [ 74%] 497 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (505)
+[e6/922d3e] process > call_telseq (ECA1445) [ 74%] 498 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (505)
+[5c/895543] process > call_telseq (NIC1846) [ 74%] 499 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (506)
+[2a/8cc66e] process > call_telseq (QG3821)  [ 74%] 499 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (507)
+[23/bc9aa8] process > call_telseq (NIC1323) [ 75%] 500 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (508)
+[f8/3d47aa] process > call_telseq (NIC1309) [ 75%] 501 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (509)
+[21/1e3f60] process > call_telseq (NIC1560) [ 75%] 502 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (510)
+[1d/059b1d] process > call_telseq (NIC1363) [ 75%] 503 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (510)
+[1d/059b1d] process > call_telseq (NIC1363) [ 75%] 503 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (511)
+[55/9c3e66] process > call_telseq (NIC1438) [ 75%] 504 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (512)
+[80/874e89] process > call_telseq (NIC898)  [ 75%] 505 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (512)
+[80/874e89] process > call_telseq (NIC898)  [ 75%] 505 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (512)
+[e6/922d3e] process > call_telseq (ECA1445) [ 76%] 506 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (513)
+[c6/3e9c54] process > call_telseq (NIC489)  [ 76%] 506 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (514)
+[9d/8eb89b] process > call_telseq (NIC403) [ 76%] 507 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (515)
+[18/1d6a80] process > call_telseq (QG935) [ 76%] 508 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (516)
+[f5/529193] process > call_telseq (QG987) [ 76%] 509 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (517)
+[c4/47cb2b] process > call_telseq (NIC1941) [ 76%] 510 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (517)
+[c4/47cb2b] process > call_telseq (NIC1941) [ 76%] 510 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (517)
+[1d/059b1d] process > call_telseq (NIC1363) [ 76%] 511 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (518)
+[93/bde367] process > call_telseq (NIC1962) [ 76%] 511 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (519)
+[34/dd5dfd] process > call_telseq (NIC99) [ 76%] 512 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (520)
+[4f/60fe92] process > call_telseq (NIC907) [ 77%] 513 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (520)
+[4f/60fe92] process > call_telseq (NIC907) [ 77%] 513 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (521)
+[96/1d34d4] process > call_telseq (NIC1148) [ 77%] 514 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (522)
+[4c/435a26] process > call_telseq (NIC579) [ 77%] 515 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (522)
+[4c/435a26] process > call_telseq (NIC579) [ 77%] 515 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (523)
+[8a/32fd14] process > call_telseq (JU1800) [ 77%] 516 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (523)
+[8a/32fd14] process > call_telseq (JU1800) [ 77%] 516 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (524)
+[90/380d63] process > call_telseq (NIC473) [ 77%] 517 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (525)
+[e9/24749c] process > call_telseq (QG2771) [ 77%] 518 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (525)
+[e9/24749c] process > call_telseq (QG2771) [ 77%] 518 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (526)
+[8c/a5a89e] process > call_telseq (NIC1594) [ 77%] 519 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (526)
+[8c/a5a89e] process > call_telseq (NIC1594) [ 77%] 519 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (526)
+[f5/529193] process > call_telseq (QG987) [ 78%] 520 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (527)
+[1b/367279] process > call_telseq (NIC1558) [ 78%] 520 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (528)
+[ed/857b3d] process > call_telseq (NIC1409) [ 78%] 521 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (528)
+[ed/857b3d] process > call_telseq (NIC1409) [ 78%] 521 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (529)
+[5a/3a8f2d] process > call_telseq (NIC405) [ 78%] 522 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (530)
+[6a/ee3104] process > call_telseq (QG3792) [ 78%] 523 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (530)
+[6a/ee3104] process > call_telseq (QG3792) [ 78%] 523 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (531)
+[62/43931f] process > call_telseq (QG845) [ 78%] 524 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (532)
+[f9/2a173b] process > call_telseq (QG3038) [ 78%] 525 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (533)
+[a4/4d8149] process > call_telseq (NIC540) [ 79%] 526 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (534)
+[7a/99fd4b] process > call_telseq (NIC951) [ 79%] 527 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (535)
+[2d/5f4420] process > call_telseq (QG3838) [ 79%] 528 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (536)
+[6b/294750] process > call_telseq (JU1374) [ 79%] 529 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (536)
+[ed/857b3d] process > call_telseq (NIC1409) [ 79%] 530 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (537)
+[0b/a25a79] process > call_telseq (NIC1549) [ 79%] 530 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (538)
+[fa/30ea37] process > call_telseq (NIC1301) [ 79%] 531 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (539)
+[0f/f69d4b] process > call_telseq (ECA799)  [ 79%] 532 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (540)
+[e6/ad3391] process > call_telseq (QG3814) [ 80%] 533 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (541)
+[5c/e660d1] process > call_telseq (NIC908) [ 80%] 534 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (542)
+[db/c7d4b2] process > call_telseq (NIC1388) [ 80%] 535 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (542)
+[db/c7d4b2] process > call_telseq (NIC1388) [ 80%] 535 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (543)
+[bf/034d18] process > call_telseq (NIC1159) [ 80%] 536 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (544)
+[92/997e7e] process > call_telseq (NIC85) [ 80%] 537 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (545)
+[d6/58ae38] process > call_telseq (QG3850) [ 80%] 538 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (546)
+[c6/64c400] process > call_telseq (QG840) [ 80%] 539 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (546)
+[e6/ad3391] process > call_telseq (QG3814) [ 81%] 540 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (547)
+[b4/d01e78] process > call_telseq (NIC129) [ 81%] 540 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (547)
+[d6/58ae38] process > call_telseq (QG3850) [ 81%] 541 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (548)
+[14/6c7203] process > call_telseq (NIC94)  [ 81%] 541 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (549)
+[a3/fcbc51] process > call_telseq (QG3852) [ 81%] 542 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (549)
+[a3/fcbc51] process > call_telseq (QG3852) [ 81%] 542 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (550)
+[cf/f50f48] process > call_telseq (NIC1555) [ 81%] 543 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (551)
+[f4/bb1cd2] process > call_telseq (NIC1252) [ 81%] 544 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (552)
+[b8/da7ee3] process > call_telseq (NIC354) [ 81%] 545 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (553)
+[5b/b33011] process > call_telseq (ECA1304) [ 81%] 546 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (554)
+[22/9627f4] process > call_telseq (NIC1548) [ 82%] 547 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (555)
+[34/0353f7] process > call_telseq (JU1871)  [ 82%] 548 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (556)
+[a2/ff9747] process > call_telseq (NIC1150) [ 82%] 549 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (556)
+[a2/ff9747] process > call_telseq (NIC1150) [ 82%] 549 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (557)
+[5e/eda7ba] process > call_telseq (NIC1342) [ 82%] 550 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (558)
+[40/738f12] process > call_telseq (JU1849)  [ 82%] 551 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (558)
+[40/738f12] process > call_telseq (JU1849)  [ 82%] 551 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (559)
+[1a/ae7d0c] process > call_telseq (NIC1386) [ 82%] 552 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (560)
+[00/8d5c7b] process > call_telseq (QG3824) [ 83%] 553 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (560)
+[00/8d5c7b] process > call_telseq (QG3824) [ 83%] 553 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (561)
+[2e/e58f85] process > call_telseq (NIC748) [ 83%] 554 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (561)
+[2e/e58f85] process > call_telseq (NIC748) [ 83%] 554 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (562)
+[f9/205c76] process > call_telseq (QG3533) [ 83%] 555 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (563)
+[93/3a83b7] process > call_telseq (NIC592) [ 83%] 556 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (564)
+[c2/b3e095] process > call_telseq (QG851) [ 83%] 557 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (564)
+[c2/b3e095] process > call_telseq (QG851) [ 83%] 557 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (565)
+[28/43330a] process > call_telseq (NIC588) [ 83%] 558 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (565)
+[28/43330a] process > call_telseq (NIC588) [ 83%] 558 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (566)
+[dc/c1e735] process > call_telseq (ECA798) [ 83%] 559 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (566)
+[f9/205c76] process > call_telseq (QG3533) [ 84%] 560 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (567)
+[ce/5a06dd] process > call_telseq (NIC594) [ 84%] 560 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (568)
+[38/15a0d7] process > call_telseq (NIC1393) [ 84%] 561 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (568)
+[38/15a0d7] process > call_telseq (NIC1393) [ 84%] 561 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (568)
+[1a/ae7d0c] process > call_telseq (NIC1386) [ 84%] 562 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (569)
+[7b/7107c6] process > call_telseq (ECA802)  [ 84%] 562 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (570)
+[67/d64524] process > call_telseq (NIC1961) [ 84%] 563 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (570)
+[67/d64524] process > call_telseq (NIC1961) [ 84%] 563 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (571)
+[43/a8bf6b] process > call_telseq (NIC1293) [ 84%] 564 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (571)
+[43/a8bf6b] process > call_telseq (NIC1293) [ 84%] 564 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (572)
+[56/4187f8] process > call_telseq (NIC940) [ 84%] 565 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (573)
+[ce/9655d1] process > call_telseq (NIC903) [ 84%] 566 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (573)
+[67/d64524] process > call_telseq (NIC1961) [ 85%] 567 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (574)
+[fb/793530] process > call_telseq (NIC1550) [ 85%] 567 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (575)
+[76/455132] process > call_telseq (ECA796) [ 85%] 568 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (576)
+[38/ef42be] process > call_telseq (NIC1170) [ 85%] 569 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (576)
+[ce/5a06dd] process > call_telseq (NIC594) [ 85%] 570 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (577)
+[f3/c5ab8b] process > call_telseq (NIC977) [ 85%] 570 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (578)
+[e4/f089df] process > call_telseq (NIC563) [ 85%] 571 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (578)
+[e4/f089df] process > call_telseq (NIC563) [ 85%] 571 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (579)
+[4a/d6d350] process > call_telseq (NIC1553) [ 85%] 572 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (580)
+[51/1d5808] process > call_telseq (NIC980)  [ 86%] 573 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (580)
+[51/1d5808] process > call_telseq (NIC980)  [ 86%] 573 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (581)
+[f6/fb0e77] process > call_telseq (NIC396) [ 86%] 574 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (581)
+[f6/fb0e77] process > call_telseq (NIC396) [ 86%] 574 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (582)
+[e4/c41871] process > call_telseq (NIC533) [ 86%] 575 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (582)
+[e4/f089df] process > call_telseq (NIC563) [ 86%] 576 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (583)
+[8d/11c3f0] process > call_telseq (NIC958) [ 86%] 576 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (584)
+[9c/21f8e1] process > call_telseq (NIC454) [ 86%] 577 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (584)
+[9c/21f8e1] process > call_telseq (NIC454) [ 86%] 577 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (585)
+[b5/bd2bfd] process > call_telseq (JU1835) [ 86%] 578 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (585)
+[b5/bd2bfd] process > call_telseq (JU1835) [ 86%] 578 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (586)
+[96/9d27ca] process > call_telseq (NIC1592) [ 86%] 579 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (587)
+[46/51fa42] process > call_telseq (NIC976) [ 87%] 580 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (587)
+[46/51fa42] process > call_telseq (NIC976) [ 87%] 580 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (587)
+[38/15a0d7] process > call_telseq (NIC1393) [ 87%] 581 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (588)
+[65/f257d6] process > call_telseq (NIC517)  [ 87%] 581 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (589)
+[80/d51118] process > call_telseq (NIC1848) [ 87%] 582 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (590)
+[fd/66112f] process > call_telseq (NIC1651) [ 87%] 583 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (591)
+[81/03aea0] process > call_telseq (NIC1879) [ 87%] 584 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (592)
+[a2/b81975] process > call_telseq (NIC1475) [ 87%] 585 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (593)
+[16/22a66f] process > call_telseq (NIC245) [ 87%] 586 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (593)
+[16/22a66f] process > call_telseq (NIC245) [ 87%] 586 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (594)
+[22/5a7f68] process > call_telseq (JU1429) [ 88%] 587 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (594)
+[22/5a7f68] process > call_telseq (JU1429) [ 88%] 587 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (595)
+[16/4a637b] process > call_telseq (NIC1294) [ 88%] 588 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (595)
+[16/4a637b] process > call_telseq (NIC1294) [ 88%] 588 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (595)
+[f3/d88b2e] process > call_telseq (JU1845) [ 88%] 589 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (596)
+[f3/d88b2e] process > call_telseq (JU1845) [ 88%] 589 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (597)
+[2d/991ff2] process > call_telseq (NIC1551) [ 88%] 590 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (597)
+[2d/991ff2] process > call_telseq (NIC1551) [ 88%] 590 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (598)
+[81/317a9a] process > call_telseq (JU1848)  [ 88%] 591 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (598)
+[81/317a9a] process > call_telseq (JU1848)  [ 88%] 591 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (599)
+[fd/081cee] process > call_telseq (ECA1302) [ 88%] 592 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (600)
+[bd/6b9c48] process > call_telseq (NIC1658) [ 89%] 593 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (601)
+[fb/a2c9bd] process > call_telseq (ECA791) [ 89%] 594 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (602)
+[19/21f150] process > call_telseq (BRC20548) [ 89%] 595 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (602)
+[19/21f150] process > call_telseq (BRC20548) [ 89%] 595 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (602)
+[fd/081cee] process > call_telseq (ECA1302)  [ 89%] 596 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (603)
+[5d/e69620] process > call_telseq (ECA794)   [ 89%] 596 of 670
+[-        ] process > combine_telseq         -
+
+executor >  local (604)
+[4b/3d7764] process > call_telseq (NIC913) [ 89%] 597 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (605)
+[ff/4e9ce9] process > call_telseq (NIC753) [ 89%] 598 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (605)
+[ff/4e9ce9] process > call_telseq (NIC753) [ 89%] 598 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (606)
+[d4/e14f7b] process > call_telseq (ECA1299) [ 89%] 599 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (607)
+[5e/8d83cf] process > call_telseq (NIC407) [ 90%] 600 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (607)
+[5e/8d83cf] process > call_telseq (NIC407) [ 90%] 600 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (608)
+[cf/c9b305] process > call_telseq (NIC1359) [ 90%] 601 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (608)
+[cf/c9b305] process > call_telseq (NIC1359) [ 90%] 601 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (608)
+[ff/4e9ce9] process > call_telseq (NIC753) [ 90%] 602 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (609)
+[71/2b4ad8] process > call_telseq (NIC192) [ 90%] 602 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (610)
+[20/8661cd] process > call_telseq (NIC1384) [ 90%] 603 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (611)
+[45/64eed4] process > call_telseq (NIC1129) [ 90%] 604 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (611)
+[45/64eed4] process > call_telseq (NIC1129) [ 90%] 604 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (612)
+[9d/ead3b1] process > call_telseq (JU2751) [ 90%] 605 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (612)
+[9d/ead3b1] process > call_telseq (JU2751) [ 90%] 605 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (613)
+[ad/364330] process > call_telseq (NIC321) [ 90%] 606 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (613)
+[ad/364330] process > call_telseq (NIC321) [ 90%] 606 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (614)
+[d2/5cf639] process > call_telseq (NIC249) [ 91%] 607 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (615)
+[9f/4beaa5] process > call_telseq (NIC413) [ 91%] 608 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (616)
+[5e/7b3ceb] process > call_telseq (JU1641) [ 91%] 609 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (616)
+[5e/7b3ceb] process > call_telseq (JU1641) [ 91%] 609 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (617)
+[bd/5540f8] process > call_telseq (QG3855) [ 91%] 610 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (617)
+[bd/5540f8] process > call_telseq (QG3855) [ 91%] 610 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (617)
+[2d/991ff2] process > call_telseq (NIC1551) [ 91%] 611 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (618)
+[f7/6f9052] process > call_telseq (NIC909)  [ 91%] 611 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (619)
+[d6/94088e] process > call_telseq (NIC90) [ 91%] 612 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (619)
+[d6/94088e] process > call_telseq (NIC90) [ 91%] 612 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (620)
+[2f/c47ab4] process > call_telseq (NIC941) [ 91%] 613 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (621)
+[cd/5ad9b1] process > call_telseq (NIC1140) [ 92%] 614 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (622)
+[57/80236b] process > call_telseq (ECA797) [ 92%] 615 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (623)
+[30/ce1a1c] process > call_telseq (QG3514) [ 92%] 616 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (624)
+[f2/1c371e] process > call_telseq (NIC929) [ 92%] 617 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (624)
+[f2/1c371e] process > call_telseq (NIC929) [ 92%] 617 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (625)
+[17/b4b6d1] process > call_telseq (QG3547) [ 92%] 618 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (625)
+[17/b4b6d1] process > call_telseq (QG3547) [ 92%] 618 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (626)
+[a5/03f4d6] process > call_telseq (NIC468) [ 92%] 619 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (627)
+[e4/cdf73a] process > call_telseq (NIC1038) [ 93%] 620 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (628)
+[cd/12ea6b] process > call_telseq (QG3843) [ 93%] 621 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (629)
+[81/746b79] process > call_telseq (QG2770) [ 93%] 622 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (629)
+[81/746b79] process > call_telseq (QG2770) [ 93%] 622 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (630)
+[14/0b5916] process > call_telseq (JU1976) [ 93%] 623 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (631)
+[df/3c834c] process > call_telseq (NIC1145) [ 93%] 624 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (631)
+[df/3c834c] process > call_telseq (NIC1145) [ 93%] 624 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (631)
+[e4/cdf73a] process > call_telseq (NIC1038) [ 93%] 625 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (632)
+[61/94f28a] process > call_telseq (NIC580)  [ 93%] 625 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (633)
+[86/81996a] process > call_telseq (QG2720) [ 93%] 626 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (634)
+[28/cfa848] process > call_telseq (NIC382) [ 94%] 627 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (634)
+[28/cfa848] process > call_telseq (NIC382) [ 94%] 627 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (635)
+[ba/c35114] process > call_telseq (NIC761) [ 94%] 628 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (635)
+[ba/c35114] process > call_telseq (NIC761) [ 94%] 628 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (636)
+[60/544800] process > call_telseq (NIC444) [ 94%] 629 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (636)
+[ba/c35114] process > call_telseq (NIC761) [ 94%] 630 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (637)
+[9c/564915] process > call_telseq (QG3789) [ 94%] 630 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (638)
+[a6/48ebdc] process > call_telseq (QG3024) [ 94%] 631 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (639)
+[cb/c0b568] process > call_telseq (QG3849) [ 94%] 632 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (640)
+[fd/a0aa2f] process > call_telseq (NIC314) [ 94%] 633 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (641)
+[b2/1e577f] process > call_telseq (NIC1157) [ 95%] 634 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (641)
+[b2/1e577f] process > call_telseq (NIC1157) [ 95%] 634 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (642)
+[55/543a03] process > call_telseq (NIC750) [ 95%] 635 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (642)
+[55/543a03] process > call_telseq (NIC750) [ 95%] 635 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (643)
+[32/617204] process > call_telseq (JU1872) [ 95%] 636 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (644)
+[91/b76d5a] process > call_telseq (NIC124) [ 95%] 637 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (645)
+[9c/c567f8] process > call_telseq (JU1633) [ 95%] 638 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (645)
+[9c/c567f8] process > call_telseq (JU1633) [ 95%] 638 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (646)
+[0f/7c73cd] process > call_telseq (JU1632) [ 95%] 639 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (647)
+[97/629203] process > call_telseq (NIC1028) [ 96%] 640 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (647)
+[b2/1e577f] process > call_telseq (NIC1157) [ 96%] 641 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (648)
+[f0/c1fb4b] process > call_telseq (QG3800)  [ 96%] 641 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (648)
+[32/617204] process > call_telseq (JU1872) [ 96%] 642 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (649)
+[15/13d325] process > call_telseq (QG1004) [ 96%] 642 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (650)
+[a3/7a08dc] process > call_telseq (NIC312) [ 96%] 643 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (651)
+[ca/d34a41] process > call_telseq (ECA1312) [ 96%] 644 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (651)
+[ca/d34a41] process > call_telseq (ECA1312) [ 96%] 644 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (652)
+[dd/09a75d] process > call_telseq (QG3835) [ 96%] 645 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (653)
+[98/49e46d] process > call_telseq (NIC1033) [ 96%] 646 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (654)
+[02/13543b] process > call_telseq (NIC1000) [ 97%] 647 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (654)
+[02/13543b] process > call_telseq (NIC1000) [ 97%] 647 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (655)
+[1d/3a914c] process > call_telseq (QG3549) [ 97%] 648 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (655)
+[1d/3a914c] process > call_telseq (QG3549) [ 97%] 648 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (656)
+[7d/005a50] process > call_telseq (ECA1449) [ 97%] 649 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (657)
+[f6/e406e7] process > call_telseq (NIC1408) [ 97%] 650 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (658)
+[ea/4047e3] process > call_telseq (NIC1257) [ 97%] 651 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (658)
+[15/13d325] process > call_telseq (QG1004) [ 97%] 652 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (659)
+[cd/9204d0] process > call_telseq (QG3543) [ 97%] 652 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (660)
+[01/ec47c0] process > call_telseq (NIC1546) [ 97%] 653 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (661)
+[d1/ebac3c] process > call_telseq (NIC459) [ 98%] 654 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (662)
+[e4/88a0f8] process > call_telseq (NIC581) [ 98%] 655 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (662)
+[e4/88a0f8] process > call_telseq (NIC581) [ 98%] 655 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (662)
+[01/ec47c0] process > call_telseq (NIC1546) [ 98%] 656 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (663)
+[3a/749bac] process > call_telseq (QG3868)  [ 98%] 656 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (664)
+[da/b0feaf] process > call_telseq (NIC1147) [ 98%] 657 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (664)
+[da/b0feaf] process > call_telseq (NIC1147) [ 98%] 657 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (665)
+[70/dbefde] process > call_telseq (NIC964) [ 98%] 658 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (666)
+[4b/9bbf6b] process > call_telseq (NIC1142) [ 98%] 659 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (666)
+[4b/9bbf6b] process > call_telseq (NIC1142) [ 98%] 659 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (667)
+[a0/531986] process > call_telseq (NIC324) [ 99%] 660 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (667)
+[a0/531986] process > call_telseq (NIC324) [ 99%] 660 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (668)
+[3b/289079] process > call_telseq (QG1000) [ 99%] 661 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (668)
+[3b/289079] process > call_telseq (QG1000) [ 99%] 661 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (669)
+[08/5b04df] process > call_telseq (QG853)  [ 99%] 662 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (670)
+[b6/d0d204] process > call_telseq (NIC1112) [ 99%] 663 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (670)
+[b6/d0d204] process > call_telseq (NIC1112) [ 99%] 663 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (670)
+[da/b0feaf] process > call_telseq (NIC1147) [ 99%] 664 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (670)
+[70/dbefde] process > call_telseq (NIC964) [ 99%] 665 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (670)
+[4b/9bbf6b] process > call_telseq (NIC1142) [ 99%] 666 of 670
+[-        ] process > combine_telseq        -
+
+executor >  local (670)
+[08/5b04df] process > call_telseq (QG853) [100%] 667 of 670
+[-        ] process > combine_telseq      -
+
+executor >  local (670)
+[a0/531986] process > call_telseq (NIC324) [100%] 668 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (670)
+[3b/289079] process > call_telseq (QG1000) [100%] 669 of 670
+[-        ] process > combine_telseq       -
+
+executor >  local (670)
+[b6/d0d204] process > call_telseq (NIC1112) [100%] 670 of 670 ✔
+[-        ] process > combine_telseq        -
+
+executor >  local (670)
+[b6/d0d204] process > call_telseq (NIC1112) [100%] 670 of 670 ✔
+[-        ] process > combine_telseq        [  0%] 0 of 1
+
+executor >  local (671)
+[b6/d0d204] process > call_telseq (NIC1112) [100%] 670 of 670 ✔
+[0e/8d1f30] process > combine_telseq        [  0%] 0 of 1
+
+executor >  local (671)
+[b6/d0d204] process > call_telseq (NIC1112) [100%] 670 of 670 ✔
+[0e/8d1f30] process > combine_telseq        [100%] 1 of 1 ✔
+
+executor >  local (671)
+[b6/d0d204] process > call_telseq (NIC1112) [100%] 670 of 670 ✔
+[0e/8d1f30] process > combine_telseq        [100%] 1 of 1 ✔
+Completed at: 21-Jul-2021 00:08:31
+Duration    : 15h 14m 18s
+CPU hours   : 425.5
+Succeeded   : 671
+
+

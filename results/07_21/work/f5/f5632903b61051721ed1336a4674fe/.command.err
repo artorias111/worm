@@ -1,0 +1,10 @@
+use user specified pattern TTAGGC
+reverse complement GCCTAA
+Start analysing BAM NIC1919.bam
+Treat all reads in BAM as if they were from a same sample
+[scan] processed 10000000 reads 
+[scan] processed 20000000 reads 
+[scan] total reads in BAM scanned 24544284
+Completed scanning BAM
+Completed writing results
+[timer - scan BAM] wall clock: 288.29s CPU: 164.31s

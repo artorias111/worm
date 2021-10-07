@@ -1,5 +1,0 @@
-use user specified pattern TTAGGC
-reverse complement GCCTAA
-Start analysing BAM JU2513.bam
-Treat all reads in BAM as if they were from a same sample
-[scan] processed 10000000 reads 

@@ -1,0 +1,136 @@
+#!/bin/bash
+# NEXTFLOW TASK: combine_telseq
+set -e
+set -u
+NXF_DEBUG=${NXF_DEBUG:=0}; [[ $NXF_DEBUG > 1 ]] && set -x
+NXF_ENTRY=${1:-nxf_main}
+
+
+nxf_sleep() {
+  sleep $1 2>/dev/null || sleep 1;
+}
+
+nxf_date() {
+    local ts=$(date +%s%3N);
+    if [[ ${#ts} == 10 ]]; then echo ${ts}000
+    elif [[ $ts == *%3N ]]; then echo ${ts/\%3N/000}
+    elif [[ $ts == *3N ]]; then echo ${ts/3N/000}
+    elif [[ ${#ts} == 13 ]]; then echo $ts
+    else echo "Unexpected timestamp value: $ts"; exit 1
+    fi
+}
+
+nxf_env() {
+    echo '============= task environment ============='
+    env | sort | sed "s/\(.*\)AWS\(.*\)=\(.\{6\}\).*/\1AWS\2=\3xxxxxxxxxxxxx/"
+    echo '============= task output =================='
+}
+
+nxf_kill() {
+    declare -a children
+    while read P PP;do
+        children[$PP]+=" $P"
+    done < <(ps -e -o pid= -o ppid=)
+
+    kill_all() {
+        [[ $1 != $$ ]] && kill $1 2>/dev/null || true
+        for i in ${children[$1]:=}; do kill_all $i; done
+    }
+
+    kill_all $1
+}
+
+nxf_mktemp() {
+    local base=${1:-/tmp}
+    if [[ $(uname) = Darwin ]]; then mktemp -d $base/nxf.XXXXXXXXXX
+    else TMPDIR="$base" mktemp -d -t nxf.XXXXXXXXXX
+    fi
+}
+
+on_exit() {
+    exit_status=${nxf_main_ret:=$?}
+    printf $exit_status > /home/bhats/thesis/worm/telseq_nf/trials/local/work/51/7af5e6dd75394ffa879820a2290f8a/.exitcode
+    set +u
+    [[ "$tee1" ]] && kill $tee1 2>/dev/null
+    [[ "$tee2" ]] && kill $tee2 2>/dev/null
+    [[ "$ctmp" ]] && rm -rf $ctmp || true
+    exit $exit_status
+}
+
+on_term() {
+    set +e
+    [[ "$pid" ]] && nxf_kill $pid
+}
+
+nxf_launch() {
+    /bin/bash -ue /home/bhats/thesis/worm/telseq_nf/trials/local/work/51/7af5e6dd75394ffa879820a2290f8a/.command.sh
+}
+
+nxf_stage() {
+    true
+    # stage input files
+    rm -f ind_telseq1.txt
+    rm -f ind_telseq2.txt
+    rm -f ind_telseq3.txt
+    rm -f ind_telseq4.txt
+    rm -f ind_telseq5.txt
+    rm -f ind_telseq6.txt
+    rm -f ind_telseq7.txt
+    rm -f ind_telseq8.txt
+    rm -f ind_telseq9.txt
+    rm -f ind_telseq10.txt
+    rm -f ind_telseq11.txt
+    rm -f ind_telseq12.txt
+    rm -f ind_telseq13.txt
+    rm -f ind_telseq14.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/1f/2a670dff33e7cf9596a36d24d1dabe/telseq_out.txt ind_telseq1.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/80/998919876ba33cfdb9cc5e5aefae7a/telseq_out.txt ind_telseq2.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/80/c5312e412069fdda8282bc9e7c3a51/telseq_out.txt ind_telseq3.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/82/96ea639412bb56844b7d9d4d82339c/telseq_out.txt ind_telseq4.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/9a/f7983d4c22b4055838a580e9e3987a/telseq_out.txt ind_telseq5.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/b5/dbb0db848ce28203201db0757ae7a9/telseq_out.txt ind_telseq6.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/b6/31729e1568cda78a8742524688577d/telseq_out.txt ind_telseq7.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/c2/f6186010e737cd4be838633234ffdb/telseq_out.txt ind_telseq8.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/df/c2a5155046d27c3c1cad2718f60afe/telseq_out.txt ind_telseq9.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/e5/8e6354635115679460f8f59035b821/telseq_out.txt ind_telseq10.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/e9/980c9f347270669debc4259830d715/telseq_out.txt ind_telseq11.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/ea/5b2ce50ed57a50c0f82c3041fd3648/telseq_out.txt ind_telseq12.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/ec/71995d4323b7cfa91c7f45986897af/telseq_out.txt ind_telseq13.txt
+    ln -s /home/bhats/thesis/worm/telseq_nf/trials/local/work/fc/87a456b63bc5c275756ff7da3056f6/telseq_out.txt ind_telseq14.txt
+}
+
+nxf_unstage() {
+    true
+    [[ ${nxf_main_ret:=0} != 0 ]] && return
+}
+
+nxf_main() {
+    trap on_exit EXIT
+    trap on_term TERM INT USR2
+    trap '' USR1
+
+    [[ "${NXF_CHDIR:-}" ]] && cd "$NXF_CHDIR"
+    NXF_SCRATCH=''
+    [[ $NXF_DEBUG > 0 ]] && nxf_env
+    touch /home/bhats/thesis/worm/telseq_nf/trials/local/work/51/7af5e6dd75394ffa879820a2290f8a/.command.begin
+    set +u
+    set -u
+    [[ $NXF_SCRATCH ]] && echo "nxf-scratch-dir $HOSTNAME:$NXF_SCRATCH" && cd $NXF_SCRATCH
+    nxf_stage
+
+    set +e
+    local ctmp=$(set +u; nxf_mktemp /dev/shm 2>/dev/null || nxf_mktemp $TMPDIR)
+    local cout=$ctmp/.command.out; mkfifo $cout
+    local cerr=$ctmp/.command.err; mkfifo $cerr
+    tee .command.out < $cout &
+    tee1=$!
+    tee .command.err < $cerr >&2 &
+    tee2=$!
+    ( nxf_launch ) >$cout 2>$cerr &
+    pid=$!
+    wait $pid || nxf_main_ret=$?
+    wait $tee1 $tee2
+    nxf_unstage
+}
+
+$NXF_ENTRY

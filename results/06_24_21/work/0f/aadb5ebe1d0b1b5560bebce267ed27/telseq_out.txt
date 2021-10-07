@@ -1,2 +1,0 @@
-[NIC514.bam]
-1 BAMs

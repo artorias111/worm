@@ -1,8 +1,0 @@
-use user specified pattern TTAGGC
-reverse complement GCCTAA
-Start analysing BAM MY2338.bam
-Specified BAM has 1 read groups
-[scan] total reads in BAM scanned 50041
-Completed scanning BAM
-Completed writing results
-[timer - scan BAM] wall clock: 0.34s CPU: 0.28s

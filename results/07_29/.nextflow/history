@@ -1,0 +1,3 @@
+2021-07-20 08:54:12	15h 14m 19s	friendly_elion	OK	04d98366de1c343d28cf4cf97a9543f3	43459d95-6dda-4c35-9937-2fbb5491fa3b	nextflow run main.nf
+2021-07-26 01:01:50	15m 39s	desperate_borg	ERR	8047346655f8fdc01dac2c5522188109	dbc21044-bb15-442a-a767-76939c13bc29	nextflow run main.nf
+2021-07-26 12:29:48	1d 4h 57m 48s	evil_marconi	OK	8047346655f8fdc01dac2c5522188109	8221b1d2-50fd-4b94-9ef8-90c4765fd182	nextflow run main.nf

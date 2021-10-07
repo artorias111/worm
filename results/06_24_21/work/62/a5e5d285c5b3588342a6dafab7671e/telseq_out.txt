@@ -1,2 +1,0 @@
-[NIC1785.bam]
-1 BAMs

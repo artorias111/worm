@@ -1,0 +1,1448 @@
+#!/bin/bash
+# NEXTFLOW TASK: combine_telseq
+set -e
+set -u
+NXF_DEBUG=${NXF_DEBUG:=0}; [[ $NXF_DEBUG > 1 ]] && set -x
+NXF_ENTRY=${1:-nxf_main}
+
+
+nxf_sleep() {
+  sleep $1 2>/dev/null || sleep 1;
+}
+
+nxf_date() {
+    local ts=$(date +%s%3N);
+    if [[ ${#ts} == 10 ]]; then echo ${ts}000
+    elif [[ $ts == *%3N ]]; then echo ${ts/\%3N/000}
+    elif [[ $ts == *3N ]]; then echo ${ts/3N/000}
+    elif [[ ${#ts} == 13 ]]; then echo $ts
+    else echo "Unexpected timestamp value: $ts"; exit 1
+    fi
+}
+
+nxf_env() {
+    echo '============= task environment ============='
+    env | sort | sed "s/\(.*\)AWS\(.*\)=\(.\{6\}\).*/\1AWS\2=\3xxxxxxxxxxxxx/"
+    echo '============= task output =================='
+}
+
+nxf_kill() {
+    declare -a children
+    while read P PP;do
+        children[$PP]+=" $P"
+    done < <(ps -e -o pid= -o ppid=)
+
+    kill_all() {
+        [[ $1 != $$ ]] && kill $1 2>/dev/null || true
+        for i in ${children[$1]:=}; do kill_all $i; done
+    }
+
+    kill_all $1
+}
+
+nxf_mktemp() {
+    local base=${1:-/tmp}
+    if [[ $(uname) = Darwin ]]; then mktemp -d $base/nxf.XXXXXXXXXX
+    else TMPDIR="$base" mktemp -d -t nxf.XXXXXXXXXX
+    fi
+}
+
+on_exit() {
+    exit_status=${nxf_main_ret:=$?}
+    printf $exit_status > /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/8d1f30f163c961c7a82b9cba4df25c/.exitcode
+    set +u
+    [[ "$tee1" ]] && kill $tee1 2>/dev/null
+    [[ "$tee2" ]] && kill $tee2 2>/dev/null
+    [[ "$ctmp" ]] && rm -rf $ctmp || true
+    exit $exit_status
+}
+
+on_term() {
+    set +e
+    [[ "$pid" ]] && nxf_kill $pid
+}
+
+nxf_launch() {
+    /bin/bash -ue /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/8d1f30f163c961c7a82b9cba4df25c/.command.sh
+}
+
+nxf_stage() {
+    true
+    # stage input files
+    rm -f ind_telseq1.txt
+    rm -f ind_telseq2.txt
+    rm -f ind_telseq3.txt
+    rm -f ind_telseq4.txt
+    rm -f ind_telseq5.txt
+    rm -f ind_telseq6.txt
+    rm -f ind_telseq7.txt
+    rm -f ind_telseq8.txt
+    rm -f ind_telseq9.txt
+    rm -f ind_telseq10.txt
+    rm -f ind_telseq11.txt
+    rm -f ind_telseq12.txt
+    rm -f ind_telseq13.txt
+    rm -f ind_telseq14.txt
+    rm -f ind_telseq15.txt
+    rm -f ind_telseq16.txt
+    rm -f ind_telseq17.txt
+    rm -f ind_telseq18.txt
+    rm -f ind_telseq19.txt
+    rm -f ind_telseq20.txt
+    rm -f ind_telseq21.txt
+    rm -f ind_telseq22.txt
+    rm -f ind_telseq23.txt
+    rm -f ind_telseq24.txt
+    rm -f ind_telseq25.txt
+    rm -f ind_telseq26.txt
+    rm -f ind_telseq27.txt
+    rm -f ind_telseq28.txt
+    rm -f ind_telseq29.txt
+    rm -f ind_telseq30.txt
+    rm -f ind_telseq31.txt
+    rm -f ind_telseq32.txt
+    rm -f ind_telseq33.txt
+    rm -f ind_telseq34.txt
+    rm -f ind_telseq35.txt
+    rm -f ind_telseq36.txt
+    rm -f ind_telseq37.txt
+    rm -f ind_telseq38.txt
+    rm -f ind_telseq39.txt
+    rm -f ind_telseq40.txt
+    rm -f ind_telseq41.txt
+    rm -f ind_telseq42.txt
+    rm -f ind_telseq43.txt
+    rm -f ind_telseq44.txt
+    rm -f ind_telseq45.txt
+    rm -f ind_telseq46.txt
+    rm -f ind_telseq47.txt
+    rm -f ind_telseq48.txt
+    rm -f ind_telseq49.txt
+    rm -f ind_telseq50.txt
+    rm -f ind_telseq51.txt
+    rm -f ind_telseq52.txt
+    rm -f ind_telseq53.txt
+    rm -f ind_telseq54.txt
+    rm -f ind_telseq55.txt
+    rm -f ind_telseq56.txt
+    rm -f ind_telseq57.txt
+    rm -f ind_telseq58.txt
+    rm -f ind_telseq59.txt
+    rm -f ind_telseq60.txt
+    rm -f ind_telseq61.txt
+    rm -f ind_telseq62.txt
+    rm -f ind_telseq63.txt
+    rm -f ind_telseq64.txt
+    rm -f ind_telseq65.txt
+    rm -f ind_telseq66.txt
+    rm -f ind_telseq67.txt
+    rm -f ind_telseq68.txt
+    rm -f ind_telseq69.txt
+    rm -f ind_telseq70.txt
+    rm -f ind_telseq71.txt
+    rm -f ind_telseq72.txt
+    rm -f ind_telseq73.txt
+    rm -f ind_telseq74.txt
+    rm -f ind_telseq75.txt
+    rm -f ind_telseq76.txt
+    rm -f ind_telseq77.txt
+    rm -f ind_telseq78.txt
+    rm -f ind_telseq79.txt
+    rm -f ind_telseq80.txt
+    rm -f ind_telseq81.txt
+    rm -f ind_telseq82.txt
+    rm -f ind_telseq83.txt
+    rm -f ind_telseq84.txt
+    rm -f ind_telseq85.txt
+    rm -f ind_telseq86.txt
+    rm -f ind_telseq87.txt
+    rm -f ind_telseq88.txt
+    rm -f ind_telseq89.txt
+    rm -f ind_telseq90.txt
+    rm -f ind_telseq91.txt
+    rm -f ind_telseq92.txt
+    rm -f ind_telseq93.txt
+    rm -f ind_telseq94.txt
+    rm -f ind_telseq95.txt
+    rm -f ind_telseq96.txt
+    rm -f ind_telseq97.txt
+    rm -f ind_telseq98.txt
+    rm -f ind_telseq99.txt
+    rm -f ind_telseq100.txt
+    rm -f ind_telseq101.txt
+    rm -f ind_telseq102.txt
+    rm -f ind_telseq103.txt
+    rm -f ind_telseq104.txt
+    rm -f ind_telseq105.txt
+    rm -f ind_telseq106.txt
+    rm -f ind_telseq107.txt
+    rm -f ind_telseq108.txt
+    rm -f ind_telseq109.txt
+    rm -f ind_telseq110.txt
+    rm -f ind_telseq111.txt
+    rm -f ind_telseq112.txt
+    rm -f ind_telseq113.txt
+    rm -f ind_telseq114.txt
+    rm -f ind_telseq115.txt
+    rm -f ind_telseq116.txt
+    rm -f ind_telseq117.txt
+    rm -f ind_telseq118.txt
+    rm -f ind_telseq119.txt
+    rm -f ind_telseq120.txt
+    rm -f ind_telseq121.txt
+    rm -f ind_telseq122.txt
+    rm -f ind_telseq123.txt
+    rm -f ind_telseq124.txt
+    rm -f ind_telseq125.txt
+    rm -f ind_telseq126.txt
+    rm -f ind_telseq127.txt
+    rm -f ind_telseq128.txt
+    rm -f ind_telseq129.txt
+    rm -f ind_telseq130.txt
+    rm -f ind_telseq131.txt
+    rm -f ind_telseq132.txt
+    rm -f ind_telseq133.txt
+    rm -f ind_telseq134.txt
+    rm -f ind_telseq135.txt
+    rm -f ind_telseq136.txt
+    rm -f ind_telseq137.txt
+    rm -f ind_telseq138.txt
+    rm -f ind_telseq139.txt
+    rm -f ind_telseq140.txt
+    rm -f ind_telseq141.txt
+    rm -f ind_telseq142.txt
+    rm -f ind_telseq143.txt
+    rm -f ind_telseq144.txt
+    rm -f ind_telseq145.txt
+    rm -f ind_telseq146.txt
+    rm -f ind_telseq147.txt
+    rm -f ind_telseq148.txt
+    rm -f ind_telseq149.txt
+    rm -f ind_telseq150.txt
+    rm -f ind_telseq151.txt
+    rm -f ind_telseq152.txt
+    rm -f ind_telseq153.txt
+    rm -f ind_telseq154.txt
+    rm -f ind_telseq155.txt
+    rm -f ind_telseq156.txt
+    rm -f ind_telseq157.txt
+    rm -f ind_telseq158.txt
+    rm -f ind_telseq159.txt
+    rm -f ind_telseq160.txt
+    rm -f ind_telseq161.txt
+    rm -f ind_telseq162.txt
+    rm -f ind_telseq163.txt
+    rm -f ind_telseq164.txt
+    rm -f ind_telseq165.txt
+    rm -f ind_telseq166.txt
+    rm -f ind_telseq167.txt
+    rm -f ind_telseq168.txt
+    rm -f ind_telseq169.txt
+    rm -f ind_telseq170.txt
+    rm -f ind_telseq171.txt
+    rm -f ind_telseq172.txt
+    rm -f ind_telseq173.txt
+    rm -f ind_telseq174.txt
+    rm -f ind_telseq175.txt
+    rm -f ind_telseq176.txt
+    rm -f ind_telseq177.txt
+    rm -f ind_telseq178.txt
+    rm -f ind_telseq179.txt
+    rm -f ind_telseq180.txt
+    rm -f ind_telseq181.txt
+    rm -f ind_telseq182.txt
+    rm -f ind_telseq183.txt
+    rm -f ind_telseq184.txt
+    rm -f ind_telseq185.txt
+    rm -f ind_telseq186.txt
+    rm -f ind_telseq187.txt
+    rm -f ind_telseq188.txt
+    rm -f ind_telseq189.txt
+    rm -f ind_telseq190.txt
+    rm -f ind_telseq191.txt
+    rm -f ind_telseq192.txt
+    rm -f ind_telseq193.txt
+    rm -f ind_telseq194.txt
+    rm -f ind_telseq195.txt
+    rm -f ind_telseq196.txt
+    rm -f ind_telseq197.txt
+    rm -f ind_telseq198.txt
+    rm -f ind_telseq199.txt
+    rm -f ind_telseq200.txt
+    rm -f ind_telseq201.txt
+    rm -f ind_telseq202.txt
+    rm -f ind_telseq203.txt
+    rm -f ind_telseq204.txt
+    rm -f ind_telseq205.txt
+    rm -f ind_telseq206.txt
+    rm -f ind_telseq207.txt
+    rm -f ind_telseq208.txt
+    rm -f ind_telseq209.txt
+    rm -f ind_telseq210.txt
+    rm -f ind_telseq211.txt
+    rm -f ind_telseq212.txt
+    rm -f ind_telseq213.txt
+    rm -f ind_telseq214.txt
+    rm -f ind_telseq215.txt
+    rm -f ind_telseq216.txt
+    rm -f ind_telseq217.txt
+    rm -f ind_telseq218.txt
+    rm -f ind_telseq219.txt
+    rm -f ind_telseq220.txt
+    rm -f ind_telseq221.txt
+    rm -f ind_telseq222.txt
+    rm -f ind_telseq223.txt
+    rm -f ind_telseq224.txt
+    rm -f ind_telseq225.txt
+    rm -f ind_telseq226.txt
+    rm -f ind_telseq227.txt
+    rm -f ind_telseq228.txt
+    rm -f ind_telseq229.txt
+    rm -f ind_telseq230.txt
+    rm -f ind_telseq231.txt
+    rm -f ind_telseq232.txt
+    rm -f ind_telseq233.txt
+    rm -f ind_telseq234.txt
+    rm -f ind_telseq235.txt
+    rm -f ind_telseq236.txt
+    rm -f ind_telseq237.txt
+    rm -f ind_telseq238.txt
+    rm -f ind_telseq239.txt
+    rm -f ind_telseq240.txt
+    rm -f ind_telseq241.txt
+    rm -f ind_telseq242.txt
+    rm -f ind_telseq243.txt
+    rm -f ind_telseq244.txt
+    rm -f ind_telseq245.txt
+    rm -f ind_telseq246.txt
+    rm -f ind_telseq247.txt
+    rm -f ind_telseq248.txt
+    rm -f ind_telseq249.txt
+    rm -f ind_telseq250.txt
+    rm -f ind_telseq251.txt
+    rm -f ind_telseq252.txt
+    rm -f ind_telseq253.txt
+    rm -f ind_telseq254.txt
+    rm -f ind_telseq255.txt
+    rm -f ind_telseq256.txt
+    rm -f ind_telseq257.txt
+    rm -f ind_telseq258.txt
+    rm -f ind_telseq259.txt
+    rm -f ind_telseq260.txt
+    rm -f ind_telseq261.txt
+    rm -f ind_telseq262.txt
+    rm -f ind_telseq263.txt
+    rm -f ind_telseq264.txt
+    rm -f ind_telseq265.txt
+    rm -f ind_telseq266.txt
+    rm -f ind_telseq267.txt
+    rm -f ind_telseq268.txt
+    rm -f ind_telseq269.txt
+    rm -f ind_telseq270.txt
+    rm -f ind_telseq271.txt
+    rm -f ind_telseq272.txt
+    rm -f ind_telseq273.txt
+    rm -f ind_telseq274.txt
+    rm -f ind_telseq275.txt
+    rm -f ind_telseq276.txt
+    rm -f ind_telseq277.txt
+    rm -f ind_telseq278.txt
+    rm -f ind_telseq279.txt
+    rm -f ind_telseq280.txt
+    rm -f ind_telseq281.txt
+    rm -f ind_telseq282.txt
+    rm -f ind_telseq283.txt
+    rm -f ind_telseq284.txt
+    rm -f ind_telseq285.txt
+    rm -f ind_telseq286.txt
+    rm -f ind_telseq287.txt
+    rm -f ind_telseq288.txt
+    rm -f ind_telseq289.txt
+    rm -f ind_telseq290.txt
+    rm -f ind_telseq291.txt
+    rm -f ind_telseq292.txt
+    rm -f ind_telseq293.txt
+    rm -f ind_telseq294.txt
+    rm -f ind_telseq295.txt
+    rm -f ind_telseq296.txt
+    rm -f ind_telseq297.txt
+    rm -f ind_telseq298.txt
+    rm -f ind_telseq299.txt
+    rm -f ind_telseq300.txt
+    rm -f ind_telseq301.txt
+    rm -f ind_telseq302.txt
+    rm -f ind_telseq303.txt
+    rm -f ind_telseq304.txt
+    rm -f ind_telseq305.txt
+    rm -f ind_telseq306.txt
+    rm -f ind_telseq307.txt
+    rm -f ind_telseq308.txt
+    rm -f ind_telseq309.txt
+    rm -f ind_telseq310.txt
+    rm -f ind_telseq311.txt
+    rm -f ind_telseq312.txt
+    rm -f ind_telseq313.txt
+    rm -f ind_telseq314.txt
+    rm -f ind_telseq315.txt
+    rm -f ind_telseq316.txt
+    rm -f ind_telseq317.txt
+    rm -f ind_telseq318.txt
+    rm -f ind_telseq319.txt
+    rm -f ind_telseq320.txt
+    rm -f ind_telseq321.txt
+    rm -f ind_telseq322.txt
+    rm -f ind_telseq323.txt
+    rm -f ind_telseq324.txt
+    rm -f ind_telseq325.txt
+    rm -f ind_telseq326.txt
+    rm -f ind_telseq327.txt
+    rm -f ind_telseq328.txt
+    rm -f ind_telseq329.txt
+    rm -f ind_telseq330.txt
+    rm -f ind_telseq331.txt
+    rm -f ind_telseq332.txt
+    rm -f ind_telseq333.txt
+    rm -f ind_telseq334.txt
+    rm -f ind_telseq335.txt
+    rm -f ind_telseq336.txt
+    rm -f ind_telseq337.txt
+    rm -f ind_telseq338.txt
+    rm -f ind_telseq339.txt
+    rm -f ind_telseq340.txt
+    rm -f ind_telseq341.txt
+    rm -f ind_telseq342.txt
+    rm -f ind_telseq343.txt
+    rm -f ind_telseq344.txt
+    rm -f ind_telseq345.txt
+    rm -f ind_telseq346.txt
+    rm -f ind_telseq347.txt
+    rm -f ind_telseq348.txt
+    rm -f ind_telseq349.txt
+    rm -f ind_telseq350.txt
+    rm -f ind_telseq351.txt
+    rm -f ind_telseq352.txt
+    rm -f ind_telseq353.txt
+    rm -f ind_telseq354.txt
+    rm -f ind_telseq355.txt
+    rm -f ind_telseq356.txt
+    rm -f ind_telseq357.txt
+    rm -f ind_telseq358.txt
+    rm -f ind_telseq359.txt
+    rm -f ind_telseq360.txt
+    rm -f ind_telseq361.txt
+    rm -f ind_telseq362.txt
+    rm -f ind_telseq363.txt
+    rm -f ind_telseq364.txt
+    rm -f ind_telseq365.txt
+    rm -f ind_telseq366.txt
+    rm -f ind_telseq367.txt
+    rm -f ind_telseq368.txt
+    rm -f ind_telseq369.txt
+    rm -f ind_telseq370.txt
+    rm -f ind_telseq371.txt
+    rm -f ind_telseq372.txt
+    rm -f ind_telseq373.txt
+    rm -f ind_telseq374.txt
+    rm -f ind_telseq375.txt
+    rm -f ind_telseq376.txt
+    rm -f ind_telseq377.txt
+    rm -f ind_telseq378.txt
+    rm -f ind_telseq379.txt
+    rm -f ind_telseq380.txt
+    rm -f ind_telseq381.txt
+    rm -f ind_telseq382.txt
+    rm -f ind_telseq383.txt
+    rm -f ind_telseq384.txt
+    rm -f ind_telseq385.txt
+    rm -f ind_telseq386.txt
+    rm -f ind_telseq387.txt
+    rm -f ind_telseq388.txt
+    rm -f ind_telseq389.txt
+    rm -f ind_telseq390.txt
+    rm -f ind_telseq391.txt
+    rm -f ind_telseq392.txt
+    rm -f ind_telseq393.txt
+    rm -f ind_telseq394.txt
+    rm -f ind_telseq395.txt
+    rm -f ind_telseq396.txt
+    rm -f ind_telseq397.txt
+    rm -f ind_telseq398.txt
+    rm -f ind_telseq399.txt
+    rm -f ind_telseq400.txt
+    rm -f ind_telseq401.txt
+    rm -f ind_telseq402.txt
+    rm -f ind_telseq403.txt
+    rm -f ind_telseq404.txt
+    rm -f ind_telseq405.txt
+    rm -f ind_telseq406.txt
+    rm -f ind_telseq407.txt
+    rm -f ind_telseq408.txt
+    rm -f ind_telseq409.txt
+    rm -f ind_telseq410.txt
+    rm -f ind_telseq411.txt
+    rm -f ind_telseq412.txt
+    rm -f ind_telseq413.txt
+    rm -f ind_telseq414.txt
+    rm -f ind_telseq415.txt
+    rm -f ind_telseq416.txt
+    rm -f ind_telseq417.txt
+    rm -f ind_telseq418.txt
+    rm -f ind_telseq419.txt
+    rm -f ind_telseq420.txt
+    rm -f ind_telseq421.txt
+    rm -f ind_telseq422.txt
+    rm -f ind_telseq423.txt
+    rm -f ind_telseq424.txt
+    rm -f ind_telseq425.txt
+    rm -f ind_telseq426.txt
+    rm -f ind_telseq427.txt
+    rm -f ind_telseq428.txt
+    rm -f ind_telseq429.txt
+    rm -f ind_telseq430.txt
+    rm -f ind_telseq431.txt
+    rm -f ind_telseq432.txt
+    rm -f ind_telseq433.txt
+    rm -f ind_telseq434.txt
+    rm -f ind_telseq435.txt
+    rm -f ind_telseq436.txt
+    rm -f ind_telseq437.txt
+    rm -f ind_telseq438.txt
+    rm -f ind_telseq439.txt
+    rm -f ind_telseq440.txt
+    rm -f ind_telseq441.txt
+    rm -f ind_telseq442.txt
+    rm -f ind_telseq443.txt
+    rm -f ind_telseq444.txt
+    rm -f ind_telseq445.txt
+    rm -f ind_telseq446.txt
+    rm -f ind_telseq447.txt
+    rm -f ind_telseq448.txt
+    rm -f ind_telseq449.txt
+    rm -f ind_telseq450.txt
+    rm -f ind_telseq451.txt
+    rm -f ind_telseq452.txt
+    rm -f ind_telseq453.txt
+    rm -f ind_telseq454.txt
+    rm -f ind_telseq455.txt
+    rm -f ind_telseq456.txt
+    rm -f ind_telseq457.txt
+    rm -f ind_telseq458.txt
+    rm -f ind_telseq459.txt
+    rm -f ind_telseq460.txt
+    rm -f ind_telseq461.txt
+    rm -f ind_telseq462.txt
+    rm -f ind_telseq463.txt
+    rm -f ind_telseq464.txt
+    rm -f ind_telseq465.txt
+    rm -f ind_telseq466.txt
+    rm -f ind_telseq467.txt
+    rm -f ind_telseq468.txt
+    rm -f ind_telseq469.txt
+    rm -f ind_telseq470.txt
+    rm -f ind_telseq471.txt
+    rm -f ind_telseq472.txt
+    rm -f ind_telseq473.txt
+    rm -f ind_telseq474.txt
+    rm -f ind_telseq475.txt
+    rm -f ind_telseq476.txt
+    rm -f ind_telseq477.txt
+    rm -f ind_telseq478.txt
+    rm -f ind_telseq479.txt
+    rm -f ind_telseq480.txt
+    rm -f ind_telseq481.txt
+    rm -f ind_telseq482.txt
+    rm -f ind_telseq483.txt
+    rm -f ind_telseq484.txt
+    rm -f ind_telseq485.txt
+    rm -f ind_telseq486.txt
+    rm -f ind_telseq487.txt
+    rm -f ind_telseq488.txt
+    rm -f ind_telseq489.txt
+    rm -f ind_telseq490.txt
+    rm -f ind_telseq491.txt
+    rm -f ind_telseq492.txt
+    rm -f ind_telseq493.txt
+    rm -f ind_telseq494.txt
+    rm -f ind_telseq495.txt
+    rm -f ind_telseq496.txt
+    rm -f ind_telseq497.txt
+    rm -f ind_telseq498.txt
+    rm -f ind_telseq499.txt
+    rm -f ind_telseq500.txt
+    rm -f ind_telseq501.txt
+    rm -f ind_telseq502.txt
+    rm -f ind_telseq503.txt
+    rm -f ind_telseq504.txt
+    rm -f ind_telseq505.txt
+    rm -f ind_telseq506.txt
+    rm -f ind_telseq507.txt
+    rm -f ind_telseq508.txt
+    rm -f ind_telseq509.txt
+    rm -f ind_telseq510.txt
+    rm -f ind_telseq511.txt
+    rm -f ind_telseq512.txt
+    rm -f ind_telseq513.txt
+    rm -f ind_telseq514.txt
+    rm -f ind_telseq515.txt
+    rm -f ind_telseq516.txt
+    rm -f ind_telseq517.txt
+    rm -f ind_telseq518.txt
+    rm -f ind_telseq519.txt
+    rm -f ind_telseq520.txt
+    rm -f ind_telseq521.txt
+    rm -f ind_telseq522.txt
+    rm -f ind_telseq523.txt
+    rm -f ind_telseq524.txt
+    rm -f ind_telseq525.txt
+    rm -f ind_telseq526.txt
+    rm -f ind_telseq527.txt
+    rm -f ind_telseq528.txt
+    rm -f ind_telseq529.txt
+    rm -f ind_telseq530.txt
+    rm -f ind_telseq531.txt
+    rm -f ind_telseq532.txt
+    rm -f ind_telseq533.txt
+    rm -f ind_telseq534.txt
+    rm -f ind_telseq535.txt
+    rm -f ind_telseq536.txt
+    rm -f ind_telseq537.txt
+    rm -f ind_telseq538.txt
+    rm -f ind_telseq539.txt
+    rm -f ind_telseq540.txt
+    rm -f ind_telseq541.txt
+    rm -f ind_telseq542.txt
+    rm -f ind_telseq543.txt
+    rm -f ind_telseq544.txt
+    rm -f ind_telseq545.txt
+    rm -f ind_telseq546.txt
+    rm -f ind_telseq547.txt
+    rm -f ind_telseq548.txt
+    rm -f ind_telseq549.txt
+    rm -f ind_telseq550.txt
+    rm -f ind_telseq551.txt
+    rm -f ind_telseq552.txt
+    rm -f ind_telseq553.txt
+    rm -f ind_telseq554.txt
+    rm -f ind_telseq555.txt
+    rm -f ind_telseq556.txt
+    rm -f ind_telseq557.txt
+    rm -f ind_telseq558.txt
+    rm -f ind_telseq559.txt
+    rm -f ind_telseq560.txt
+    rm -f ind_telseq561.txt
+    rm -f ind_telseq562.txt
+    rm -f ind_telseq563.txt
+    rm -f ind_telseq564.txt
+    rm -f ind_telseq565.txt
+    rm -f ind_telseq566.txt
+    rm -f ind_telseq567.txt
+    rm -f ind_telseq568.txt
+    rm -f ind_telseq569.txt
+    rm -f ind_telseq570.txt
+    rm -f ind_telseq571.txt
+    rm -f ind_telseq572.txt
+    rm -f ind_telseq573.txt
+    rm -f ind_telseq574.txt
+    rm -f ind_telseq575.txt
+    rm -f ind_telseq576.txt
+    rm -f ind_telseq577.txt
+    rm -f ind_telseq578.txt
+    rm -f ind_telseq579.txt
+    rm -f ind_telseq580.txt
+    rm -f ind_telseq581.txt
+    rm -f ind_telseq582.txt
+    rm -f ind_telseq583.txt
+    rm -f ind_telseq584.txt
+    rm -f ind_telseq585.txt
+    rm -f ind_telseq586.txt
+    rm -f ind_telseq587.txt
+    rm -f ind_telseq588.txt
+    rm -f ind_telseq589.txt
+    rm -f ind_telseq590.txt
+    rm -f ind_telseq591.txt
+    rm -f ind_telseq592.txt
+    rm -f ind_telseq593.txt
+    rm -f ind_telseq594.txt
+    rm -f ind_telseq595.txt
+    rm -f ind_telseq596.txt
+    rm -f ind_telseq597.txt
+    rm -f ind_telseq598.txt
+    rm -f ind_telseq599.txt
+    rm -f ind_telseq600.txt
+    rm -f ind_telseq601.txt
+    rm -f ind_telseq602.txt
+    rm -f ind_telseq603.txt
+    rm -f ind_telseq604.txt
+    rm -f ind_telseq605.txt
+    rm -f ind_telseq606.txt
+    rm -f ind_telseq607.txt
+    rm -f ind_telseq608.txt
+    rm -f ind_telseq609.txt
+    rm -f ind_telseq610.txt
+    rm -f ind_telseq611.txt
+    rm -f ind_telseq612.txt
+    rm -f ind_telseq613.txt
+    rm -f ind_telseq614.txt
+    rm -f ind_telseq615.txt
+    rm -f ind_telseq616.txt
+    rm -f ind_telseq617.txt
+    rm -f ind_telseq618.txt
+    rm -f ind_telseq619.txt
+    rm -f ind_telseq620.txt
+    rm -f ind_telseq621.txt
+    rm -f ind_telseq622.txt
+    rm -f ind_telseq623.txt
+    rm -f ind_telseq624.txt
+    rm -f ind_telseq625.txt
+    rm -f ind_telseq626.txt
+    rm -f ind_telseq627.txt
+    rm -f ind_telseq628.txt
+    rm -f ind_telseq629.txt
+    rm -f ind_telseq630.txt
+    rm -f ind_telseq631.txt
+    rm -f ind_telseq632.txt
+    rm -f ind_telseq633.txt
+    rm -f ind_telseq634.txt
+    rm -f ind_telseq635.txt
+    rm -f ind_telseq636.txt
+    rm -f ind_telseq637.txt
+    rm -f ind_telseq638.txt
+    rm -f ind_telseq639.txt
+    rm -f ind_telseq640.txt
+    rm -f ind_telseq641.txt
+    rm -f ind_telseq642.txt
+    rm -f ind_telseq643.txt
+    rm -f ind_telseq644.txt
+    rm -f ind_telseq645.txt
+    rm -f ind_telseq646.txt
+    rm -f ind_telseq647.txt
+    rm -f ind_telseq648.txt
+    rm -f ind_telseq649.txt
+    rm -f ind_telseq650.txt
+    rm -f ind_telseq651.txt
+    rm -f ind_telseq652.txt
+    rm -f ind_telseq653.txt
+    rm -f ind_telseq654.txt
+    rm -f ind_telseq655.txt
+    rm -f ind_telseq656.txt
+    rm -f ind_telseq657.txt
+    rm -f ind_telseq658.txt
+    rm -f ind_telseq659.txt
+    rm -f ind_telseq660.txt
+    rm -f ind_telseq661.txt
+    rm -f ind_telseq662.txt
+    rm -f ind_telseq663.txt
+    rm -f ind_telseq664.txt
+    rm -f ind_telseq665.txt
+    rm -f ind_telseq666.txt
+    rm -f ind_telseq667.txt
+    rm -f ind_telseq668.txt
+    rm -f ind_telseq669.txt
+    rm -f ind_telseq670.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/00/0684dd71f2b7a3b1532e7889acb384/telseq_out.txt ind_telseq1.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/00/0cec4ea2c27bbbe02d929bff768e8e/telseq_out.txt ind_telseq2.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/00/8d5c7b0da1401505786cb749d6682b/telseq_out.txt ind_telseq3.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/01/252d28c8fb005fb1864087a5929c8d/telseq_out.txt ind_telseq4.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/01/5bcc971447c4026ed7edb422b3fe14/telseq_out.txt ind_telseq5.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/01/ec47c04ee56fdca602fe6e4abfd8b3/telseq_out.txt ind_telseq6.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/02/13543b47a479e37f421e986fa042e3/telseq_out.txt ind_telseq7.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/02/34c2b87a37fa6989a3e7e66972fe95/telseq_out.txt ind_telseq8.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/02/53f0d9d342854f11b88b8b29cb40c0/telseq_out.txt ind_telseq9.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/03/f7d27d5e45172117ba6e055a31c0ad/telseq_out.txt ind_telseq10.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/04/07554cbe8c6d95b7f6c77a24668daa/telseq_out.txt ind_telseq11.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/04/3cd2084f6d37881a8f6c9da09aac4e/telseq_out.txt ind_telseq12.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/05/6f136c141babd91a0ca1069f8c6743/telseq_out.txt ind_telseq13.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/06/d2ba19ad996e2f87d58b4fcb7b5b84/telseq_out.txt ind_telseq14.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/08/5b04df2a830f40f4d5d4d7a3e6c0d2/telseq_out.txt ind_telseq15.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/08/64cb978d3c017520b4bd6558c662b6/telseq_out.txt ind_telseq16.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/09/4c7e1f85840976160ffd2f97397c56/telseq_out.txt ind_telseq17.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/09/6c3364f7fec86e2026614ffeddecf9/telseq_out.txt ind_telseq18.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/09/c4dc95cca295e38f4cb780acf441ba/telseq_out.txt ind_telseq19.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0a/115e03624c29d6cc144ef896871f78/telseq_out.txt ind_telseq20.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0a/8d96c1652ed25fc792d6e19e3ddbae/telseq_out.txt ind_telseq21.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0b/a25a799fe72b48cb841367f2db5b7d/telseq_out.txt ind_telseq22.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0b/c1a5945028f8dc1121ad81f2432e99/telseq_out.txt ind_telseq23.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0b/c331be9b998aeecf4a50c01917d9cb/telseq_out.txt ind_telseq24.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0d/9f9e162b3831c7bc5979434dfcf802/telseq_out.txt ind_telseq25.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/2162d3a4173065df048475094a398a/telseq_out.txt ind_telseq26.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/7980f881426699771b83eefee08f2f/telseq_out.txt ind_telseq27.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/a0db196b71b7f6db48298f00560058/telseq_out.txt ind_telseq28.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0f/3847ed1028bcdbb457da685d00da13/telseq_out.txt ind_telseq29.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0f/54bc274e0b4ae21df57cf894770257/telseq_out.txt ind_telseq30.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0f/7c73cd3d1bc4b9e2058b86c486057f/telseq_out.txt ind_telseq31.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/0f/f69d4bd318e79c9fc0ccf5c2cd507f/telseq_out.txt ind_telseq32.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/10/36a1326ad2bac36b5cf773436e8758/telseq_out.txt ind_telseq33.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/10/49a3d55916c7b03c17413102fe3fb8/telseq_out.txt ind_telseq34.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/11/79d8fa74a1bae34cbaa3826ddb4f2d/telseq_out.txt ind_telseq35.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/11/bc94463f8a2102eb25e6fe0305c89a/telseq_out.txt ind_telseq36.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/12/e59522526e89b83c2e7ec08b7d9cf9/telseq_out.txt ind_telseq37.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/13/18be30a5cc26d886266d8a6092a9ef/telseq_out.txt ind_telseq38.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/13/4e080379fbc4ba37f2ac6f99d02d77/telseq_out.txt ind_telseq39.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/13/8128ad17c1c041df9feccac8cb5498/telseq_out.txt ind_telseq40.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/13/93cdf30376956869814375672dd42f/telseq_out.txt ind_telseq41.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/13/b130401febfb00fdc452b429f33c9d/telseq_out.txt ind_telseq42.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/14/0b5916594c4a11b3f362104045b986/telseq_out.txt ind_telseq43.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/14/30b6293877ab3769bd34946232bb8a/telseq_out.txt ind_telseq44.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/14/6c7203a0f68d638670ff36b58bd2d1/telseq_out.txt ind_telseq45.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/14/87953476439fd956bb5690f2253980/telseq_out.txt ind_telseq46.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/15/13d325477faa5bdd9c04bf402c2be1/telseq_out.txt ind_telseq47.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/15/eb5c7eccaef3fe41d7b3b7a0e229fd/telseq_out.txt ind_telseq48.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/15/f9910c2e2dc5862b70fd89eca1f5e3/telseq_out.txt ind_telseq49.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/16/084871989c45b319dfbcb68225fe46/telseq_out.txt ind_telseq50.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/16/22a66f1bfb8755e5d8e1913a6dfe04/telseq_out.txt ind_telseq51.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/16/4a637bf447104f448cd71ad16e74a1/telseq_out.txt ind_telseq52.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/16/db140d14a5ae0a30ea19ad59573536/telseq_out.txt ind_telseq53.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/17/13167a98861d4d5dc08a8e7e61702f/telseq_out.txt ind_telseq54.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/17/b4b6d15f969c52c28de019a1cbd124/telseq_out.txt ind_telseq55.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/17/c348a93604e34508691493323e5559/telseq_out.txt ind_telseq56.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/18/1d6a8088e52aa2b5a03a2dd289ddc0/telseq_out.txt ind_telseq57.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/19/21f1502df229855f214412877eb41e/telseq_out.txt ind_telseq58.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/19/379a64c6658d6423de070e0cb41afa/telseq_out.txt ind_telseq59.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/19/5ce9af3c46528b1f568ffd095e6233/telseq_out.txt ind_telseq60.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/19/8981af5dd7a7c71450213175d8c5df/telseq_out.txt ind_telseq61.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/19/8d943339cfe4be2accf6105cdf8461/telseq_out.txt ind_telseq62.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1a/3cde4d6c636034a271de19edead5ab/telseq_out.txt ind_telseq63.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1a/54b3e8e7ee143a8e6a7a4dbd39ceef/telseq_out.txt ind_telseq64.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1a/ae7d0c3a6d7f776d9c42d527ee031a/telseq_out.txt ind_telseq65.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1b/3672790f411e87577b18b9e84d52ed/telseq_out.txt ind_telseq66.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1b/78b534da9863d9ffc893af5d8a3402/telseq_out.txt ind_telseq67.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1c/38f0ff66ee5358713c18feb170b874/telseq_out.txt ind_telseq68.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1c/9d2e73c8d427d48f20fd2ce92cc548/telseq_out.txt ind_telseq69.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1c/bf6b175446c93396240d79c79317e6/telseq_out.txt ind_telseq70.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1d/059b1dedfede3b7649c2112c88f192/telseq_out.txt ind_telseq71.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1d/0c41edf2db2fff1875bea6c8e13a91/telseq_out.txt ind_telseq72.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1d/3a914cb91cd92dd2d16def8d1083b0/telseq_out.txt ind_telseq73.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1e/3d5a522eea310f8bcb14f30f67f8bd/telseq_out.txt ind_telseq74.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1e/679b039cbd1ef871e406769b6f48ec/telseq_out.txt ind_telseq75.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1e/a8bf3b1dcb005ed6fe17d6698826da/telseq_out.txt ind_telseq76.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1e/aec114d613caff8380e5c7a59e69e9/telseq_out.txt ind_telseq77.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1e/b9bfe9765fbb1471473200355ae8d4/telseq_out.txt ind_telseq78.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1f/40b1dfba11882021b64c2cddfed9b7/telseq_out.txt ind_telseq79.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1f/9d59df111d0b67e6cf3b055d02ab59/telseq_out.txt ind_telseq80.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/1f/b947124dd8fd23452593acefcb5574/telseq_out.txt ind_telseq81.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/20/3a427ea7d4a1777e4f7a2dc904c025/telseq_out.txt ind_telseq82.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/20/5b5eaa63a0b990434081512d130d40/telseq_out.txt ind_telseq83.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/20/76b6a1d3a765fa905e166233f1fa1c/telseq_out.txt ind_telseq84.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/20/8661cd83fbd4223df1ca084546b5a4/telseq_out.txt ind_telseq85.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/21/1e3f60cce2a682a6f694115ce14239/telseq_out.txt ind_telseq86.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/22/2fdcc3e823c28dd7985c584b7fe838/telseq_out.txt ind_telseq87.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/22/5a7f68db902d534d175622a0b86a7a/telseq_out.txt ind_telseq88.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/22/9627f417365d770a50116125f3770e/telseq_out.txt ind_telseq89.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/22/da954961c79e5d00d2925123f880c4/telseq_out.txt ind_telseq90.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/23/13d9f77c4916b5b464f14a4a6306a6/telseq_out.txt ind_telseq91.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/23/5a188354eaad4b9f6fceeef7ba9951/telseq_out.txt ind_telseq92.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/23/6090709cf430896d271a1eddd6f2c9/telseq_out.txt ind_telseq93.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/23/6e08f56f1927b0b79c97801b6ed0b3/telseq_out.txt ind_telseq94.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/23/bc9aa81b96056422ffd31704b02ec9/telseq_out.txt ind_telseq95.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/24/153977e0ba78dfc5a5a32383379bb8/telseq_out.txt ind_telseq96.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/24/8cd861679217511487d951a2da2cff/telseq_out.txt ind_telseq97.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/25/0f8091b6f60250695918a2de09f608/telseq_out.txt ind_telseq98.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/25/25b25aa79bb9429c003a350cda77a0/telseq_out.txt ind_telseq99.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/25/557ecc5c3655a04e29cfa2018aef15/telseq_out.txt ind_telseq100.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/25/5e2e54f7e6872cee3d510b36730917/telseq_out.txt ind_telseq101.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/25/ac00b007646117480c0036896116bf/telseq_out.txt ind_telseq102.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/26/1924d71b3908b04db0fb761d6acb5d/telseq_out.txt ind_telseq103.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/26/7a049524e03a701e1dbffb6e9e36fa/telseq_out.txt ind_telseq104.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/26/7ba0e92c2e422d9c1737315cf6aa72/telseq_out.txt ind_telseq105.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/26/c0b1acf1551efedd87eebf4b5ba970/telseq_out.txt ind_telseq106.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/27/197e4a6cd9b135beafa3b781f82902/telseq_out.txt ind_telseq107.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/27/6cffb0e6b014cdb4beae2f010c43c7/telseq_out.txt ind_telseq108.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/28/43330a175511a62c1f68db3ee4ebae/telseq_out.txt ind_telseq109.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/28/7ba9ac4c3d118161b006cceeeccd46/telseq_out.txt ind_telseq110.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/28/cfa848c617c2db400c18ae8731ce11/telseq_out.txt ind_telseq111.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/29/061a84c95edea5be87a1968a9c5539/telseq_out.txt ind_telseq112.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/29/adaa1b61b8bf681476267a3800d109/telseq_out.txt ind_telseq113.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/29/d96fb2d56cec6ea32ef306c9e3ca2b/telseq_out.txt ind_telseq114.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/29/defbc5b79d2e9d9b1006b8e54bd9cb/telseq_out.txt ind_telseq115.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2a/8cc66ec7d302fb599f1f7d28cc8104/telseq_out.txt ind_telseq116.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2a/b9be2f7881409b4811081ada00df65/telseq_out.txt ind_telseq117.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2b/43f5531b8d67c966ced44b1645035e/telseq_out.txt ind_telseq118.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2b/896f456d216b33322ba58f6653a956/telseq_out.txt ind_telseq119.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2c/20852e4e61c4cdc2c5e36b2d14412e/telseq_out.txt ind_telseq120.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2c/4b4d40e9357d90d389f94375a5c888/telseq_out.txt ind_telseq121.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2d/5f44204e3241910fc8f6df85f21802/telseq_out.txt ind_telseq122.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2d/6ca390f43712c229a0aa8f4b9eb386/telseq_out.txt ind_telseq123.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2d/6e2a33a99a1619aeca16dc837dbd12/telseq_out.txt ind_telseq124.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2d/991ff277d32dcc3ca7872a809cf85c/telseq_out.txt ind_telseq125.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2d/df6f9d744a9f2fe91abeee030076fc/telseq_out.txt ind_telseq126.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2e/35b25dae2695ca2cf1710cd7e77d6b/telseq_out.txt ind_telseq127.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2e/cde5a64934ce5df335f00f57203c1e/telseq_out.txt ind_telseq128.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2e/e58f8544824418a640c85bac36579d/telseq_out.txt ind_telseq129.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2f/2d62486df79fc080c3eea71609ac1e/telseq_out.txt ind_telseq130.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2f/3e6c6b25c95644c0325804a3c7c04b/telseq_out.txt ind_telseq131.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2f/4f83a9d0613e88ffb6c17ced39dbd9/telseq_out.txt ind_telseq132.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/2f/c47ab4efd8556e4da985b975c57f6a/telseq_out.txt ind_telseq133.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/30/0c60230546bac0f8927c95ae134a06/telseq_out.txt ind_telseq134.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/30/ce1a1ca23f0f621340acc1d4f49853/telseq_out.txt ind_telseq135.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/30/f30cbe22a87592da226eaad5f10585/telseq_out.txt ind_telseq136.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/31/a41402111c5386d6dafca669274a5f/telseq_out.txt ind_telseq137.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/32/53fa2cfedeb3c17bee1d9df9a6baac/telseq_out.txt ind_telseq138.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/32/591250e38a60e6a15cb4d5aa9b9de1/telseq_out.txt ind_telseq139.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/32/617204f7b0748d54db4e4b6949c528/telseq_out.txt ind_telseq140.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/32/922bcb18f7436cb2b243eeeb1fd96e/telseq_out.txt ind_telseq141.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/33/f3afa8c6d88d06433ee87fa4aab8c4/telseq_out.txt ind_telseq142.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/34/0353f71596ecad2fe7b3b2a1df5486/telseq_out.txt ind_telseq143.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/34/1304f57b208f206fe34d5c47ee801b/telseq_out.txt ind_telseq144.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/34/6207174b540c6448b199feb5729961/telseq_out.txt ind_telseq145.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/34/dd5dfdc6945a66f40f7f06aaaed4df/telseq_out.txt ind_telseq146.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/34/ed175cf9919a3e85dc017e0e61b423/telseq_out.txt ind_telseq147.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/37/6b9f80fdeec7ff38439aaacf94f802/telseq_out.txt ind_telseq148.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/38/15a0d7561d2aca38fff6362562d3b7/telseq_out.txt ind_telseq149.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/38/15bbe7419e09592c336446c8d4c62f/telseq_out.txt ind_telseq150.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/38/5561552bc53d247214021bf85ea150/telseq_out.txt ind_telseq151.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/38/ef42be331ce874896b6690f7637f25/telseq_out.txt ind_telseq152.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/39/1733fe1e983b18799e67fc8ccfee6c/telseq_out.txt ind_telseq153.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/39/97083ae825c2d9fa3c954835c125d7/telseq_out.txt ind_telseq154.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/39/a9a3c4db184cc254afd81bb8bf7559/telseq_out.txt ind_telseq155.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/39/e932a5cd4ff115425cd836b656c135/telseq_out.txt ind_telseq156.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3a/02f3d4e084dd9fdf376e66d537bb0e/telseq_out.txt ind_telseq157.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3a/749bac4d841c139735bf8793881a4a/telseq_out.txt ind_telseq158.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3a/c4913563caaf1f37321f95296dcf2b/telseq_out.txt ind_telseq159.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3a/c539241dbc2a8447e9c76079b4f335/telseq_out.txt ind_telseq160.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3a/f09ab7dadc795f2277f6668d97eed8/telseq_out.txt ind_telseq161.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/076b6d21b164d8c24e9b01da36d6e9/telseq_out.txt ind_telseq162.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/0f1dc7730185f8863f32a7b98788ce/telseq_out.txt ind_telseq163.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/289079a0f72c1d7d20f866d8a7419f/telseq_out.txt ind_telseq164.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/320a425135f93f390105fe883baa35/telseq_out.txt ind_telseq165.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/863d18a6bd46a0bec3dbb7db98b3e0/telseq_out.txt ind_telseq166.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3b/ec90f898119b088b70b7b0588ae211/telseq_out.txt ind_telseq167.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3c/27900980c1973a810b6abc43be5c24/telseq_out.txt ind_telseq168.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3d/8e6e1e5890e2886a54c9f7afcda032/telseq_out.txt ind_telseq169.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3d/eb0725b3d7c12da2db864e7a85428a/telseq_out.txt ind_telseq170.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3e/06a6e84709072de95bf998904b2f44/telseq_out.txt ind_telseq171.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3e/227995d8d6ee731d164bcca8b9ebf3/telseq_out.txt ind_telseq172.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3e/bd3242753ba88108a42a4c36dd98ec/telseq_out.txt ind_telseq173.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3e/c00510393539b5ca16c326eb597a99/telseq_out.txt ind_telseq174.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3e/d0b64ca4824666564ac955f78ebd69/telseq_out.txt ind_telseq175.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3f/9e812e73c41496ba5946aba4601e1f/telseq_out.txt ind_telseq176.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3f/c71beb6ba2f73ff0d4872f0f55add5/telseq_out.txt ind_telseq177.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/3f/c997c0a130a506f6381bb8d64624e5/telseq_out.txt ind_telseq178.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/40/4d93a90ef93e8536cb666b41a9276b/telseq_out.txt ind_telseq179.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/40/50bc11c7c3f6aafcf8969e33f6b085/telseq_out.txt ind_telseq180.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/40/738f1274f7cad64746570c9272419a/telseq_out.txt ind_telseq181.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/40/79ef635c1e3dceb91eafa72e65126b/telseq_out.txt ind_telseq182.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/40/ea61259e5044fe7ad9cfc7436c42db/telseq_out.txt ind_telseq183.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/41/1680dc7b9e8d784ee782073cf53417/telseq_out.txt ind_telseq184.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/41/260b01407995f58ebcdf6320825a07/telseq_out.txt ind_telseq185.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/41/2a85698ed06462893c59dced99416b/telseq_out.txt ind_telseq186.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/42/6fbd70c6138261cb92cc7a1fac60ee/telseq_out.txt ind_telseq187.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/43/a8bf6bf24eed8d81a965205d1cb469/telseq_out.txt ind_telseq188.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/44/8bce7dfdd7bfff36e9af6c97dd790f/telseq_out.txt ind_telseq189.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/45/64eed447b5d00cc7da90bb8daf245f/telseq_out.txt ind_telseq190.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/46/51fa4286a96dce8bebcdae2b6780cf/telseq_out.txt ind_telseq191.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/47/96e7932fd52e88079872564fb564f2/telseq_out.txt ind_telseq192.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/48/0694c360c7a6600ddf07b5ef795f11/telseq_out.txt ind_telseq193.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/48/74204a5d6365fca218571fc674a908/telseq_out.txt ind_telseq194.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/49/36c60ed0753b42e1f50247f25b6fba/telseq_out.txt ind_telseq195.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/49/cbd7ecc29e55c4a9928c02cf0cb29b/telseq_out.txt ind_telseq196.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4a/62c6753c5240bd6284fad234c7b997/telseq_out.txt ind_telseq197.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4a/b6e29768c5d1b2e705e7fad8e37e93/telseq_out.txt ind_telseq198.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4a/d6d35076136ef1733c614061c7ad60/telseq_out.txt ind_telseq199.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4b/3d7764e2dcd7251fb8758b863221e2/telseq_out.txt ind_telseq200.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4b/49b1b505a0b16699793f86eb26f5d3/telseq_out.txt ind_telseq201.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4b/99a93ff0dc0edf55c69c848af8033d/telseq_out.txt ind_telseq202.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4b/9bbf6b9b749d6a7c2fe0d989472db4/telseq_out.txt ind_telseq203.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4c/435a268a3f3f1ce08bbfa27ee026c3/telseq_out.txt ind_telseq204.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4c/66a077f873665745ca08f64a0a283d/telseq_out.txt ind_telseq205.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4c/dd33acf30b4742acf9cd405ba56058/telseq_out.txt ind_telseq206.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4c/f9a7b2b3b241955edcca3cb950a819/telseq_out.txt ind_telseq207.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4e/0d02e6de39818897374ae981f5623f/telseq_out.txt ind_telseq208.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4e/ca614ac41df3c84bbef09af6b56c8f/telseq_out.txt ind_telseq209.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4e/f3d96bc12d744a7c85cb3cd1a78c99/telseq_out.txt ind_telseq210.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4f/0e04dc46015db11dd66c8c7daa4c97/telseq_out.txt ind_telseq211.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4f/26f76568694843fad793c8860fd47f/telseq_out.txt ind_telseq212.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/4f/60fe92535a03a0303cb3cc7b556bdc/telseq_out.txt ind_telseq213.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/50/041e3e42cc7c0ec501a5f8af196d44/telseq_out.txt ind_telseq214.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/50/12747b970ff8b11f5474ff43e7a998/telseq_out.txt ind_telseq215.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/50/67edbc815ece9ef20c2d63efd3a80a/telseq_out.txt ind_telseq216.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/50/ad43ff55e7cbcd8f75dbb5967b4177/telseq_out.txt ind_telseq217.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/50/b39bb656967858265ce44f1e2d2071/telseq_out.txt ind_telseq218.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/51/1d5808ef893828a9ac8d51985fb267/telseq_out.txt ind_telseq219.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/51/20468b3b531b0564b415235a8d8b86/telseq_out.txt ind_telseq220.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/53/23dafd6c4ce2655c4ef6bdd5682c55/telseq_out.txt ind_telseq221.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/53/850774dbadcd3fa3fc7d9c1b54b011/telseq_out.txt ind_telseq222.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/53/94f311f771de31c81b4c9d78312437/telseq_out.txt ind_telseq223.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/53/ec91c16a6ee2d7337232eb9ee5138b/telseq_out.txt ind_telseq224.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/54/45ffaf8f91e3d78e8a08766e7e730f/telseq_out.txt ind_telseq225.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/55/543a03eb418cafee01a87c02ca63a4/telseq_out.txt ind_telseq226.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/55/9c3e66f0c03b1938242ab67ab93c7a/telseq_out.txt ind_telseq227.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/55/d405eccedb10a5a7f7dc2865cdf2fa/telseq_out.txt ind_telseq228.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/55/d9b63a1767e2e728757cf929ace580/telseq_out.txt ind_telseq229.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/55/f042fd5428541580ab7ed712bc2109/telseq_out.txt ind_telseq230.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/56/4187f8221ab525651d2574f4ff3c82/telseq_out.txt ind_telseq231.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/56/b26f54ed132d316169f0b5672b9553/telseq_out.txt ind_telseq232.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/56/b3210ac5729848d823d17db056bad8/telseq_out.txt ind_telseq233.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/57/0f358484f77a32e99734e57a04bee0/telseq_out.txt ind_telseq234.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/57/1268bc19d0406f9e5dc0e59f13feae/telseq_out.txt ind_telseq235.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/57/2e822379dc593d44a5f67490f8ab03/telseq_out.txt ind_telseq236.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/57/4e814c4f79698146ad72aaed0b5e2a/telseq_out.txt ind_telseq237.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/57/80236b6c25d4ee6c880ada1c7bce1c/telseq_out.txt ind_telseq238.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/59/b5ed70d205c211c4b1b1054bbb5d01/telseq_out.txt ind_telseq239.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/59/d2c1cf30b8d073200f4fed1841b7c9/telseq_out.txt ind_telseq240.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5a/3a8f2d1e7fbbc7136137e51274aa9e/telseq_out.txt ind_telseq241.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5a/a432ae8d7548d3a290381848e79f3a/telseq_out.txt ind_telseq242.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5b/b33011068377886740b1a2e203cb39/telseq_out.txt ind_telseq243.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5b/e92744953490888199bcfebe635436/telseq_out.txt ind_telseq244.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/50e7d834eae850aa02f5cd6be6ffbf/telseq_out.txt ind_telseq245.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/6f343059ab24c88147a3faa0856eb7/telseq_out.txt ind_telseq246.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/895543f0dda81c9eb1ce97214d048c/telseq_out.txt ind_telseq247.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/b4952111cd63d1067310a25cf1d94e/telseq_out.txt ind_telseq248.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/e660d1084ce6086bb0d2026da15426/telseq_out.txt ind_telseq249.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5c/e7d9a73ef07bbe2584ad39d5d97c6e/telseq_out.txt ind_telseq250.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5d/e6962004d87492b4299b13d5f51eb7/telseq_out.txt ind_telseq251.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5d/f3a032fc80c7bcf8a9bc09b045e4a5/telseq_out.txt ind_telseq252.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/1533a91e697a391c181b3c48e8cd37/telseq_out.txt ind_telseq253.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/7b3ceb76fa2464820e0c521491f5e5/telseq_out.txt ind_telseq254.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/8d83cfa77835774f32465e1e2f8745/telseq_out.txt ind_telseq255.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/d239b079386986629aabf6a508ec1b/telseq_out.txt ind_telseq256.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/eda7bac61931a68f5258da8004556f/telseq_out.txt ind_telseq257.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5e/fb8c20feb95d37a426fb01792cd3f7/telseq_out.txt ind_telseq258.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/5f/9b13f93d714be91f7cedacd78afece/telseq_out.txt ind_telseq259.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/60/54480093c63b243413236925378580/telseq_out.txt ind_telseq260.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/60/b6b276385ce636187108e076f155d6/telseq_out.txt ind_telseq261.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/60/dcd87cae7d025308e852bae27597e9/telseq_out.txt ind_telseq262.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/61/924b3e96562b89bc9c4b662612f004/telseq_out.txt ind_telseq263.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/61/94f28a180c3ab0ec7ef8c63f19c952/telseq_out.txt ind_telseq264.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/61/f41915c07dcbe0a8726781552faa31/telseq_out.txt ind_telseq265.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/62/43931faa9cef0ad39107c7727a945b/telseq_out.txt ind_telseq266.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/62/6bae0d8501b50447562e2a9e77792b/telseq_out.txt ind_telseq267.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/63/66036990fc5bb6f709efc70ce502fb/telseq_out.txt ind_telseq268.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/64/7961bef214809c6bf319bbee5c5799/telseq_out.txt ind_telseq269.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/64/b239bd014f5a587ce1f04d6b75a354/telseq_out.txt ind_telseq270.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/65/c060f71e6d86c551fb6de8ece4fa8c/telseq_out.txt ind_telseq271.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/65/ebe68331e6fe5172bac25ab308a015/telseq_out.txt ind_telseq272.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/65/f257d6dfd473a8e7d9ccb9ae48e5bd/telseq_out.txt ind_telseq273.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/66/016d2f57e54caf954d03ad3b690237/telseq_out.txt ind_telseq274.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/66/8a450b4a995dfd39f53b82e53edcec/telseq_out.txt ind_telseq275.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/66/f5b627f544134ce6361150d4c8dc3d/telseq_out.txt ind_telseq276.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/67/340826fe3b7d2765d7bac83c90a1e8/telseq_out.txt ind_telseq277.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/67/3b16a6983661d844f6ded400323239/telseq_out.txt ind_telseq278.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/67/6d5af1f1f362d93f39bb9b8ee726b7/telseq_out.txt ind_telseq279.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/67/d64524afae3e5d569ec14e4c33dfee/telseq_out.txt ind_telseq280.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/68/811b666ce5ac037c6d86c67292f372/telseq_out.txt ind_telseq281.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/68/eb51140e052031da3a60edb8b46020/telseq_out.txt ind_telseq282.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/69/786cf4b458e190b1df136ec9e95800/telseq_out.txt ind_telseq283.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6a/ab4317ba32559df21033689880b8a5/telseq_out.txt ind_telseq284.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6a/ee3104e74dba367cb03ef46ef483d8/telseq_out.txt ind_telseq285.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6a/fb68a25944de081b45c606615233e1/telseq_out.txt ind_telseq286.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6b/0a0c444d3d61d1c8025520eaeca348/telseq_out.txt ind_telseq287.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6b/29475061a7af7a692f1e8c91f1a51c/telseq_out.txt ind_telseq288.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6b/adce153da68ec3886036e12c7d43d9/telseq_out.txt ind_telseq289.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6b/b889ce3fba5eb3a36aa8a45c3f9b16/telseq_out.txt ind_telseq290.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6c/ba996d284a3e9e473ae3ce5f098516/telseq_out.txt ind_telseq291.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6c/c9b86b8182afe15f1ff40a2c860cb5/telseq_out.txt ind_telseq292.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6d/4fe72c9cb07af63833782ff3438a62/telseq_out.txt ind_telseq293.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6d/6a488cad518b254cece9da633bb080/telseq_out.txt ind_telseq294.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6d/93ba1ad133fc78d480a1f9e7a8ac37/telseq_out.txt ind_telseq295.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6e/7226a0fd046ed7eac38aded518c1f7/telseq_out.txt ind_telseq296.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6e/8525d5f2a63edfda159aed3c1f842f/telseq_out.txt ind_telseq297.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6e/d2b9ef3072dfd332868af822032668/telseq_out.txt ind_telseq298.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/6f/f4ddd5fe22c887830b73d338ef0c41/telseq_out.txt ind_telseq299.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/70/0c5cabcf12de4ca5450a482b502776/telseq_out.txt ind_telseq300.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/70/a95db933e4927c4bbf6ccabcd0c989/telseq_out.txt ind_telseq301.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/70/dbefdecc750d02af9ba048f40776cf/telseq_out.txt ind_telseq302.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/71/1f7dd3c812dd542a5646d0a20cc994/telseq_out.txt ind_telseq303.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/71/2b4ad80f58381c56a582dfed0840fd/telseq_out.txt ind_telseq304.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/71/c79e8d635e6a94404d6b3e9c4ba35f/telseq_out.txt ind_telseq305.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/71/ec468e899eabfe12f83adf7a998728/telseq_out.txt ind_telseq306.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/72/c1b40ee9a347d4cf28dcc958ff2e68/telseq_out.txt ind_telseq307.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/72/df20fe5de1714dbe881cdf0c0a7a9c/telseq_out.txt ind_telseq308.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/73/96fe04581e8ad5e72fb0b369d8d0b0/telseq_out.txt ind_telseq309.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/74/7bea2734e865625b5a6680b8c55aa2/telseq_out.txt ind_telseq310.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/74/b62ab485c6fa5465ab80dbc359aa0f/telseq_out.txt ind_telseq311.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/74/beef183c5cef810769c1f1a046ffa9/telseq_out.txt ind_telseq312.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/75/3d0726398e9bc3142c8c0c3ab62c36/telseq_out.txt ind_telseq313.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/75/e65ca1583f4119e1aa9a656414bffb/telseq_out.txt ind_telseq314.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/75/ecb151b49a36c61185dc7a75f91b20/telseq_out.txt ind_telseq315.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/76/455132686abed4ed76fc0879526955/telseq_out.txt ind_telseq316.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/76/69bb3d487c1196bc772fb7fc71a582/telseq_out.txt ind_telseq317.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/78/c0ff1e22e71c56a60ef685c7f65f62/telseq_out.txt ind_telseq318.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/79/279a825026341b00d5db1867b25298/telseq_out.txt ind_telseq319.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/79/4a8607ad4989b4f2334dcb8f4ccefb/telseq_out.txt ind_telseq320.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/79/71fe7e11f02dbd0d628e62bb5f00d6/telseq_out.txt ind_telseq321.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7a/2ddc4220f0f9d87e06cddfe55c3a32/telseq_out.txt ind_telseq322.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7a/99fd4b6c2a2d66a0cd1bd8ae7d73a4/telseq_out.txt ind_telseq323.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7a/ad2f625be6b01b60a3efcb68debcca/telseq_out.txt ind_telseq324.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7b/42188c74afcb8008b5844fc249d766/telseq_out.txt ind_telseq325.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7b/69f4d33eea288430e0784cbab78bf9/telseq_out.txt ind_telseq326.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7b/7107c60a644fa84257fa2bcc34c86b/telseq_out.txt ind_telseq327.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7b/eb2c97415b911b836e59329e0ddd40/telseq_out.txt ind_telseq328.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7b/fa6e59ba2746799dd35b5449343d5e/telseq_out.txt ind_telseq329.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7c/66511ae13a2bfd789c9349d640e4aa/telseq_out.txt ind_telseq330.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7c/97d912b8e0f534de12cac3704cf921/telseq_out.txt ind_telseq331.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7d/005a50818ac0d056fd2bf2f1fc47f8/telseq_out.txt ind_telseq332.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7d/174217d86b603803b21151fc0838d2/telseq_out.txt ind_telseq333.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7e/3823a53d68385d96d19ebe6aabf22c/telseq_out.txt ind_telseq334.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/7e/d8bce0f916857437e6aa8946697b36/telseq_out.txt ind_telseq335.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/80/7e58502456e03a2c896e9cda1d5805/telseq_out.txt ind_telseq336.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/80/874e897103287d5bb749134ea3f5cb/telseq_out.txt ind_telseq337.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/80/cf0706eee711468e0b61b861f3342c/telseq_out.txt ind_telseq338.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/80/d5111811782bc03da6974917b46885/telseq_out.txt ind_telseq339.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/81/03aea089622c2ebd2f3f128d4e0321/telseq_out.txt ind_telseq340.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/81/317a9a9110e5ae032539fa3994e230/telseq_out.txt ind_telseq341.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/81/746b79f945bc33b03cdc9c7c80e014/telseq_out.txt ind_telseq342.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/81/a82ba4c3240ac7e02d30c9a59af208/telseq_out.txt ind_telseq343.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/81/bcd6ed9960e382700bae33243a8887/telseq_out.txt ind_telseq344.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/82/16948d2ccc40f175039289b0056ebe/telseq_out.txt ind_telseq345.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/82/6a2a6ca11789b774a32a861f8dba00/telseq_out.txt ind_telseq346.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/82/9dec12d53218ab550c933d3cd38b4d/telseq_out.txt ind_telseq347.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/83/8d0306883cf8eb839d18b3cee248bc/telseq_out.txt ind_telseq348.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/83/be20a1ada711a8b90eee4e8d0700bb/telseq_out.txt ind_telseq349.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/84/bf3e229f3e18ec24d6c08447eabd23/telseq_out.txt ind_telseq350.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/85/5232c1dc6c091c9d58258104fb68c0/telseq_out.txt ind_telseq351.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/418b1d4b7510cd2bf5991fc08d299c/telseq_out.txt ind_telseq352.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/4869ac9ee44d63bac0179f11ed23fe/telseq_out.txt ind_telseq353.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/81996aad814b7cc2801f90d22d6ff5/telseq_out.txt ind_telseq354.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/91b8fbd2dbf9ffecdb7d7ee801206d/telseq_out.txt ind_telseq355.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/ab0cce988a248e841544e32eb650db/telseq_out.txt ind_telseq356.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/de269dab7464484758c8609f9c58ba/telseq_out.txt ind_telseq357.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/86/e1642bef99c9f0066738584086f57d/telseq_out.txt ind_telseq358.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/87/6fcd60421de41571786604c04c4ec0/telseq_out.txt ind_telseq359.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/88/b516bf3e2106a4908a6dea7f92ab42/telseq_out.txt ind_telseq360.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/88/f95c7a2675500e1e7a5ea467529b4f/telseq_out.txt ind_telseq361.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/89/2f332306d391de0e4a2c3e8bbd4b90/telseq_out.txt ind_telseq362.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8a/32fd147dfdc4a956e40e92c4ed92c2/telseq_out.txt ind_telseq363.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8a/d3f48f07ce7cd2c4bac374c79c5e44/telseq_out.txt ind_telseq364.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8a/db0ef4b411d95df6f579e79a066d8a/telseq_out.txt ind_telseq365.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8b/d36dcd0f4c707a552a397c9c37aa2b/telseq_out.txt ind_telseq366.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8c/2806ef0a6a35be78f4c871543aef57/telseq_out.txt ind_telseq367.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8c/840625f83185f22abb580d64cf2a8b/telseq_out.txt ind_telseq368.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8c/a5a89ed83b7a72fc837add2b0c1ef6/telseq_out.txt ind_telseq369.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8c/a5f9fb0ccc774cbaa46530fbd84843/telseq_out.txt ind_telseq370.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8c/ba932cce4c3b6ca96ac5b9ef936d77/telseq_out.txt ind_telseq371.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8d/11c3f0061832ff590c74f8e9a6b5e4/telseq_out.txt ind_telseq372.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8e/3b2ed34934281d9261cf6ed8a7ccc4/telseq_out.txt ind_telseq373.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8e/8c4e9ad24cf9cf3a80695505bfcccf/telseq_out.txt ind_telseq374.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8e/cfb830aee5d47795a17003e8c534f8/telseq_out.txt ind_telseq375.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/8f/c161d8254e642428dfced04e73c03d/telseq_out.txt ind_telseq376.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/90/380d63a0d469893ec83b82f767f6f3/telseq_out.txt ind_telseq377.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/90/77d58fa4c8e565301c27ec843e47a8/telseq_out.txt ind_telseq378.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/90/a8ee5a8125c4135abc1bab1d3d6537/telseq_out.txt ind_telseq379.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/90/b217ab4e8d5494d7e83ab745210576/telseq_out.txt ind_telseq380.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/91/6440e010758c742d368f21e992bff5/telseq_out.txt ind_telseq381.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/91/b76d5a3b476c8f4709d499b7cc8d44/telseq_out.txt ind_telseq382.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/91/c7ddc9d8be67bfb8c0eda1558ab5b3/telseq_out.txt ind_telseq383.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/92/0a14b576da8a6aca55f5abbec180ba/telseq_out.txt ind_telseq384.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/92/997e7ea67434bd3a04706501574da4/telseq_out.txt ind_telseq385.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/92/c6a96b16093401a6e6fdd4a0a13856/telseq_out.txt ind_telseq386.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/93/3a83b7d98c9f235199f6a271dd27df/telseq_out.txt ind_telseq387.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/93/4b9d52f7030f700e0bdbcceea4e393/telseq_out.txt ind_telseq388.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/93/9b10067d90adf673701859bd2a30d5/telseq_out.txt ind_telseq389.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/93/bde367f93e763db3d15ab491555bca/telseq_out.txt ind_telseq390.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/94/10b3a91572c08ac2131033622d39a5/telseq_out.txt ind_telseq391.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/94/6b90afff36089eb3ef71e154daadd9/telseq_out.txt ind_telseq392.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/94/abecce37ec599feebfaf05709872d6/telseq_out.txt ind_telseq393.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/94/ea56c69adee62fcea34b5580b4a63a/telseq_out.txt ind_telseq394.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/95/b2113247da328e2a4a00f7ce05b176/telseq_out.txt ind_telseq395.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/96/1d34d49b050d8619c460f65a2afa50/telseq_out.txt ind_telseq396.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/96/9cc32c5356507708b4a744401835ad/telseq_out.txt ind_telseq397.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/96/9d27cadf1ba5f661a247140cd09d14/telseq_out.txt ind_telseq398.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/97/629203db05774daa01daa3311c0c0d/telseq_out.txt ind_telseq399.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/97/cf76c87ad001df74097205c07f6221/telseq_out.txt ind_telseq400.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/98/49e46d23e3bb46d67a7985ffcb96a9/telseq_out.txt ind_telseq401.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/98/5ea9f9cb594caf8985f5f3b8948ef9/telseq_out.txt ind_telseq402.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/98/cdeefb008d9617a68b1c2f680ac6e0/telseq_out.txt ind_telseq403.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/98/d6334cbbc91fbbbcb9171be21063b9/telseq_out.txt ind_telseq404.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/99/00c9b5aca66001bb33a5aedd1a5abb/telseq_out.txt ind_telseq405.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/99/34f7b28d0f778decb89985e13db1e4/telseq_out.txt ind_telseq406.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/99/87a2fe8cbca79b99ece802d3190181/telseq_out.txt ind_telseq407.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/99/ffd18d2487040906927d3d0af0f56a/telseq_out.txt ind_telseq408.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9a/2be30160d2f6bb4e87e7f97f08eee0/telseq_out.txt ind_telseq409.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9a/577ffef2bcfbdc98802d2e33d078cb/telseq_out.txt ind_telseq410.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9a/e935b88da38e41f27c03defea2164e/telseq_out.txt ind_telseq411.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9b/3358f8d493dede7bc2767ca2fbbe85/telseq_out.txt ind_telseq412.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9b/48a57028cdbd21a453aced4f3a15e1/telseq_out.txt ind_telseq413.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9b/4f6a4c5df16646327e979983d933ca/telseq_out.txt ind_telseq414.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/09b08a8b25a0fff8f571160abd278b/telseq_out.txt ind_telseq415.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/15c137f6d2f52e8969823b2e42755c/telseq_out.txt ind_telseq416.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/21f8e1c997c01b4505db47f3a97d2f/telseq_out.txt ind_telseq417.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/564915d1c101ed37e542ae0e601349/telseq_out.txt ind_telseq418.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/83e53fa475057c950cf5529dda68cb/telseq_out.txt ind_telseq419.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/c567f8555f9b68b15c68621169b966/telseq_out.txt ind_telseq420.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/da72cf158190aa2377b21e2f44c2cc/telseq_out.txt ind_telseq421.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9c/ed75c1123a25eb14fce2ef69175570/telseq_out.txt ind_telseq422.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9d/053ae758c4c5e69e75ee0c6ab3cf29/telseq_out.txt ind_telseq423.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9d/8eb89b3562a19d035672704ce9379f/telseq_out.txt ind_telseq424.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9d/ead3b18955ff6689300d39c494d897/telseq_out.txt ind_telseq425.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9e/05c551a917089d14e11637badc4bc2/telseq_out.txt ind_telseq426.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9e/0a913455b511ca0667e79c613e1945/telseq_out.txt ind_telseq427.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9f/2d38c51576edc7509e9b579f64bf1c/telseq_out.txt ind_telseq428.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/9f/4beaa5d589a04f3c723815bf8fbf88/telseq_out.txt ind_telseq429.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/051cb793dd7085ed284c02317610a9/telseq_out.txt ind_telseq430.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/41afca12ebc82673b64b46c6ed070b/telseq_out.txt ind_telseq431.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/472d7ceb76c060c64b8e29e9449bbe/telseq_out.txt ind_telseq432.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/531986fa7c34a8577d91f2d679be2c/telseq_out.txt ind_telseq433.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/d56d7a95e6d64900527f2a53604307/telseq_out.txt ind_telseq434.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a0/f689c254467f04b7f75c0ca69d9762/telseq_out.txt ind_telseq435.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a1/133ba3b33426f3fe68b135c7e4d808/telseq_out.txt ind_telseq436.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a1/20c155642bdf48a4f927b29d212a90/telseq_out.txt ind_telseq437.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a2/397ce897dc5cfa6f070bc82121ff4b/telseq_out.txt ind_telseq438.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a2/7cf67d1d3bc7c9dfb0e9213a3efa0d/telseq_out.txt ind_telseq439.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a2/b8197554ec429af82e533e8eaeadac/telseq_out.txt ind_telseq440.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a2/ff974738f0179c7206f3d37834dec5/telseq_out.txt ind_telseq441.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a3/2723a0a49592b2a97613897edeffe3/telseq_out.txt ind_telseq442.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a3/7a08dcd1ca22a81631adbc22e54042/telseq_out.txt ind_telseq443.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a3/8365459bf972e5b9fb1cafdb50b102/telseq_out.txt ind_telseq444.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a3/fcbc51cebe678a0846ee8843b7fbf5/telseq_out.txt ind_telseq445.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a4/4d8149e3e2ebb7a380e9ed69a4c50d/telseq_out.txt ind_telseq446.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a4/63cfc30afaad49967482fb98b843e8/telseq_out.txt ind_telseq447.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a5/03f4d68d4d92a978cf1a913b9a5228/telseq_out.txt ind_telseq448.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a5/2b46b180233fcdfb503fd2c96d412e/telseq_out.txt ind_telseq449.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a5/cadf0db677fb76314f1d62f27dcfae/telseq_out.txt ind_telseq450.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a6/48ebdc8c569f4f4125f4c656ad3992/telseq_out.txt ind_telseq451.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a7/4571e6b30ea9edac8955c5289a2298/telseq_out.txt ind_telseq452.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a7/5b603def807c0815bd196413d47b34/telseq_out.txt ind_telseq453.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a7/9dd1edb8755408f61c6838d18ddfd1/telseq_out.txt ind_telseq454.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a7/f66a50a1aa12b897191534bead8376/telseq_out.txt ind_telseq455.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a8/3839f6d5d85ce4699acbe8e3182060/telseq_out.txt ind_telseq456.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a8/eb05ba28fd888f36a057e7e2b54e5d/telseq_out.txt ind_telseq457.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/a9/32188674b537a0896928b4d3800ea2/telseq_out.txt ind_telseq458.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/aa/f390d3288f423a9c69762ec37d8106/telseq_out.txt ind_telseq459.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/33f7a4a5cc0a194c690e35cca47250/telseq_out.txt ind_telseq460.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/394dd21fdef50407fb081f61ad9e8c/telseq_out.txt ind_telseq461.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/589f4c57c877b4a9e39993238b790f/telseq_out.txt ind_telseq462.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/924a18b63f863eea90c1bee3633e08/telseq_out.txt ind_telseq463.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/b30e06a08dbe96e164b1e0900905fd/telseq_out.txt ind_telseq464.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ac/e2ee7bc610bec17faaea849e6afa99/telseq_out.txt ind_telseq465.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ad/3643309287927994931670cffa61b5/telseq_out.txt ind_telseq466.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ad/6d6bf9250a6f261e419d8c1d24ccf6/telseq_out.txt ind_telseq467.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ad/f3a5f7cff07f70b746f3a4e460adf5/telseq_out.txt ind_telseq468.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ae/4b89210f5955098ae2cade91a6a120/telseq_out.txt ind_telseq469.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/af/3557f4ddf01f9504398f2f87ab4820/telseq_out.txt ind_telseq470.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/af/84488c74d6b14fce52e3cb8e8a047d/telseq_out.txt ind_telseq471.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b0/34a0dff88eb5a271fc5a7c727e5811/telseq_out.txt ind_telseq472.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b0/5507f867ca5e64daddc9d52cb42cae/telseq_out.txt ind_telseq473.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b0/57a348f0061415c29fc8861de2cd0b/telseq_out.txt ind_telseq474.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b0/bef8a2b9473d3a7dc49dae8615f0b5/telseq_out.txt ind_telseq475.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b1/1e5f75c6de8cdcaafbda9ae0159cc0/telseq_out.txt ind_telseq476.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b1/2a7e0b4b07a22f6345aff91990683a/telseq_out.txt ind_telseq477.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b2/1e577f9c9df519c6d7612e404df24e/telseq_out.txt ind_telseq478.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b2/2f2273a3c5f7bdcd912763526b0c62/telseq_out.txt ind_telseq479.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b2/458d0b9ae5932c7eed0f16972252a0/telseq_out.txt ind_telseq480.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b3/9708ef6dd51cf2ee086f6cece9ec5c/telseq_out.txt ind_telseq481.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b3/b2926821f9eab61ab88137d50046e3/telseq_out.txt ind_telseq482.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b4/3a3d8fb55eae28959720c5a61d10e6/telseq_out.txt ind_telseq483.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b4/d01e7872db2a2c799622fa818a3f0f/telseq_out.txt ind_telseq484.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b4/e0c2b3c1d9349cd1b4c12abbb9e388/telseq_out.txt ind_telseq485.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/03270ec423157e1d942c6d25ba83cd/telseq_out.txt ind_telseq486.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/07b7ae392e7321355fe2b442d19c2b/telseq_out.txt ind_telseq487.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/27a48d8b8580cdba3fe66188aa9565/telseq_out.txt ind_telseq488.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/9d6651ffeb657a9ae4710ef26d8dc3/telseq_out.txt ind_telseq489.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/bd2bfd66f9e0611e43b7f5f337da75/telseq_out.txt ind_telseq490.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b5/c219db356c79f190e553a8ba296fe9/telseq_out.txt ind_telseq491.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b6/d0d204f8ea6ffdcb442522b35e337e/telseq_out.txt ind_telseq492.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b7/25f62b32d46376123700a09d702a84/telseq_out.txt ind_telseq493.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b8/518230e7bbf229996ebe1293440e29/telseq_out.txt ind_telseq494.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b8/8ab308573132c4e5a6a5fad5ae299b/telseq_out.txt ind_telseq495.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/b8/da7ee31930a6e4d156b1b2d33ed038/telseq_out.txt ind_telseq496.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ba/16dab9ac35f8c4b0cdd2da09893c95/telseq_out.txt ind_telseq497.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ba/c351145e7e2556499b19fd8e53c4aa/telseq_out.txt ind_telseq498.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bb/742588c92394c11ca94b778b7d35e9/telseq_out.txt ind_telseq499.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bc/386507042299c77d1181127e9dae8a/telseq_out.txt ind_telseq500.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bd/5540f847f20e6535e2991a4c20f410/telseq_out.txt ind_telseq501.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bd/5d4604b35c277f960481c41ca41c9c/telseq_out.txt ind_telseq502.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bd/6b9c48cc012fec98ba3585a406b446/telseq_out.txt ind_telseq503.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/be/34d81b14dfc9789d7b8a59254f7d12/telseq_out.txt ind_telseq504.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/be/5056489b780f9a951f6b8ccdac1115/telseq_out.txt ind_telseq505.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/be/9c95f002ce952c6cfd14ceb20934f8/telseq_out.txt ind_telseq506.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/be/c478b2b6f5d7fe7eea54ecb464d117/telseq_out.txt ind_telseq507.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bf/034d182dd8f750e524dfcfd96a9813/telseq_out.txt ind_telseq508.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bf/16bbf791ffbbaf18a3148a9789f1d8/telseq_out.txt ind_telseq509.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/bf/c1a5d388fda8c73504913cba666b92/telseq_out.txt ind_telseq510.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c0/99120b3453f805a2d7ecdb5feb70cf/telseq_out.txt ind_telseq511.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c1/253c2441f7d01ef5580e3efabb07ef/telseq_out.txt ind_telseq512.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c1/cf72df1fd75e82e16368413aff465e/telseq_out.txt ind_telseq513.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c2/8e5bea0f6ea0b7961e07a58beee5ec/telseq_out.txt ind_telseq514.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c2/b3e09525e6710e9bab7df4caab766c/telseq_out.txt ind_telseq515.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c3/28ec63287dc431024e6d4a0fdd52b7/telseq_out.txt ind_telseq516.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c3/58ad795d35ee5dae520ed769a7d6fb/telseq_out.txt ind_telseq517.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c3/cc65dc792226f2b2ed4ef7cbcb0655/telseq_out.txt ind_telseq518.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c3/ec88788905b35002579288ed14308a/telseq_out.txt ind_telseq519.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c4/47cb2b59e26b3db38d62a96d97705f/telseq_out.txt ind_telseq520.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c4/ff7becb0518441c9da1964f741cccc/telseq_out.txt ind_telseq521.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/4a17d6f64b6bb98cbce732f76e601f/telseq_out.txt ind_telseq522.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/71f90830d56f5b3ef35aea48edc892/telseq_out.txt ind_telseq523.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/7779898b91475a7bfcf335b5cca933/telseq_out.txt ind_telseq524.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/830d963c26d06d935f8a28677caaa2/telseq_out.txt ind_telseq525.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/a6e02bad7fb1aab299cb9365de4953/telseq_out.txt ind_telseq526.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c5/b0a571c868941ccbda7bccbf1cef93/telseq_out.txt ind_telseq527.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c6/3e9c54423d59b0d6748cba749f15f6/telseq_out.txt ind_telseq528.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c6/64c400eaffafa149f82d2b2a4e5968/telseq_out.txt ind_telseq529.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c6/770b2e7bf06d7b3ac9fdbe9d547a61/telseq_out.txt ind_telseq530.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c7/0291bbfe40d0c2bc5d8521e65a05aa/telseq_out.txt ind_telseq531.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c8/cc675a74d9000d8723463753a3bf34/telseq_out.txt ind_telseq532.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c9/04c76c856a07f548d9e4952b14f445/telseq_out.txt ind_telseq533.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/c9/2ba753fa9989faff36645857904e55/telseq_out.txt ind_telseq534.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ca/1d763887d64861ec84cfd5c376c8f7/telseq_out.txt ind_telseq535.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ca/a292fe9c347325f5769510828644ef/telseq_out.txt ind_telseq536.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ca/d34a41c773176cf19d121524782476/telseq_out.txt ind_telseq537.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cb/4ddd9fab56be6fbf906b345096c486/telseq_out.txt ind_telseq538.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cb/956ee0f1e1f5b9e0046eb9fe57d9bb/telseq_out.txt ind_telseq539.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cb/c0b568c5de86bb39f2dfe8dba79273/telseq_out.txt ind_telseq540.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cc/fd7537db50a72d81d9d2ecb20999f0/telseq_out.txt ind_telseq541.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cd/12ea6bcc2e49f736858860deeb749f/telseq_out.txt ind_telseq542.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cd/5ad9b1f7996ec6d6ab6a5e7619f3fb/telseq_out.txt ind_telseq543.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cd/9204d0369f4ecd56306edcda08ef35/telseq_out.txt ind_telseq544.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cd/e35c0713817b590a984cb8c245d6d0/telseq_out.txt ind_telseq545.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ce/5a06dd1b24471a105ba05b0c48ad7b/telseq_out.txt ind_telseq546.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ce/9655d19b8da98b5cec64839ce69e2c/telseq_out.txt ind_telseq547.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cf/c9b305deeaa682070fed175dd81ed1/telseq_out.txt ind_telseq548.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cf/ece93629b58040359fdede95aef06f/telseq_out.txt ind_telseq549.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/cf/f50f487454ee20244973627eb33cf1/telseq_out.txt ind_telseq550.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d1/0f76897b5ebcca1bc31be1edba9f58/telseq_out.txt ind_telseq551.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d1/4d07705bf6bdb162b72bf558bdae4f/telseq_out.txt ind_telseq552.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d1/d96e2abf8d4a4a47a278d8feb16974/telseq_out.txt ind_telseq553.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d1/dc3320779fed3c7b64cb8e4f5a068c/telseq_out.txt ind_telseq554.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d1/ebac3c4a5d250d5a4131c1ba6cc4e2/telseq_out.txt ind_telseq555.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d2/2be66a6bf272daa94919861cc0d758/telseq_out.txt ind_telseq556.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d2/2dd1e1245a5b799255f60019ea4090/telseq_out.txt ind_telseq557.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d2/355a19bbae719d6ff808f1d498beda/telseq_out.txt ind_telseq558.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d2/5cf6397040f3a35cc9f12e545d3186/telseq_out.txt ind_telseq559.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d2/db59116df867ef0a0b8910af42c81a/telseq_out.txt ind_telseq560.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d3/133f3d5847b57e155db05b4a4721ec/telseq_out.txt ind_telseq561.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d4/d92896d79e6b8ee99b9415d6cbafbb/telseq_out.txt ind_telseq562.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d4/e14f7b1708cc8ece822eff6e0587d0/telseq_out.txt ind_telseq563.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d5/aac1385304db600a1a114bcc57ab36/telseq_out.txt ind_telseq564.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d5/c5ea314d8d3308d6d04b61482fd257/telseq_out.txt ind_telseq565.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d6/58ae3811a0e3d4fdeba9f60e47cb5c/telseq_out.txt ind_telseq566.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d6/94088ec32aee45de544b9f0c0a8070/telseq_out.txt ind_telseq567.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d6/a8403a1b48b50ab4f529d4d219091b/telseq_out.txt ind_telseq568.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d6/ff1e366488e7cb6322500d7e71568d/telseq_out.txt ind_telseq569.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d7/1b1775e3313115ea758ab63810f311/telseq_out.txt ind_telseq570.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d7/9e78add2a0ea99a3520be9b3aa1913/telseq_out.txt ind_telseq571.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d7/a840a30441c1e7ff003a8ac541b68f/telseq_out.txt ind_telseq572.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d8/4f2a201f94a566d2e46b4e204171b4/telseq_out.txt ind_telseq573.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d9/5a193e8e37ac9739a85f4e4cb919bf/telseq_out.txt ind_telseq574.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/d9/d9c21b0e48d5161b018bf23530e56d/telseq_out.txt ind_telseq575.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/da/943cbcc0f9de5c8c4474a0bdcb4e37/telseq_out.txt ind_telseq576.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/da/a56c258db240ec9baa4f2afd037046/telseq_out.txt ind_telseq577.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/da/aabf630de09e6bb0421b36e214b100/telseq_out.txt ind_telseq578.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/da/b0feaf9f329dde680a25b012d015a2/telseq_out.txt ind_telseq579.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/db/323f991a6da8f51587d977ca459af2/telseq_out.txt ind_telseq580.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/db/5e484033d8c7bf44f4b10612277de7/telseq_out.txt ind_telseq581.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/db/c7d4b2b23235b41ab7080d3c7a5a9e/telseq_out.txt ind_telseq582.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dc/0e238a0c60a3521ba6c823019d3a50/telseq_out.txt ind_telseq583.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dc/341e00393c1f814655960189afaea1/telseq_out.txt ind_telseq584.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dc/b914d60b09177915b027e0e20d9df2/telseq_out.txt ind_telseq585.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dc/c1e7359c78f5431fe29c1c2a7bc748/telseq_out.txt ind_telseq586.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dd/09a75d96206bccec6afe0b865f97d7/telseq_out.txt ind_telseq587.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/dd/23b5c02ffdd0553f756693b3b1fc5f/telseq_out.txt ind_telseq588.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/de/578cc5ec6c8fc8cc3466d17d5b295f/telseq_out.txt ind_telseq589.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/de/858bc432d75a118070d0813fb9b0e0/telseq_out.txt ind_telseq590.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/de/874c5b329d8bfb00f1ac042a25276a/telseq_out.txt ind_telseq591.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/de/b9fae7526396be3b854ce2a98807b1/telseq_out.txt ind_telseq592.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/df/2a1ae25e16c2685d8fc22f53521c36/telseq_out.txt ind_telseq593.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/df/3c834c6e0d60386284d48aebb8e5a7/telseq_out.txt ind_telseq594.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/df/93109f5a3423823012db4003847733/telseq_out.txt ind_telseq595.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/df/acaddaa1ee9b5e30fe49e377a3ad0c/telseq_out.txt ind_telseq596.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e1/ad7a9793c1e14ab8ac68aeaba61a0f/telseq_out.txt ind_telseq597.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e2/569c811bf688f94c8dad18114d8272/telseq_out.txt ind_telseq598.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e2/be808fbe97651f5c89612bb7bbf39f/telseq_out.txt ind_telseq599.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e2/ca2f704b2748a456207c0df3966d49/telseq_out.txt ind_telseq600.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e3/06800d0c1e095b1f26b6670e9ccd5f/telseq_out.txt ind_telseq601.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e3/f93b4243bfa1911bf2ed70a2e2ebd9/telseq_out.txt ind_telseq602.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e4/88a0f816847584feac19bd6effbbe6/telseq_out.txt ind_telseq603.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e4/c418719de65ca162b1261e765e1fe0/telseq_out.txt ind_telseq604.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e4/c731c5bc679a55351bda313aa01cfc/telseq_out.txt ind_telseq605.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e4/cdf73a5d38ed225276bde93285b14a/telseq_out.txt ind_telseq606.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e4/f089df5606320dee19f3bdfa4ec144/telseq_out.txt ind_telseq607.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e5/70978f18b6688f20986328c360e1f2/telseq_out.txt ind_telseq608.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e5/818a008bc8367fbd4a0094e7fe128f/telseq_out.txt ind_telseq609.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e6/3629fee1f132aebe3dc3ce1e46a93e/telseq_out.txt ind_telseq610.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e6/922d3e0ac5d9b0dec645c9fa6971f5/telseq_out.txt ind_telseq611.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e6/ad3391126ef7c9de9614c7f13c4a05/telseq_out.txt ind_telseq612.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e9/10650903d345b26fa22e3b4ef08811/telseq_out.txt ind_telseq613.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e9/24749c3a739c6ad14a4f977f426289/telseq_out.txt ind_telseq614.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/e9/70709106ae6cd5230926678f6414cc/telseq_out.txt ind_telseq615.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ea/174d437bffecce09bd16c92a5a37f0/telseq_out.txt ind_telseq616.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ea/4047e328762ee3c4315b0c0d090073/telseq_out.txt ind_telseq617.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/eb/4731fee2c4f1a6f4b39c1a4dae817c/telseq_out.txt ind_telseq618.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/eb/e190a426b046b1bfbae2c0f1a9cc78/telseq_out.txt ind_telseq619.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/eb/e9d57ae0f39185d296d2a0a8f187e7/telseq_out.txt ind_telseq620.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ed/110157d77e28e9485888bde7ec0e06/telseq_out.txt ind_telseq621.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ed/857b3dea2ba49fde44e634200a9a46/telseq_out.txt ind_telseq622.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ed/c4620073b20d7993c607c0e1d1086a/telseq_out.txt ind_telseq623.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ef/68ee35ea53c23f6db14cc7cb004685/telseq_out.txt ind_telseq624.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f0/9dad3fc92ed877b3fb499948825e21/telseq_out.txt ind_telseq625.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f0/c1fb4b22e3f87cde53a045543b24c1/telseq_out.txt ind_telseq626.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f1/a5946d9253678f50aaf9e41877714b/telseq_out.txt ind_telseq627.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f2/1c371ed6dca3f8645dcbf667b8a57a/telseq_out.txt ind_telseq628.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f3/0365fa919014045ed6355adc3a9347/telseq_out.txt ind_telseq629.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f3/3074c9872f69cddf93054e3ee8fa24/telseq_out.txt ind_telseq630.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f3/c5ab8b06b66b5ce1d2e364d0acf15f/telseq_out.txt ind_telseq631.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f3/d88b2e62e6014737a1faa08feb3421/telseq_out.txt ind_telseq632.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f4/b2c839e0f548567f7f4f0bf15907f7/telseq_out.txt ind_telseq633.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f4/bb1cd2cf396de1eed2469420df584e/telseq_out.txt ind_telseq634.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f5/442a2ae361fb0e8319a4e0fc4ffc50/telseq_out.txt ind_telseq635.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f5/529193fbd61a1669605493f0547e8d/telseq_out.txt ind_telseq636.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f5/c175fbdb0b52f28a843f4612cf401f/telseq_out.txt ind_telseq637.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f5/dea45a4f06cdd7a3d6fa4e40377c5f/telseq_out.txt ind_telseq638.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f5/f5632903b61051721ed1336a4674fe/telseq_out.txt ind_telseq639.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f6/3e603cedeb21b210cb64bbd2bee569/telseq_out.txt ind_telseq640.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f6/e406e7937693cff1093b05daaa69ac/telseq_out.txt ind_telseq641.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f6/fb0e77bc746ce52d276f764842b53e/telseq_out.txt ind_telseq642.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/046ae87b2e41d2690e7e5da44dccf2/telseq_out.txt ind_telseq643.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/1e0483f49cff2cd813b066ad84a7e2/telseq_out.txt ind_telseq644.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/51774bcc680d74358677efdf120820/telseq_out.txt ind_telseq645.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/6f90526fcf61337f18f28bc8d14116/telseq_out.txt ind_telseq646.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/805576efba153fc95191ea3e3014f7/telseq_out.txt ind_telseq647.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f7/f7cfe5614daafffbd74d64cf590565/telseq_out.txt ind_telseq648.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f8/3d47aa6c6cc529916bfbb47ede160f/telseq_out.txt ind_telseq649.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f9/205c762e0fad7fd54e843f98f21340/telseq_out.txt ind_telseq650.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/f9/2a173b146aae187f5630a2339fc928/telseq_out.txt ind_telseq651.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fa/30ea376952f6899c754788db97293d/telseq_out.txt ind_telseq652.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fa/66629927138431610f4f18f929e223/telseq_out.txt ind_telseq653.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fb/793530f2894f3c4f07f8ce2a072cae/telseq_out.txt ind_telseq654.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fb/a2c9bd8654a9f500e2a96dcceb7c90/telseq_out.txt ind_telseq655.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fc/064dbb7a728ccc4a19884a8f136665/telseq_out.txt ind_telseq656.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fc/2509cef802eda6a11b494f94e248b6/telseq_out.txt ind_telseq657.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fc/c59b56e7d5deb6ad253fee826c8585/telseq_out.txt ind_telseq658.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fd/081cee23321bbfd19ae691afae5be5/telseq_out.txt ind_telseq659.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fd/66112f9dbbb40fa5d642ee68604253/telseq_out.txt ind_telseq660.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fd/831d3d5a3dd6557257eb98efda457c/telseq_out.txt ind_telseq661.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fd/a0aa2fe5d0a28afe3e460ca093a1c4/telseq_out.txt ind_telseq662.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fd/b85002f4f6e0e9b238f48d3b9bb6d2/telseq_out.txt ind_telseq663.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fe/0c9a299d51f7c6192f4129d8bf29d8/telseq_out.txt ind_telseq664.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fe/59078e76d909783509b1491800d7af/telseq_out.txt ind_telseq665.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fe/a1ea99a00d1c22d4d4df322ed2875a/telseq_out.txt ind_telseq666.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fe/bd2b4ee615923de6afe905c155a6b8/telseq_out.txt ind_telseq667.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/fe/e8ec2567708a48ae39953d2afa25c0/telseq_out.txt ind_telseq668.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ff/4e9ce9f68ecdbe98d870e065e7c728/telseq_out.txt ind_telseq669.txt
+    ln -s /projects/b1059/projects/Shriram/worm/telseq_nf/work/ff/bc8a001c36c2e10e3e3fd8ccd063ad/telseq_out.txt ind_telseq670.txt
+}
+
+nxf_unstage() {
+    true
+    [[ ${nxf_main_ret:=0} != 0 ]] && return
+}
+
+nxf_main() {
+    trap on_exit EXIT
+    trap on_term TERM INT USR2
+    trap '' USR1
+
+    [[ "${NXF_CHDIR:-}" ]] && cd "$NXF_CHDIR"
+    NXF_SCRATCH=''
+    [[ $NXF_DEBUG > 0 ]] && nxf_env
+    touch /projects/b1059/projects/Shriram/worm/telseq_nf/work/0e/8d1f30f163c961c7a82b9cba4df25c/.command.begin
+    set +u
+    set -u
+    [[ $NXF_SCRATCH ]] && echo "nxf-scratch-dir $HOSTNAME:$NXF_SCRATCH" && cd $NXF_SCRATCH
+    nxf_stage
+
+    set +e
+    local ctmp=$(set +u; nxf_mktemp /dev/shm 2>/dev/null || nxf_mktemp $TMPDIR)
+    local cout=$ctmp/.command.out; mkfifo $cout
+    local cerr=$ctmp/.command.err; mkfifo $cerr
+    tee .command.out < $cout &
+    tee1=$!
+    tee .command.err < $cerr >&2 &
+    tee2=$!
+    ( nxf_launch ) >$cout 2>$cerr &
+    pid=$!
+    wait $pid || nxf_main_ret=$?
+    wait $tee1 $tee2
+    nxf_unstage
+}
+
+$NXF_ENTRY

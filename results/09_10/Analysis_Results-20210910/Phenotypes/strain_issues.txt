@@ -1,0 +1,2 @@
+[1] "Strain issues: (if empty, no strain issues were found)"
+`summarise()` has grouped output by 'isotype'. You can override using the `.groups` argument.
