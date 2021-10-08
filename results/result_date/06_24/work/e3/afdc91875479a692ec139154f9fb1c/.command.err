@@ -1,0 +1,4 @@
+use user specified pattern TTAGGC
+reverse complement GCCTAA
+Start analysing BAM JU1792.bam
+Treat all reads in BAM as if they were from a same sample
